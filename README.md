@@ -132,6 +132,90 @@ a tolerance and a blind spot.
 v4 adds step-by-step reasoning: parse rate **100% → 0%**, 51 of 60 cases newly
 failing, 85% churn. Gate fires, exit 1, eight distinct reasons listed.
 
+### And what actually fixes it — which is not a better prompt
+
+The same v4 prompt, re-run with the response **schema passed to the decoder**
+rather than described in the prompt:
+
+| v4 — "explain your reasoning step by step" | prompt only | schema-constrained |
+|---|---:|---:|
+| parses as JSON | **0.0%** | **100.0%** |
+| has required fields | 0.0% | 100.0% |
+| valid category | 0.0% | 100.0% |
+| correct category | 0.0% | **80.0%** |
+
+Total structural repair. Which reframes the whole finding:
+
+> **The regression was never really about the prompt.** It was about relying on
+> a prompt to enforce a contract. Asking for a shape is a request; handing the
+> decoder a schema is a guarantee — the tokens that would break the structure
+> are never available to sample.
+
+The `enum` on `category` carries the most weight: it makes an invented label —
+the failure that most resembles success — *structurally impossible* rather than
+merely discouraged.
+
+### But chain-of-thought still lost, and that is the second finding
+
+With the format problem removed, v4 is **still the worst prompt**:
+
+| prompt | correct |
+|---|---:|
+| v2 personas + descriptions | **86.7%** |
+| v3 concise | 86.7% |
+| v1 baseline | 85.0% |
+| **v4 reasoning, schema-constrained** | **80.0%** |
+
+`account` and `billing` both fell to 60%, from 73.3% and 66.7%.
+
+So "add step-by-step reasoning" hurt this task **twice** — it destroyed the
+output format, and once that was fixed it was still five points behind doing
+nothing. Constrained to emit only the schema, the model has nowhere to put the
+reasoning it was asked for; the instruction becomes context that crowds out the
+ticket without buying anything.
+
+Chain-of-thought is widely assumed to help. On short classification it did not.
+That is exactly the kind of assumption a harness exists to test.
+
+### Two cache bugs, both mine, both silent
+
+Worth recording because the second only appeared because the first was fixed.
+
+**The flag was not in the key.** `json_mode` changes the answer, and the cache
+key was `(prompt, model_name)` where the name omitted it. A constrained run was
+served an unconstrained run's replies and reported that constrained decoding
+made *no difference at all* — a plausible, completely wrong result, with no
+error anywhere.
+
+**Then the behaviour was not in the key.** With `[json]` added to the name, the
+implementation of json_mode then changed — from the string `"json"` to a schema
+— and every entry cached by the broken version stayed valid-looking under the
+same key. The second run reported 0% for the same reason as the first and a
+completely different cause.
+
+The key now hashes the schema itself, so changing the contract invalidates
+exactly the entries it should. Two tests guard it.
+
+> This is the failure this README already described from a sibling Java project
+> — a cache key built from something that did not capture everything affecting
+> the answer. Made here, twice, in the file that warns about it. Which is
+> roughly the point: **the only reason it was caught is that a result looked too
+> tidy and got checked.**
+
+### A library flag that silently did nothing
+
+`format: "json"` was Ollama's way of requesting JSON. In 0.32 it is a **silent
+no-op** — accepted, ignored, no warning. Measured: byte-identical 1,904
+characters of prose with and without it.
+
+```
+format: "json"     →  1904 chars of prose        (ignored)
+format: {schema}   →  {"category":"shipping",…}  (47 chars, correct)
+```
+
+A flag that appears to work, changes nothing, and reports success is worse than
+one that fails.
+
 ### The edit that did nothing, which is also worth knowing
 
 v3 adds *"Be concise."* — a plausible candidate for breaking structured output.
@@ -183,12 +267,15 @@ the generator's style would score better for no real reason.
 makes two measurements incomparable — a score moves and you cannot tell whether
 the prompt changed or the questions did.
 
-**JSON-constrained decoding is off by default.** Ollama can force valid JSON at
-the decoding level. Turning it on would make the parse-rate metric report 100%
-no matter how badly a prompt was written — hiding exactly the failure the
-harness exists to catch. It is available as `--json-mode`, because in production
-you would want it on; the point is that it conceals a failure rather than fixing
-it.
+**Schema-constrained decoding is off by default.** `--json-mode` passes the
+response schema to the decoder, which forces valid output. Turning it on by
+default would make the parse-rate metric report 100% however badly a prompt was
+written — hiding exactly the failure the harness exists to catch.
+
+In production you would want it **on**: it is the difference between a request
+and a guarantee, and it repaired a prompt with a 0% parse rate completely. The
+point is that it conceals a broken prompt rather than fixing one, so the harness
+has to be able to see the prompt naked.
 
 **Temperature 0.** Otherwise a "regression" could just be resampling, and the
 cache would store one draw from a distribution rather than an answer.

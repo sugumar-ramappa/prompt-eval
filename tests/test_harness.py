@@ -153,6 +153,35 @@ def test_editing_the_prompt_invalidates_the_cache(tmp_path, monkeypatch):
     assert model.calls == 2
 
 
+def test_a_setting_that_changes_the_answer_changes_the_cache_key():
+    """The bug this project shipped, in the file that warns about it.
+
+    `json_mode` constrains decoding, so it changes the reply. It was missing
+    from the model name - which is the cache key - so a run with it ON was
+    served the cached replies from a run with it OFF and reported that
+    constrained decoding made no difference at all.
+
+    Plausible, completely wrong, and no error anywhere. The only symptom was a
+    result that was too tidy.
+    """
+    from src.models import OllamaModel
+
+    plain = OllamaModel(model="llama3.1:8b")
+    constrained = OllamaModel(model="llama3.1:8b", json_mode=True)
+    hot = OllamaModel(model="llama3.1:8b", temperature=0.7)
+
+    assert plain.name != constrained.name, "json_mode must be in the cache key"
+    assert plain.name != hot.name, "temperature must be in the cache key"
+    assert constrained.name != hot.name
+
+
+def test_two_identically_configured_models_share_a_cache_key():
+    """The other half: identical configuration must NOT miss the cache."""
+    from src.models import OllamaModel
+
+    assert OllamaModel(model="llama3.1:8b").name == OllamaModel(model="llama3.1:8b").name
+
+
 def test_run_round_trips_through_disk(tmp_path, monkeypatch):
     monkeypatch.setattr("src.runner.RUNS_DIR", tmp_path)
     monkeypatch.setattr("src.runner.CACHE_DIR", tmp_path / "c")

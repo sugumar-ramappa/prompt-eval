@@ -15,6 +15,7 @@ parts that actually contain the bugs - are testable in milliseconds.
 from __future__ import annotations
 
 import hashlib
+import json as _json
 import os
 import time
 from dataclasses import dataclass
@@ -106,25 +107,71 @@ class OllamaModel:
     """
 
     def __init__(self, model: str = "llama3.1:8b", host: str | None = None,
-                 temperature: float = 0.0, json_mode: bool = False):
-        self.name = f"ollama/{model}"
+                 temperature: float = 0.0, json_mode: bool = False,
+                 schema: dict | None = None):
+        # EVERY SETTING THAT CHANGES THE ANSWER BELONGS IN THE NAME.
+        #
+        # The name is the cache key and the identity used to refuse
+        # incomparable runs, so anything affecting the output has to appear in
+        # it. This originally read f"ollama/{model}" and omitted json_mode -
+        # so a run with constrained decoding turned ON was served the cached
+        # replies from a run with it OFF, and reported that constrained
+        # decoding made no difference whatsoever. Perfectly plausible, entirely
+        # wrong, and no error anywhere.
+        #
+        # That is the same class of bug this project's README describes from a
+        # sibling codebase, made here, in the file that warns about it.
+        # Temperature is included for the same reason: at 0.7 the same prompt
+        # returns different text, and caching one draw under a key that does
+        # not mention temperature makes it look reproducible.
+        # The key must capture the BEHAVIOUR, not merely the flag.
+        #
+        # This first read "[json]". That was not enough: when the implementation
+        # of json_mode changed from the string "json" to a schema, every entry
+        # cached by the broken version stayed valid-looking under the same key,
+        # and the fixed code was served the broken code's answers. A second run
+        # reported 0% for the same reason the first did, and for a completely
+        # different cause.
+        #
+        # Hashing the schema means changing the contract - a new field, a
+        # different enum, a different mechanism - invalidates exactly the
+        # entries it should.
+        suffix = ""
+        if json_mode:
+            from src.golden import RESPONSE_SCHEMA
+
+            active = schema or RESPONSE_SCHEMA
+            digest = hashlib.sha256(
+                _json.dumps(active, sort_keys=True).encode()
+            ).hexdigest()[:6]
+            suffix = f"[schema:{digest}]"
+        if temperature:
+            suffix += f"[t{temperature}]"
+        self.name = f"ollama/{model}{suffix}"
         self.model = model
         self.host = host
         # Temperature 0 so re-running an unchanged prompt returns the same text.
         # Without it a "regression" could just be resampling, and the cache
         # would store one draw from a distribution rather than an answer.
         self.temperature = temperature
-        # Ollama can constrain decoding so the output is always valid JSON,
-        # rather than merely asking for it in the prompt.
+        # Constrained decoding: the schema is enforced by the sampler, so tokens
+        # that would break the structure are never available to choose.
         #
-        # OFF BY DEFAULT, DELIBERATELY. Several experiments here measure whether
-        # a PROMPT reliably produces parseable JSON. Turning this on would make
-        # that unmeasurable - the harness would report a 100% parse rate no
-        # matter how badly the prompt was written, and the regression it exists
-        # to catch would be invisible. It is exposed as a flag because in
-        # production you would want it on; the point is that it hides a failure
-        # mode rather than fixing it.
+        # MUST BE A SCHEMA, NOT THE STRING "json".
+        # Ollama used to accept format="json". In 0.32 that string is a silent
+        # no-op - it does not error, it simply does nothing, and the model
+        # returns whatever it likes. Measured here: identical 1,904 characters
+        # of prose with and without it. A flag that appears to work, changes
+        # nothing, and reports success is worse than one that fails.
+        #
+        # OFF BY DEFAULT, DELIBERATELY. Several experiments measure whether a
+        # PROMPT reliably produces parseable JSON. Turning this on would report
+        # a 100% parse rate however badly the prompt was written, hiding the
+        # exact failure the harness exists to catch. In production you would
+        # want it on - the point is that it conceals a broken prompt rather
+        # than fixing one.
         self.json_mode = json_mode
+        self.schema = schema
         self._client = None
 
     def _connect(self):
@@ -138,7 +185,9 @@ class OllamaModel:
         client = self._connect()
         kwargs: dict = {"options": {"temperature": self.temperature}}
         if self.json_mode:
-            kwargs["format"] = "json"
+            # A schema, never the string "json" - see __init__.
+            from src.golden import RESPONSE_SCHEMA
+            kwargs["format"] = self.schema or RESPONSE_SCHEMA
 
         t0 = time.perf_counter()
         result = client.chat(
