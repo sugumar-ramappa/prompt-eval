@@ -177,6 +177,116 @@ ticket without buying anything.
 Chain-of-thought is widely assumed to help. On short classification it did not.
 That is exactly the kind of assumption a harness exists to test.
 
+### Local vs hosted, same prompt, same 60 cases
+
+The harness is model-agnostic, so the same evaluation runs against a model on
+this laptop and a model fifteen times its size in someone else's data centre.
+
+| | local `llama3.1:8b` | hosted `gpt-oss-120b` |
+|---|---:|---:|
+| **accuracy** | **86.7%** | **96.7%** |
+| account | 80.0% | 93.3% |
+| billing | 73.3% | 93.3% |
+| shipping | 93.3% | 100.0% |
+| technical | 100.0% | 100.0% |
+| **latency per call** | **689 ms** | **1,786 ms** |
+| total run | 42 s | 107 s |
+| API key | none | required |
+| rate limit | none | free-tier cap |
+| data leaves the machine | no | yes |
+
+**Ten points of accuracy is what keeping the model local costs.** Now it is a
+number rather than an argument.
+
+**And the local model is 2.6× faster**, which was not the expected result. Groq
+runs on custom silicon and is genuinely fast per token — but for a 60-token
+classification the network round trip dominates, so the model on the laptop wins
+on latency while losing on accuracy.
+
+That inversion is the useful part. "Local is slower but private" is the assumed
+trade-off, and on short structured requests it is simply wrong.
+
+### Local vs hosted: the complete matrix
+
+Same 60 cases, same prompts, temperature 0. Local is `llama3.1:8b` on an M3 Pro;
+hosted is `openai/gpt-oss-120b` on Groq — fifteen times the parameters.
+
+| prompt | local 8B | hosted 120B |
+|---|---:|---:|
+| v1 baseline | 85.0% | **88.3%** |
+| v2 personas + descriptions | 86.7% | **96.7%** |
+| v3 concise | 86.7% | *not run — identical to v2 locally* |
+| **v4 reasoning** | **0.0%** | **0.0%** |
+| v4 + constrained decoding | 80.0% | **impossible — see below** |
+| v2 + constrained decoding | — | **98.3%** |
+
+**The hosted model is better, consistently.** +3.3 on v1, +10.0 on v2, and 98.3%
+once decoding is constrained — the best number this project has produced.
+
+**And scale buys nothing at all against a bad prompt.** v4 scores **0.0% on
+both**. A 120B model on custom inference silicon fails byte-for-byte the same way
+an 8B model on a laptop does:
+
+```
+local  8B    "To classify the customer support ticket, let's consider each..."
+hosted 120B  "**Step-by-step reasoning** 1. Identify the main issue –"
+```
+
+That is the strongest version of the project's central claim. The failure is not
+a small-model weakness to be bought out of with a bigger model. **It is what
+happens when a prompt is asked to enforce a contract**, and it is
+provider-independent and scale-independent.
+
+### The local model gives a *stronger* guarantee than the hosted one
+
+This was the surprise, and it runs against the assumption that hosted is simply
+the more capable option.
+
+| | local Ollama | hosted Groq |
+|---|---|---|
+| `json_schema` with an `enum` | **supported** — enforced by the sampler | **rejected**, `BadRequestError` |
+| `json_object` | n/a | supported, but **only if the prompt contains the word "json"** |
+| Shape guaranteed | yes | no — valid JSON of any shape |
+| Invented category possible | **no** | **yes** |
+
+Two consequences, both measured:
+
+**The rescue does not exist on the hosted model.** Locally, the broken v4 prompt
+was repaired by passing the schema to the decoder: 0% → 100% parse. On Groq that
+is not available. `json_schema` is refused outright, and the weaker `json_object`
+mode **requires the prompt to mention JSON** — which the v4 prompt does not, by
+design. So the request fails:
+
+```
+400 - 'messages' must contain the word 'json' in some form,
+      to use 'response_format' of type 'json_object'
+```
+
+The one prompt that most needs constraining is the one that cannot be
+constrained, because the mechanism depends on the prompt already caring about
+JSON. Locally the decoder does not ask the prompt's permission.
+
+**And where it does work, it is the weaker guarantee.** v2 constrained on Groq
+reaches 98.3% with a 100% parse rate — but the `enum` is not enforced, so an
+invented category remains structurally possible. Locally it is impossible.
+
+> This is the concrete answer to "why run a model locally when the hosted one is
+> better?" It is not only privacy and cost. On this task the local runtime offers
+> a **contract the hosted API will not**: the output shape is guaranteed by the
+> sampler rather than requested in the prompt, whatever the prompt happens to
+> say.
+
+### A hosted model name is the shortest-lived constant in the codebase
+
+This defaulted to `llama-3.3-70b-versatile` and returned **404 mid-run** — the
+provider had retired it. Not an auth failure, not a typo; the model was simply
+gone.
+
+Every baseline recorded against a hosted model is reproducible only until the
+provider decides otherwise. The local GGUF will still be here in two years.
+`python -m scripts.list_models` now prints what the account can actually reach,
+because asking the provider takes a second and guessing costs an afternoon.
+
 ### Two cache bugs, both mine, both silent
 
 Worth recording because the second only appeared because the first was fixed.
@@ -313,8 +423,14 @@ running it against a live model is a harness nobody tests.
 ## Backends
 
 ```bash
---backend ollama            # local, no key, unlimited   (default)
---backend groq              # hosted, needs GROQ_API_KEY in .env
+python -m scripts.list_models          # what this machine and account can reach
+
+--backend ollama                       # local, no key, unlimited   (default)
+--backend groq                         # hosted, needs GROQ_API_KEY in .env
+--backend groq --model qwen/qwen3.6-27b
 ```
 
 `.env` is gitignored. The local backend needs no key at all.
+
+Model availability changes without notice — `list_models` asks the provider
+rather than trusting a constant in the source.

@@ -57,7 +57,11 @@ def main() -> int:
     kwargs = {}
     if args.model:
         kwargs["model"] = args.model
-    if args.backend == "ollama":
+    # Both real backends support constrained decoding now; the stub does not
+    # need it. Passing it only to ollama silently ignored --json-mode on the
+    # hosted backend, which would have made "schema fixes it" a claim about one
+    # provider dressed up as a general one.
+    if args.backend in ("ollama", "groq"):
         kwargs["json_mode"] = args.json_mode
     model = models.build(args.backend, **kwargs)
 

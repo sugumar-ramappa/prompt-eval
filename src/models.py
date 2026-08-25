@@ -214,11 +214,40 @@ class GroqModel:
     machine, and what it costs you to send it away.
     """
 
-    def __init__(self, model: str = "llama-3.3-70b-versatile",
-                 temperature: float = 0.0):
-        self.name = f"groq/{model}"
+    # Default chosen for contrast with the local 8B, not for brand: 120B against
+    # 8B is fifteen times the scale, which is the variable the comparison is
+    # meant to isolate.
+    #
+    # Hosted model names go stale faster than anything else in a codebase. This
+    # read `llama-3.3-70b-versatile` and returned a 404 - the provider had
+    # retired it. `python -m scripts.list_models --backend groq` prints what the
+    # account can actually reach, which is the only reliable answer.
+    # Set once per process by the first fallback, so the warning is read
+    # rather than scrolled past sixty times.
+    _warned_fallback = False
+
+    def __init__(self, model: str = "openai/gpt-oss-120b",
+                 temperature: float = 0.0, json_mode: bool = False,
+                 schema: dict | None = None):
+        # Same rule as the local backend: everything that changes the answer
+        # goes in the name, because the name is the cache key. Omitting
+        # json_mode here would repeat the bug that made a constrained run serve
+        # an unconstrained run's replies.
+        suffix = ""
+        if json_mode:
+            from src.golden import RESPONSE_SCHEMA
+
+            active = schema or RESPONSE_SCHEMA
+            digest = hashlib.sha256(
+                _json.dumps(active, sort_keys=True).encode()).hexdigest()[:6]
+            suffix = f"[schema:{digest}]"
+        if temperature:
+            suffix += f"[t{temperature}]"
+        self.name = f"groq/{model}{suffix}"
         self.model = model
         self.temperature = temperature
+        self.json_mode = json_mode
+        self.schema = schema
         self._client = None
 
     def _connect(self):
@@ -238,12 +267,58 @@ class GroqModel:
 
     def complete(self, prompt: str) -> Reply:
         client = self._connect()
+        kwargs: dict = {"temperature": self.temperature}
+        if self.json_mode:
+            from src.golden import RESPONSE_SCHEMA
+
+            # Two mechanisms, deliberately in this order.
+            #
+            # json_schema constrains the output to the exact shape, the way
+            # Ollama's format does. Not every hosted model supports it, and the
+            # ones that do not reject the request rather than ignoring it - which
+            # is the better failure, but it means falling back.
+            #
+            # json_object is the weaker guarantee: valid JSON, any shape. It
+            # cannot enforce the category enum, so an invented label stays
+            # possible. Recorded here so the difference is visible in the
+            # results rather than assumed away.
+            self._format_used = "json_schema"
+            kwargs["response_format"] = {
+                "type": "json_schema",
+                "json_schema": {"name": "classification", "strict": True,
+                                "schema": self.schema or RESPONSE_SCHEMA},
+            }
+
         t0 = time.perf_counter()
-        result = client.chat.completions.create(
-            model=self.model,
-            messages=[{"role": "user", "content": prompt}],
-            temperature=self.temperature,
-        )
+        try:
+            result = client.chat.completions.create(
+                model=self.model,
+                messages=[{"role": "user", "content": prompt}],
+                **kwargs,
+            )
+        except Exception as exc:
+            if not self.json_mode or "json_schema" not in str(kwargs):
+                raise
+            # Fall back once, and say so - a silent downgrade to a weaker
+            # guarantee is how you end up believing the enum was enforced.
+            #
+            # Announced once per process, not once per call: sixty identical
+            # warnings is noise that gets scrolled past, and the point is that
+            # it be read.
+            if not GroqModel._warned_fallback:
+                GroqModel._warned_fallback = True
+                print(f"    note: this model rejects json_schema "
+                      f"({type(exc).__name__}). Falling back to json_object, "
+                      f"which guarantees valid JSON but NOT the shape - so the "
+                      f"category enum is not enforced and an invented label "
+                      f"stays possible.")
+            self._format_used = "json_object"
+            kwargs["response_format"] = {"type": "json_object"}
+            result = client.chat.completions.create(
+                model=self.model,
+                messages=[{"role": "user", "content": prompt}],
+                **kwargs,
+            )
         elapsed = (time.perf_counter() - t0) * 1000
         usage = getattr(result, "usage", None)
         return Reply(
