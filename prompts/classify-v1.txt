@@ -1,0 +1,8 @@
+Classify this customer support ticket into exactly one category.
+
+Categories: billing, account, technical, shipping
+
+Respond with JSON only, in this shape:
+{"category": "<one of the categories>", "confidence": <number between 0 and 1>}
+
+Ticket: {ticket}

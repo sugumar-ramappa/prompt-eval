@@ -1,0 +1,8 @@
+Classify this customer support ticket into exactly one category.
+
+Categories: billing, account, technical, shipping
+
+First explain your reasoning step by step, considering which category fits and
+why the others do not. Then give your final answer.
+
+Ticket: {ticket}

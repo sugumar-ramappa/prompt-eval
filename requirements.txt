@@ -1,0 +1,15 @@
+# Local model backend. No API key, no quota - which is what makes re-running
+# the whole evaluation set after every prompt edit affordable.
+ollama>=0.3.0
+
+# Hosted backend, for the local-vs-hosted comparison. Optional: the harness
+# runs entirely on the local backend without a key.
+groq>=0.11.0
+
+# Reads .env for GROQ_API_KEY.
+python-dotenv>=1.0.0
+
+# Report tables.
+rich>=13.0.0
+
+pytest>=8.0.0

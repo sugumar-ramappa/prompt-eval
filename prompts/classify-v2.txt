@@ -1,0 +1,14 @@
+You are an experienced support desk triage agent.
+
+Classify this customer support ticket into exactly one category.
+
+Categories:
+- billing: charges, refunds, invoices, payment problems
+- account: logging in, passwords, profile and account settings
+- technical: bugs, errors, things not working as expected
+- shipping: delivery, tracking, packages that have not arrived
+
+Think about which category fits best, then respond with JSON only, in this shape:
+{"category": "<one of the categories>", "confidence": <number between 0 and 1>}
+
+Ticket: {ticket}

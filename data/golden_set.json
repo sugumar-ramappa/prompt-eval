@@ -1,0 +1,302 @@
+[
+ {
+  "id": "t6",
+  "text": "Shipping is delayed by 2 weeks",
+  "expected": "shipping"
+ },
+ {
+  "id": "t10",
+  "text": "I was charged after cancelling my subscription",
+  "expected": "billing"
+ },
+ {
+  "id": "t16",
+  "text": "Two factor authentication is not sending codes",
+  "expected": "account"
+ },
+ {
+  "id": "t22",
+  "text": "How to delete my account permanently",
+  "expected": "account"
+ },
+ {
+  "id": "t23",
+  "text": "App notification sounds not working on iOS",
+  "expected": "technical"
+ },
+ {
+  "id": "t41",
+  "text": "Subscription auto-renewed but I wanted to cancel",
+  "expected": "billing"
+ },
+ {
+  "id": "t43",
+  "text": "Video player buffering constantly on all browsers",
+  "expected": "technical"
+ },
+ {
+  "id": "t48",
+  "text": "Package lost in transit no tracking updates for a week",
+  "expected": "shipping"
+ },
+ {
+  "id": "t50",
+  "text": "Session expires too quickly have to login every 5 min",
+  "expected": "account"
+ },
+ {
+  "id": "t52",
+  "text": "My order was delivered to the wrong address",
+  "expected": "shipping"
+ },
+ {
+  "id": "t56",
+  "text": "Tracking number shows delivered but I did not receive",
+  "expected": "shipping"
+ },
+ {
+  "id": "t58",
+  "text": "I want to change my account username",
+  "expected": "account"
+ },
+ {
+  "id": "t69",
+  "text": "Duplicate transaction reference 88123 needs reversing",
+  "expected": "billing"
+ },
+ {
+  "id": "t71",
+  "text": "Subscription renewed automatically without any warning email",
+  "expected": "billing"
+ },
+ {
+  "id": "t72",
+  "text": "Can I switch from monthly to yearly billing partway through",
+  "expected": "billing"
+ },
+ {
+  "id": "t73",
+  "text": "The discount code was accepted but not applied to the total",
+  "expected": "billing"
+ },
+ {
+  "id": "t100",
+  "text": "The package arrived crushed and the contents are broken",
+  "expected": "shipping"
+ },
+ {
+  "id": "t101",
+  "text": "Half the items are missing from the box I received",
+  "expected": "shipping"
+ },
+ {
+  "id": "t108",
+  "text": "Driver could not find the building, how do I add directions",
+  "expected": "shipping"
+ },
+ {
+  "id": "t116",
+  "text": "What courier do you normally use",
+  "expected": "shipping"
+ },
+ {
+  "id": "t124",
+  "text": "Parcel stuck at customs for two weeks now",
+  "expected": "shipping"
+ },
+ {
+  "id": "t125",
+  "text": "Consignment shows out for delivery three days running",
+  "expected": "shipping"
+ },
+ {
+  "id": "t126",
+  "text": "Wrong item entirely was delivered to me",
+  "expected": "shipping"
+ },
+ {
+  "id": "t129",
+  "text": "Package thrown over the fence and the seal is broken",
+  "expected": "shipping"
+ },
+ {
+  "id": "t131",
+  "text": "Locked out completely after too many failed attempts",
+  "expected": "account"
+ },
+ {
+  "id": "t134",
+  "text": "Two factor codes are being sent to a phone I no longer own",
+  "expected": "account"
+ },
+ {
+  "id": "t145",
+  "text": "Team member left, need to revoke their access",
+  "expected": "account"
+ },
+ {
+  "id": "t148",
+  "text": "Where do I download all my data before closing the account",
+  "expected": "account"
+ },
+ {
+  "id": "t152",
+  "text": "What happens to my data if I stay inactive for a year",
+  "expected": "account"
+ },
+ {
+  "id": "t167",
+  "text": "Site returns a 500 error on every page since this morning",
+  "expected": "technical"
+ },
+ {
+  "id": "t185",
+  "text": "Print view cuts off the right hand column",
+  "expected": "technical"
+ },
+ {
+  "id": "t189",
+  "text": "Tooltip text is cut short on long labels",
+  "expected": "technical"
+ },
+ {
+  "id": "t198",
+  "text": "Two users editing the same record lose each other's changes",
+  "expected": "technical"
+ },
+ {
+  "id": "t200",
+  "text": "Is there a sandbox environment for testing the API",
+  "expected": "technical"
+ },
+ {
+  "id": "t202",
+  "text": "Really happy with the plan, thinking of upgrading to the team tier",
+  "expected": "billing"
+ },
+ {
+  "id": "t206",
+  "text": "Love the product, happy to move to the yearly plan if that helps you",
+  "expected": "billing"
+ },
+ {
+  "id": "t212",
+  "text": "Order came through perfectly, could I set up a repeat delivery",
+  "expected": "shipping"
+ },
+ {
+  "id": "t220",
+  "text": "Single sign on worked first time, delighted",
+  "expected": "account"
+ },
+ {
+  "id": "t234",
+  "text": "Overdue notice arrived for an invoice I settled in June",
+  "expected": "billing"
+ },
+ {
+  "id": "t239",
+  "text": "Promotional rate ended without notice",
+  "expected": "billing"
+ },
+ {
+  "id": "t241",
+  "text": "Please send invoices to our finance mailbox instead",
+  "expected": "billing"
+ },
+ {
+  "id": "t247",
+  "text": "Is there a setup fee for new accounts",
+  "expected": "billing"
+ },
+ {
+  "id": "t253",
+  "text": "Is VAT charged for customers outside the UK",
+  "expected": "billing"
+ },
+ {
+  "id": "t259",
+  "text": "The new billing dashboard is a big improvement",
+  "expected": "billing"
+ },
+ {
+  "id": "t261",
+  "text": "Pleased with how simple the upgrade process was",
+  "expected": "billing"
+ },
+ {
+  "id": "t288",
+  "text": "Can I redirect a parcel that has already been dispatched",
+  "expected": "shipping"
+ },
+ {
+  "id": "t302",
+  "text": "Courier rescheduled easily when I was out, very flexible",
+  "expected": "shipping"
+ },
+ {
+  "id": "t323",
+  "text": "How do I create a read only role for auditors",
+  "expected": "account"
+ },
+ {
+  "id": "t329",
+  "text": "Is there an option to hide my email from other members",
+  "expected": "account"
+ },
+ {
+  "id": "t335",
+  "text": "Onboarding was very smooth, the whole team is set up",
+  "expected": "account"
+ },
+ {
+  "id": "t340",
+  "text": "Glad you added single sign on, that was the blocker for us",
+  "expected": "account"
+ },
+ {
+  "id": "t348",
+  "text": "Notification settings do not persist between sessions",
+  "expected": "account"
+ },
+ {
+  "id": "t352",
+  "text": "Webhook deliveries stopped without any change on our side",
+  "expected": "technical"
+ },
+ {
+  "id": "t362",
+  "text": "Editor loses formatting when pasting from a document",
+  "expected": "technical"
+ },
+ {
+  "id": "t364",
+  "text": "Scheduled export produced an empty file this week",
+  "expected": "technical"
+ },
+ {
+  "id": "t367",
+  "text": "What is the rate limit on the public API",
+  "expected": "technical"
+ },
+ {
+  "id": "t371",
+  "text": "Is there a bulk endpoint for creating records",
+  "expected": "technical"
+ },
+ {
+  "id": "t373",
+  "text": "Do you support webhooks with a signing secret",
+  "expected": "technical"
+ },
+ {
+  "id": "t374",
+  "text": "How long are logs retained in the console",
+  "expected": "technical"
+ },
+ {
+  "id": "t387",
+  "text": "Error messages do not say which field was rejected",
+  "expected": "technical"
+ }
+]
