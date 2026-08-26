@@ -237,6 +237,37 @@ a small-model weakness to be bought out of with a bigger model. **It is what
 happens when a prompt is asked to enforce a contract**, and it is
 provider-independent and scale-independent.
 
+#### What this comparison does and does not isolate
+
+Held constant: the 60 cases, the prompt files byte-for-byte, temperature 0, and
+the scoring code.
+
+**Not** held constant - and this is a real limitation, not a footnote:
+
+| | local | hosted |
+|---|---|---|
+| model family | Llama 3.1 (Meta) | gpt-oss (OpenAI weights) |
+| parameters | 8B | 120B |
+| precision | 4-bit quantized | full |
+
+**Two variables move at once.** When hosted wins by 10 points, that could be
+scale, model family, or quantization, and this experiment cannot separate them.
+
+The original plan was `llama-3.3-70b-versatile` - same family, different size,
+which would have isolated scale cleanly. The provider retired that model
+mid-project, and `gpt-oss-120b` was the closest available contrast.
+
+So the defensible claims are narrower than the table suggests:
+
+- **Supported:** "the hosted setup scored 10 points higher on identical inputs,
+  was 2.6x slower per call, and offered a weaker output guarantee"
+- **Not supported:** "larger models are better at this task" - size was never
+  isolated
+- **Supported, and strengthened by the confound:** "a bad prompt scores 0% on
+  both". Two different model families, two sizes, two precisions, and an
+  identical failure. Varying more things and still seeing the same result makes
+  that finding stronger, not weaker.
+
 ### The local model gives a *stronger* guarantee than the hosted one
 
 This was the surprise, and it runs against the assumption that hosted is simply
