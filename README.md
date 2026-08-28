@@ -378,6 +378,144 @@ all.** Read with two caveats: this is 60 cases against the classifier's 389, and
 the classifier answers in 2ms on a CPU while the model takes ~700ms on a GPU.
 Not the same trade.
 
+### An LLM judge, and the calibration that says not to trust it
+
+Every scorer above is deterministic — parses, has the fields, matches the label.
+That works because classification has a correct answer. **Summarisation,
+extraction and rewriting do not**, so a harness built only on deterministic
+scorers can evaluate only tasks with a lookup key.
+
+`src/judge.py` adds a scorer that grades against a rubric instead. Writing it was
+twenty lines. **Measuring whether it can be trusted was the work**, and it is
+the only reason the scorer is worth having: a judge you have not validated
+replaces *"I don't know if the output is good"* with *"I don't know if the judge
+is right"*.
+
+The golden set has 60 human-labelled tickets, so the judge can be run where the
+truth is already known. It is never shown the label — only the ticket and a
+category, the same as a human grader.
+
+**Half the answers fed to it are deliberately wrong.** A real classifier is right
+about 87% of the time, so judging its output yields ~8 negatives from 60 cases —
+far too few to measure how often the judge *waves a wrong answer through*, which
+is the failure that matters. So the calibration set is built 30 correct / 30
+incorrect, seeded, giving both error directions equal weight.
+
+Two prompt versions, and they fail in opposite directions:
+
+```
+                agreement   false accept   false reject   skew
+v1 prompt          66.7%          1             19        harsh
+v2 prompt          76.7%         11              3        GENEROUS
+```
+
+**v1 was rejecting defensible answers in favour of categories that do not
+exist:**
+
+```
+"Two factor authentication is not sending codes"   account -> judge wanted "technical"
+"Locked out after too many failed attempts"        account -> judge wanted "security"
+"Driver could not find the building"               shipping -> judge wanted "navigation"
+```
+
+`security` and `navigation` are not options. The prompt listed the allowed
+categories but never said the list was **exhaustive**, so the judge compared the
+answer against the best label it could imagine rather than the best one
+available. Naming a constraint is not closing it.
+
+**v2 closed that and over-corrected.** It now accepts almost anything relevant —
+including one answer whose own stated reason contradicts the verdict:
+
+```
+ticket:  "The discount code was accepted but not applied to the total"
+truth:   billing
+verdict: ACCEPTED 'account'
+reason:  "The issue is related to the discount code, which is a billing issue."
+```
+
+**The conclusion is that `llama3.1:8b` is not a reliable judge for this task** —
+and the harness established that rather than assuming it. That is the result. A
+judged score from this model is worth roughly 70%, which is not enough to gate a
+build on.
+
+**The methodological point is worth more than the number.** v2 looks ten points
+better and is arguably worse: a generous judge passes bad output, and that is the
+failure that reaches production, while a harsh one only annoys you. **Agreement
+rate alone is the wrong metric for choosing a judge** — the same lesson as recall
+without false positives, in a different disguise.
+
+**Also free:** some disagreements are not judge errors at all. *"Two factor
+authentication is not sending codes"* is genuinely arguable between `account` and
+`technical`. Calibrating a judge surfaces ambiguity in your own labels.
+
+**Not in `DEFAULT_SCORERS`, deliberately.** Adding a sixth scorer would change
+every aggregate this harness has already recorded, so a re-run would not be
+comparable with what is on disk. The judge is opt-in; the deterministic numbers
+are untouched.
+
+### A second judge, and what two judges find that one cannot
+
+`scripts/compare_judges.py` runs the same calibration across several judges. Both
+local, both free:
+
+```
+judge                  agreement   false accept   false reject
+llama3.1:8b                76.7%        11              3
+qwen2.5:14b                85.0%         7              2
+```
+
+**Size mattered.** Doubling the parameters bought 8.3 points, which answers the
+question the single-judge run left open: 8B was too small, rather than the task
+being unjudgeable. Both still skew generous, which is the direction that lets bad
+output through.
+
+**But the more valuable output is the disagreements.**
+
+Six cases where **both judges independently** disagreed with the human label —
+and all six sit on the same boundary:
+
+```
+t41   "Subscription auto-renewed but I wanted to cancel"       labelled billing
+t71   "Subscription renewed automatically without warning"     labelled billing
+t73   "Discount code accepted but not applied to the total"    labelled billing
+t206  "Happy to move to the yearly plan"                       labelled billing
+t239  "Promotional rate ended without notice"                  labelled billing
+t247  "Is there a setup fee for new accounts"                  labelled billing
+```
+
+Every one is a subscription or pricing question, and both models accepted
+`account` as defensible.
+
+That is not six wrong labels. It is evidence that **the `account` / `billing`
+boundary is under-specified in the category scheme** - "my subscription
+auto-renewed" is a billing event about an account setting, and the taxonomy never
+says which wins. Two independent models converging on the same six cases is
+evidence about the DATA, which no deterministic scorer can produce:
+`category_correct` marks those six wrong and moves on.
+
+Eleven further cases where the judges disagreed with **each other** are the
+genuinely hard ones - a damaged package that is both shipping and goods
+condition, a concurrent-edit bug that presents as an account-collaboration
+problem.
+
+**The technique, stated plainly:** a single judge reports ambiguity as an error.
+A panel reports it as ambiguity. Where judges agree, trust the verdict; where
+they split, you have found a case your labelling guide does not cover.
+
+**Still not enough to gate a build.** 85% agreement means roughly one verdict in
+seven is wrong, and the errors lean permissive. This measures a judge well enough
+to know it should not be a gate - which was the point of measuring it.
+
+**Where a judge SHOULD go next, and it is not here.** Classification already has
+ground truth, so a judge is redundant: `category_correct` answers directly. A
+judge earns its keep only where no key exists. The sibling `hybrid-rag-service`
+names exactly such a gap in its own README - *nothing measures what the system
+does when retrieval fails*, and 7 of its 267 queries have no correct chunk in the
+top 5. Whether the answer is then "I don't know" or a confident fabrication is
+unmeasured, has no deterministic scorer, and is a **containment check** ("is every
+claim supported by this passage?") rather than a taxonomy judgement - which is a
+far easier question for a small model than the one asked here.
+
 ---
 
 ## Why the cache is not an optimisation
