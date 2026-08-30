@@ -293,6 +293,11 @@ So the defensible claims are narrower than the table suggests:
 
 - **Supported:** "the hosted setup scored 10 points higher on identical inputs,
   was 2.6x slower per call, and offered a weaker output guarantee"
+
+  *(2.6x is the mean and the wall-clock ratio, which agree - 107.4 s against
+  41.6 s over 60 cases. The median ratio is 3.1x. Both are in `data/runs/`;
+  the mean is quoted because total wall clock is what a build actually waits
+  for, and it is the figure the two measures agree on.)*
 - **Not supported:** "larger models are better at this task" - size was never
   isolated
 - **Supported, and strengthened by the confound:** "a bad prompt scores 0% on
