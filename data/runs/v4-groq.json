@@ -1,0 +1,1270 @@
+{
+ "label": "v4-groq",
+ "prompt_name": "classify-v4-reasoning",
+ "prompt_hash": "3fa162460ab4",
+ "model": "groq/openai/gpt-oss-120b",
+ "results": [
+  {
+   "case_id": "t6",
+   "expected": "shipping",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main issue** \u2013 The ticket states that \u201cShipping is delayed by 2 weeks.\u201d The core problem concerns the delivery of a product and the timeline for that delivery.\n\n2. **Match the issue to the available categories**  \n   - **Billing** \u2013 concerns invoices, payments, refunds, or charges. The ticket does not mention any monetary transaction or invoice problem.  \n   - **Account** \u2013 relates to login, password, profile updates, or account settings. No account\u2011related details are present.  \n   - **Technical** \u2013 involves software bugs, error messages, device malfunctions, or other technical failures. The ticket is not about a technical malfunction.  \n   - **Shipping** \u2013 covers order fulfillment, delivery status, delays, lost packages, or any logistics\u2011related concerns. The ticket explicitly mentions a shipping delay, which directly falls under this category.\n\n3. **Eliminate the non\u2011matching categories** \u2013 Since the ticket does not discuss billing, account, or technical matters, those categories can be ruled out.\n\n4. **Select the appropriate category** \u2013 The only category that aligns with a delayed delivery is **shipping**.\n\n**Final answer:**  \n**shipping**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main issue** \u2013'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 1479.699374998745,
+   "cached": false
+  },
+  {
+   "case_id": "t10",
+   "expected": "billing",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main problem** \u2013 The customer says they were *charged* after they *canceled* their subscription. The core issue is a monetary charge that should not have occurred.\n\n2. **Match the problem to the categories**  \n   - **Billing** \u2013 Concerns about payments, refunds, unexpected charges, invoices, etc. The complaint about an unwanted charge fits directly here.  \n   - **Account** \u2013 Involves login problems, password resets, profile updates, or account access. The ticket does not mention any of these.  \n   - **Technical** \u2013 Relates to software/hardware malfunctions, bugs, error messages, or feature usage problems. No technical malfunction is described.  \n   - **Shipping** \u2013 Pertains to delivery, tracking, lost packages, or product returns. The issue is not about any physical shipment.\n\n3. **Eliminate the non\u2011matching categories** \u2013 Since the ticket does not discuss account access, technical errors, or shipping logistics, those three categories can be ruled out.\n\n4. **Select the best fit** \u2013 The complaint is about an unexpected monetary charge after a subscription cancellation, which is a classic billing issue.\n\n**Final answer:** **billing**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main problem**'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 1088.566542006447,
+   "cached": false
+  },
+  {
+   "case_id": "t16",
+   "expected": "account",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the core problem** \u2013 The user reports that the two\u2011factor authentication (2FA) system is not delivering the verification codes they need to log in.\n\n2. **Match the problem to the given categories**  \n   - **Billing** \u2013 Concerns payments, invoices, refunds, etc. The ticket does not mention any monetary transaction, so billing is not a fit.  \n   - **Account** \u2013 Usually covers things like password resets, profile updates, account closures, or general account access questions. While 2FA is related to account security, the specific issue is the failure of a system component (code delivery), which is more about the product\u2019s functionality than about the account itself.  \n   - **Technical** \u2013 Encompasses any malfunction, bug, or failure of a feature or service (e.g., login problems, error messages, software glitches). A 2FA code not being sent is a classic technical malfunction.  \n   - **Shipping** \u2013 Pertains to physical product delivery, tracking, returns, etc. This ticket is unrelated to any shipping matter.\n\n3. **Determine the best fit** \u2013 The inability to receive 2FA codes is a functional problem with the authentication system, making **technical** the most appropriate category.\n\n**Final answer:** **technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the core problem**'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 1077.5553330022376,
+   "cached": false
+  },
+  {
+   "case_id": "t22",
+   "expected": "account",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main request** \u2013 The user asks how to delete their account permanently. This is a request concerning the status and management of their user profile.\n\n2. **Match to categories**  \n   - **Billing** \u2013 Concerns payments, invoices, refunds, etc. The request does not involve any monetary issue.  \n   - **Account** \u2013 Covers topics such as login problems, password resets, profile updates, and account closure. Deleting an account falls squarely into this area.  \n   - **Technical** \u2013 Relates to product functionality, bugs, errors, or technical troubleshooting. No technical malfunction is described.  \n   - **Shipping** \u2013 Pertains to delivery of physical goods. There is no mention of shipping or orders.\n\n3. **Select the best fit** \u2013 Since the request is about permanently removing the user\u2019s account, the **account** category is the most appropriate.\n\n**Final answer:** **account**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main request**'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 958.564207998279,
+   "cached": false
+  },
+  {
+   "case_id": "t23",
+   "expected": "technical",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the core problem** \u2013 The user reports that notification sounds in the app are not working on iOS. This is a functionality problem with the software.\n\n2. **Match against categories**  \n   - **Billing** \u2013 Concerns payments, invoices, refunds, etc. The ticket does not mention any monetary issue.  \n   - **Account** \u2013 Involves login problems, password resets, profile changes, or account permissions. No account\u2011related details are present.  \n   - **Shipping** \u2013 Relates to physical product delivery, tracking, or logistics. The ticket is about a digital app feature, not a shipment.  \n   - **Technical** \u2013 Covers bugs, feature malfunctions, performance issues, or any other problems with the product\u2019s operation. A non\u2011functioning notification sound is exactly a technical malfunction.\n\n3. **Conclusion** \u2013 The only category that accurately describes a malfunction of an app feature is **technical**.\n\n**Final answer:**  \n**technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the core problem**'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 964.641209000547,
+   "cached": false
+  },
+  {
+   "case_id": "t41",
+   "expected": "billing",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the core issue** \u2013 The customer says their *subscription auto\u2011renewed* even though they *wanted to cancel* it. The problem revolves around an unwanted charge/renewal.\n\n2. **Match the issue to the available categories**  \n   - **Billing** \u2013 Concerns charges, invoices, refunds, auto\u2011renewals, and any payment\u2011related disputes. An unwanted auto\u2011renewal fits squarely here.  \n   - **Account** \u2013 Covers login problems, password resets, profile updates, or changes to account settings that are not directly about money. While canceling a subscription is a setting change, the complaint is about the *financial* consequence (the renewal).  \n   - **Technical** \u2013 Involves bugs, errors, or malfunctions of the product/service itself. No technical malfunction is described.  \n   - **Shipping** \u2013 Relates to physical goods delivery, which is irrelevant to a subscription renewal.\n\n3. **Determine the best fit** \u2013 Because the ticket is primarily about an unexpected charge due to an auto\u2011renewal, the most appropriate category is **billing**. The request to cancel is a billing\u2011related action (stop future charges/refund the recent one).\n\n**Final answer:** **billing**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the core issue** \u2013'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 1191.2876669957768,
+   "cached": false
+  },
+  {
+   "case_id": "t43",
+   "expected": "technical",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the core problem** \u2013 The customer reports that the video player is \u201cbuffering constantly on all browsers.\u201d This describes a performance issue with a software feature (the video player).\n\n2. **Match the problem to the available categories**  \n   - **Billing** \u2013 concerns invoices, payments, refunds, etc. The ticket does not mention any monetary transaction.  \n   - **Account** \u2013 concerns login, password resets, profile changes, account suspension, etc. No account\u2011related details are present.  \n   - **Shipping** \u2013 concerns delivery of physical goods, tracking numbers, delays, etc. The issue is purely digital and not about any shipment.  \n   - **Technical** \u2013 covers problems with product functionality, bugs, performance, error messages, compatibility, etc. A video player that buffers constantly is a classic technical performance problem.\n\n3. **Eliminate the non\u2011matching categories** \u2013 Since the ticket does not involve money, user credentials, or physical delivery, the only appropriate category is **technical**.\n\n**Final answer:**  \n**technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the core problem**'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 980.7290839962661,
+   "cached": false
+  },
+  {
+   "case_id": "t48",
+   "expected": "shipping",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main subject of the ticket**  \n   - The customer says the *package* is lost in transit and there have been no tracking updates for a week.  \n   - This concerns the physical delivery of an order.\n\n2. **Match the subject to the available categories**  \n   - **Billing** \u2013 deals with payments, invoices, refunds, charges. The ticket does not mention any monetary issue.  \n   - **Account** \u2013 concerns login problems, profile changes, password resets, account security. No account\u2011related details are present.  \n   - **Technical** \u2013 relates to software or hardware malfunctions, website errors, app crashes, etc. The problem is not about a technical malfunction of a product or service.  \n   - **Shipping** \u2013 covers order fulfillment, delivery status, lost or delayed packages, tracking problems, and any logistics\u2011related queries. The ticket directly describes a lost package and missing tracking information, which is a classic shipping issue.\n\n3. **Eliminate the non\u2011matching categories**  \n   - Since the ticket does not involve money, account access, or a technical glitch, the only appropriate category is **shipping**.\n\n**Final answer:**  \n**shipping**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main subject o'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 1125.6992499984335,
+   "cached": false
+  },
+  {
+   "case_id": "t50",
+   "expected": "account",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the core problem** \u2013 The user reports that their session ends after only five minutes, forcing them to log in repeatedly. This is about the behavior of the website/application while the user is using it.\n\n2. **Match the problem to the categories**  \n   - **Billing** \u2013 concerns payments, invoices, refunds, etc. The ticket does not mention any monetary transaction. \u2192 *Not a fit.*  \n   - **Account** \u2013 usually covers creation, deletion, password resets, profile updates, or access permissions. While the issue involves being logged out, the underlying cause is the session timeout, which is a system\u2011level setting rather than a request to change account details. \u2192 *Less appropriate.*  \n   - **Technical** \u2013 covers bugs, performance problems, error messages, and any malfunction of the product\u2019s functionality. A session expiring far sooner than expected is a technical malfunction (session\u2011management bug or misconfiguration). \u2192 *Strong fit.*  \n   - **Shipping** \u2013 pertains to physical product delivery, tracking, delays, etc. The ticket is unrelated to shipping. \u2192 *Not a fit.*\n\n3. **Select the most specific category** \u2013 The issue is best described as a technical problem with session handling.\n\n**Final answer:** **technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the core problem**'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 1445.2182079985505,
+   "cached": false
+  },
+  {
+   "case_id": "t52",
+   "expected": "shipping",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main issue** \u2013 The customer says the order was delivered to the wrong address. This concerns the physical delivery of a purchased item.\n\n2. **Match the issue to the available categories**  \n   - **Billing** \u2013 deals with invoices, charges, refunds, payment problems. The ticket does not mention any money\u2011related question.  \n   - **Account** \u2013 concerns login, password, profile updates, account settings. No account\u2011related details are present.  \n   - **Technical** \u2013 involves product malfunctions, software bugs, website errors, etc. The problem is not about a technical failure.  \n   - **Shipping** \u2013 covers order fulfillment, tracking, delivery delays, wrong or missing shipments, address problems, and returns. The complaint about the order being sent to the wrong address fits squarely here.\n\n3. **Select the best fit** \u2013 Since the core of the complaint is about the delivery location, the appropriate category is **shipping**.\n\n**Final answer:** shipping",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main issue** \u2013'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 928.827583004022,
+   "cached": false
+  },
+  {
+   "case_id": "t56",
+   "expected": "shipping",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main issue** \u2013 The customer says the tracking number indicates the package was delivered, but they never received it. This concerns the physical movement of a product from the seller to the buyer.\n\n2. **Match to categories**  \n   - **Billing** \u2013 Deals with invoices, charges, refunds, payment methods. The ticket does not mention any money\u2011related problem.  \n   - **Account** \u2013 Concerns login, password, profile updates, account settings. No account information is referenced.  \n   - **Technical** \u2013 Involves software bugs, website/app functionality, error messages, device issues. The problem is not about a technical malfunction of a system.  \n   - **Shipping** \u2013 Covers order fulfillment, delivery status, lost or delayed parcels, tracking numbers, and any logistics\u2011related concerns. The ticket directly references a tracking number and a delivery discrepancy, which is a classic shipping issue.\n\n3. **Conclusion** \u2013 The only category that aligns with a delivery\u2011tracking problem is **shipping**.\n\n**Final answer:** shipping",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main issue** \u2013'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 994.8846660045092,
+   "cached": false
+  },
+  {
+   "case_id": "t58",
+   "expected": "account",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main request** \u2013 The user wants to change their *account username*. This is a request that deals directly with the personal information tied to their user profile.\n\n2. **Match to possible categories**  \n   - **Billing** \u2013 Concerns payments, invoices, refunds, or charges. The request does not involve any monetary transaction, so billing is not a fit.  \n   - **Shipping** \u2013 Involves delivery, tracking, address changes for physical goods. No shipping or delivery element is present.  \n   - **Technical** \u2013 Covers issues like software bugs, error messages, connectivity problems, or feature malfunctions. Changing a username is not a technical malfunction; it\u2019s a profile management request.  \n   - **Account** \u2013 Encompasses anything related to user profile management, login credentials, password resets, username changes, account settings, or profile updates. The request aligns perfectly with this category.\n\n3. **Conclusion** \u2013 The request is about modifying a detail of the user\u2019s account, so the appropriate category is **account**.\n\n**Final answer:**  \n**account**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main request**'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 1016.5640420018462,
+   "cached": false
+  },
+  {
+   "case_id": "t69",
+   "expected": "billing",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the core issue** \u2013 The customer reports a *duplicate transaction* (reference\u202f88123) and asks for it to be *reversed*. This concerns a payment that was processed twice.\n\n2. **Match the issue to the available categories**  \n   - **Billing** \u2013 Handles anything related to charges, invoices, refunds, duplicate payments, and transaction disputes. A duplicate transaction that needs reversal is a classic billing problem.  \n   - **Account** \u2013 Concerns login problems, profile updates, password resets, or account\u2011level settings. The ticket does not mention any of these.  \n   - **Technical** \u2013 Involves software bugs, error messages, site functionality, or integration issues. No technical malfunction is described.  \n   - **Shipping** \u2013 Relates to order delivery, tracking, lost packages, or address changes. The ticket is about a financial transaction, not a physical shipment.\n\n3. **Eliminate the non\u2011matching categories** \u2013 Since the ticket is neither about account access, technical malfunction, nor shipping logistics, those three categories can be ruled out.\n\n4. **Select the best fit** \u2013 The request to reverse a duplicate charge directly falls under the **billing** domain.\n\n**Final answer:**  \n**billing**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the core issue** \u2013'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 1054.2831249986193,
+   "cached": false
+  },
+  {
+   "case_id": "t71",
+   "expected": "billing",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the core issue** \u2013 The customer is complaining that their subscription was renewed automatically and they did not receive a warning email.  \n   - This concerns a **payment/renewal** that happened without the customer\u2019s knowledge.\n\n2. **Match the issue to the available categories**  \n   - **Billing** \u2013 Handles questions about charges, invoices, renewals, refunds, and any unexpected payments. The automatic renewal and missing warning email are directly related to a billing event.  \n   - **Account** \u2013 Covers login problems, profile updates, password resets, or account access. The ticket does not mention any of these.  \n   - **Technical** \u2013 Involves product functionality, bugs, error messages, or technical performance. No technical malfunction is described.  \n   - **Shipping** \u2013 Relates to delivery, tracking, or receipt of physical goods. There is no mention of any shipment.\n\n3. **Eliminate the non\u2011matching categories**  \n   - The issue is not about accessing or modifying the account \u2192 not **account**.  \n   - No software or hardware malfunction is reported \u2192 not **technical**.  \n   - No physical product is being shipped \u2192 not **shipping**.\n\n4. **Select the best fit** \u2013 The complaint is about an unexpected charge/renewal, which is a classic **billing** concern.\n\n**Final answer:** **billing**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the core issue** \u2013'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 1133.8237919990206,
+   "cached": false
+  },
+  {
+   "case_id": "t72",
+   "expected": "billing",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main topic of the ticket.**  \n   The customer is asking about changing the frequency of their payment plan\u2014from a monthly schedule to a yearly schedule.\n\n2. **Match the topic to the given categories.**  \n   - **Billing:** Concerns anything related to payment amounts, cycles, invoices, refunds, or plan changes. The request to switch billing periods fits squarely here.  \n   - **Account:** Would involve login problems, profile updates, password resets, or user\u2011level permissions\u2014not relevant to a payment\u2011cycle change.  \n   - **Technical:** Covers bugs, feature malfunctions, or performance issues with the product or service, which this ticket does not mention.  \n   - **Shipping:** Pertains to delivery, tracking, or logistics of physical goods, unrelated to the billing schedule.\n\n3. **Conclusion.**  \n   Since the question is about modifying the billing arrangement, the appropriate category is **billing**.\n\n**Final answer:** billing",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main topic of '",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 888.9460419959505,
+   "cached": false
+  },
+  {
+   "case_id": "t73",
+   "expected": "billing",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main issue** \u2013 The customer says a discount code was accepted but the discount was not reflected in the order total. This concerns the amount the customer is being charged.\n\n2. **Match to categories**  \n   - **Billing** \u2013 Deals with pricing, discounts, invoices, and any problems that affect the amount due. A discount not being applied directly impacts the bill.  \n   - **Account** \u2013 Concerns login, profile details, password changes, or account status. The ticket does not mention any of these.  \n   - **Technical** \u2013 Involves site functionality, errors, or bugs unrelated to pricing (e.g., site crashes, feature malfunctions). While the discount issue could be a system bug, it is fundamentally a pricing problem, not a generic technical malfunction.  \n   - **Shipping** \u2013 Relates to delivery, tracking, or logistics. No shipping element is present.\n\n3. **Select the best fit** \u2013 The problem is about a monetary discount, which is a classic billing concern. Therefore, the appropriate category is **billing**.\n\n**Final answer:** billing",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main issue** \u2013'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 1389.8254160012584,
+   "cached": false
+  },
+  {
+   "case_id": "t100",
+   "expected": "shipping",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main issue** \u2013 The customer says the *package* arrived crushed and the *contents are broken*. The problem is directly related to the condition of the delivery.\n\n2. **Match the issue to the available categories**  \n   - **Billing** \u2013 concerns payments, invoices, refunds unrelated to delivery condition. Not a fit.  \n   - **Account** \u2013 concerns login, profile, password, or account settings. Not relevant here.  \n   - **Technical** \u2013 concerns product functionality, software bugs, or technical errors. The complaint is not about the product working incorrectly, but about physical damage during transit.  \n   - **Shipping** \u2013 covers anything about delivery, packaging, lost or damaged shipments, delays, and related logistics. The complaint about a crushed package and broken contents falls squarely into this area.\n\n3. **Eliminate the non\u2011matching categories** \u2013 Since the issue is about the physical state of the shipment, the billing, account, and technical categories are clearly inappropriate.\n\n**Conclusion**\n\nThe ticket belongs to the **shipping** category.\n\n**Final answer:** shipping",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main issue** \u2013'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 957.7729590018862,
+   "cached": false
+  },
+  {
+   "case_id": "t101",
+   "expected": "shipping",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the core problem** \u2013 The customer says that \u201chalf the items are missing from the box I received.\u201d  \n   This indicates that the order was delivered, but the contents are incomplete.\n\n2. **Match the problem to the available categories**  \n   - **Billing** \u2013 Concerns payments, invoices, refunds, or charges. The ticket does not mention any money\u2011related issue.  \n   - **Account** \u2013 Involves login problems, profile updates, password resets, or account settings. Nothing about the customer\u2019s account is described.  \n   - **Technical** \u2013 Relates to product malfunctions, software bugs, or technical support for a service. The issue is not about a malfunction; it\u2019s about missing physical items.  \n   - **Shipping** \u2013 Covers anything about order delivery, packaging, missing or damaged items, wrong items, or delays. The complaint about missing items directly falls under this category.\n\n3. **Eliminate the non\u2011matching categories** \u2013 Since the ticket does not discuss payment, account access, or technical functionality, those three categories can be ruled out.\n\n4. **Select the best fit** \u2013 The problem is about the fulfillment of a shipment (incomplete box), which is precisely what the **shipping** category addresses.\n\n**Final answer:** **shipping**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the core problem**'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 1186.5445829971577,
+   "cached": false
+  },
+  {
+   "case_id": "t108",
+   "expected": "shipping",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main issue** \u2013 The customer is saying that the driver could not locate the building and is asking how to add directions. This concerns the delivery process.\n\n2. **Match the issue to the available categories**  \n   - **Billing** \u2013 deals with invoices, payments, refunds, etc. The ticket does not mention any money\u2011related problem.  \n   - **Account** \u2013 concerns login, password, profile updates, account settings. No account\u2011related request is present.  \n   - **Technical** \u2013 usually about software bugs, app crashes, device compatibility, etc. While \u201cadding directions\u201d might involve using an app, the core problem is the driver\u2019s inability to find the location, which is a logistics/delivery matter rather than a software malfunction.  \n   - **Shipping** \u2013 covers anything related to order delivery, tracking, address issues, driver instructions, and delivery instructions. The request to add directions for the driver fits squarely here.\n\n3. **Eliminate the non\u2011matching categories** \u2013 Billing, Account, and Technical do not directly address a delivery\u2011location problem.\n\n**Conclusion**\n\nThe ticket is about improving delivery instructions, which belongs to the **shipping** category.\n\n**Final answer:** shipping",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main issue** \u2013'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 1011.0334579949267,
+   "cached": false
+  },
+  {
+   "case_id": "t116",
+   "expected": "shipping",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main topic of the ticket**  \n   The customer is asking: *\u201cWhat courier do you normally use?\u201d* \u2013 they want to know which shipping carrier the company employs for delivering orders.\n\n2. **Match the topic to the available categories**  \n   - **Billing** \u2013 concerns invoices, payments, refunds, etc. The question is not about money.  \n   - **Account** \u2013 concerns login, password, profile, or account settings. The question does not involve any account details.  \n   - **Technical** \u2013 concerns product functionality, website errors, or technical glitches. The question is not about a technical problem.  \n   - **Shipping** \u2013 concerns delivery methods, carriers, tracking, delivery times, or any logistics\u2011related inquiry. The question directly asks about the courier (shipping carrier), which falls squarely under shipping.\n\n3. **Eliminate the non\u2011matching categories**  \n   Since the ticket does not involve payment, account management, or technical issues, those three categories can be ruled out.\n\n4. **Select the best fitting category**  \n   The only category that aligns with a query about the courier used for deliveries is **shipping**.\n\n**Final answer:**  \n**shipping**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main topic of '",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 1022.3872499991558,
+   "cached": false
+  },
+  {
+   "case_id": "t124",
+   "expected": "shipping",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main issue** \u2013 The customer says the parcel is \u201cstuck at customs for two weeks now.\u201d The problem concerns the physical movement of a package.\n\n2. **Match the issue to the available categories**  \n   - **Billing** \u2013 deals with invoices, charges, refunds, etc. The ticket does not mention any money\u2011related problem.  \n   - **Account** \u2013 concerns login, password, profile updates, or account status. No account\u2011related details are present.  \n   - **Technical** \u2013 involves software bugs, website/app errors, or device malfunctions. This ticket is not about any technical malfunction.  \n   - **Shipping** \u2013 covers order fulfillment, delivery status, delays, customs holds, lost parcels, etc. A parcel being held at customs is a classic shipping\u2011related issue.\n\n3. **Eliminate the non\u2011matching categories** \u2013 Since the ticket is neither about payment, account access, nor a technical error, those three categories can be ruled out.\n\n4. **Select the appropriate category** \u2013 The only category that directly addresses delivery problems is **shipping**.\n\n**Final answer:**  \n**shipping**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main issue** \u2013'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 1358.0009169963887,
+   "cached": false
+  },
+  {
+   "case_id": "t125",
+   "expected": "shipping",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main issue** \u2013 The customer is reporting that a consignment (i.e., a package) has been marked \u201cout for delivery\u201d for three consecutive days. This is a problem with the progress of a shipment.\n\n2. **Match the issue to the available categories**  \n   - **Billing** \u2013 Concerns invoices, charges, refunds, payment methods, etc. The ticket does not mention any money\u2011related question.  \n   - **Account** \u2013 Involves login problems, profile updates, password resets, account closures, etc. No account\u2011related details are present.  \n   - **Technical** \u2013 Relates to software bugs, website/app functionality, error messages, etc. The ticket is about a physical delivery status, not a technical malfunction.  \n   - **Shipping** \u2013 Covers order fulfillment, tracking, delivery delays, lost packages, and any logistics\u2011related inquiries. The description of a consignment stuck \u201cout for delivery\u201d fits squarely here.\n\n3. **Eliminate the non\u2011matching categories** \u2013 Since the ticket does not discuss money, account access, or software behavior, the only appropriate category is **shipping**.\n\n**Final answer:**  \n**shipping**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main issue** \u2013'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 986.6586249991087,
+   "cached": false
+  },
+  {
+   "case_id": "t126",
+   "expected": "shipping",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the core issue** \u2013 The customer says they received a *wrong item* in the delivery. The problem is about the physical product that arrived.\n\n2. **Match the issue to the categories**  \n   - **Billing** \u2013 concerns invoices, charges, refunds, payment methods. The ticket does not mention any money\u2011related problem.  \n   - **Account** \u2013 concerns login, password, profile changes, account status. No account\u2011related details are present.  \n   - **Technical** \u2013 concerns software bugs, device malfunctions, error messages, or usage of a product\u2019s features. Receiving an incorrect physical item is not a technical malfunction.  \n   - **Shipping** \u2013 concerns anything about the order\u2019s delivery: delays, lost packages, damaged goods, or receiving the wrong product.\n\n3. **Select the best fit** \u2013 Since the complaint is specifically about the *delivery* of an incorrect item, the appropriate category is **shipping**.\n\n**Final answer:** shipping",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the core issue** \u2013'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 874.6146249977755,
+   "cached": false
+  },
+  {
+   "case_id": "t129",
+   "expected": "shipping",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main issue described in the ticket**  \n   - The customer says the *package* was *thrown over the fence* and the *seal is broken*.  \n   - This concerns the physical delivery of a product and the condition in which it arrived.\n\n2. **Match the issue to the available categories**  \n   - **Billing** \u2013 deals with invoices, charges, refunds, payment disputes. The ticket does not mention any money\u2011related problem.  \n   - **Account** \u2013 concerns login problems, profile updates, password resets, or account permissions. No account\u2011related details are present.  \n   - **Technical** \u2013 involves product functionality, software bugs, hardware malfunctions, or usage problems. The complaint is not about the product working incorrectly, but about how it was delivered.  \n   - **Shipping** \u2013 covers order fulfillment, delivery methods, package handling, lost or damaged shipments, and any problems that occur during transit. The description of a mishandled, damaged package fits squarely here.\n\n3. **Eliminate the non\u2011matching categories**  \n   - Since there is no mention of money, account access, or product performance, *billing*, *account*, and *technical* can be ruled out.\n\n4. **Select the best fitting category**  \n   - The issue is about the condition of the delivered package, which is a classic shipping problem.\n\n**Final answer:** **shipping**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main issue des'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 1152.9195830007666,
+   "cached": false
+  },
+  {
+   "case_id": "t131",
+   "expected": "account",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the core problem** \u2013 The user says they are \u201clocked out completely after too many failed attempts.\u201d This describes an inability to access their account because the login attempts were exceeded.\n\n2. **Match the problem to the available categories**  \n   - **Billing** \u2013 Concerns invoices, payments, refunds, etc. The ticket does not mention any monetary issue, so this category does not fit.  \n   - **Shipping** \u2013 Relates to delivery, tracking, address changes, etc. The ticket is about account access, not about physical goods, so this is not appropriate.  \n   - **Technical** \u2013 Covers bugs, system errors, software malfunctions, or feature\u2011specific problems. While a lockout could be caused by a technical glitch, the description points to a standard security measure (account lock after failed logins) rather than a system error.  \n   - **Account** \u2013 Encompasses login problems, password resets, account suspensions, and anything that prevents a user from accessing their personal account. A lockout due to too many failed attempts is a classic account\u2011access issue.\n\n3. **Select the best fit** \u2013 The most precise category is **account**, because the issue is directly about being unable to log into the user\u2019s account.\n\n**Final answer:** **account**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the core problem**'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 973.8937500005704,
+   "cached": false
+  },
+  {
+   "case_id": "t134",
+   "expected": "account",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the core issue** \u2013 The user is receiving two\u2011factor authentication (2FA) codes on a phone they no longer control. They need to change the 2FA delivery method or update their account\u2019s security settings.\n\n2. **Match the issue to the given categories**  \n   - **Billing** \u2013 Concerns payments, invoices, refunds, etc. The ticket does not mention any monetary transaction. \u2192 *Not a fit.*  \n   - **Shipping** \u2013 Involves delivery of physical goods, tracking numbers, addresses, etc. No physical product or delivery is referenced. \u2192 *Not a fit.*  \n   - **Technical** \u2013 Covers bugs, system errors, connectivity problems, software malfunctions, etc. While 2FA is a feature, the problem is not a system malfunction but a user\u2011account configuration. \u2192 *Less appropriate.*  \n   - **Account** \u2013 Encompasses login issues, password resets, security settings, profile updates, and anything related to managing the user\u2019s account. Changing the phone number for 2FA is a classic account\u2011management request. \u2192 *Best fit.*\n\n3. **Conclusion** \u2013 The ticket is about updating the account\u2019s two\u2011factor authentication settings, which falls squarely under the **account** category.\n\n**Final answer:** **account**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the core issue** \u2013'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 1517.6727080033743,
+   "cached": false
+  },
+  {
+   "case_id": "t145",
+   "expected": "account",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the core request** \u2013 The user wants to remove a former team member\u2019s access. This is about managing who can log in or use the service.\n\n2. **Match the request to the available categories**  \n   - **Billing** \u2013 Concerns invoices, payments, refunds, or subscription changes. The ticket does not mention any of these.  \n   - **Shipping** \u2013 Relates to physical delivery of goods, tracking, or logistics. No shipping element is present.  \n   - **Technical** \u2013 Involves troubleshooting errors, bugs, performance issues, or feature usage problems. Revoking access is not a technical malfunction; it\u2019s an account\u2011management action.  \n   - **Account** \u2013 Covers login problems, password resets, permission changes, user management, and other administrative tasks related to the customer\u2019s account. Revoking a former employee\u2019s access falls squarely into this area.\n\n3. **Select the best fit** \u2013 The request is an account\u2011administration task (user permission removal), so the **account** category is the most appropriate.\n\n**Final answer:** **account**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the core request**'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 3094.5324580025044,
+   "cached": false
+  },
+  {
+   "case_id": "t148",
+   "expected": "account",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main request** \u2013 The user wants to know how to download all of their personal data before they close their account.  \n2. **Match the request to the categories**  \n   * **Billing** \u2013 concerns payments, invoices, refunds, etc. The request is not about any monetary issue, so billing is not a fit.  \n   * **Shipping** \u2013 deals with delivery of physical goods. No shipping or delivery is mentioned, so this category is out.  \n   * **Technical** \u2013 usually covers problems with the product\u2019s functionality, bugs, error messages, or how to use a feature. While downloading data involves a technical step, the core of the request is about managing the user\u2019s account (specifically, preparing for account closure).  \n   * **Account** \u2013 encompasses questions about account creation, modification, deletion, data export, privacy, and any actions directly related to the user\u2019s account status. Requesting data before closing the account is a classic \u201caccount\u2011related\u201d inquiry.  \n\n3. **Select the best fit** \u2013 The primary intent is to handle the account lifecycle (closing the account) and to retrieve the data tied to that account. Therefore, the **account** category best captures the nature of the ticket.\n\n**Final answer:** **account**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main request**'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 3549.962458993832,
+   "cached": false
+  },
+  {
+   "case_id": "t152",
+   "expected": "account",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main subject of the ticket**  \n   The user asks about the fate of their data after a period of inactivity (one year). This concerns the policies that govern a user\u2019s account when it is not used.\n\n2. **Match the subject to the available categories**  \n   - **Billing** \u2013 deals with payments, invoices, refunds, etc. The question does not mention any monetary issue.  \n   - **Shipping** \u2013 concerns the delivery of physical goods. No product shipment is referenced.  \n   - **Technical** \u2013 relates to problems with the product\u2019s functionality, bugs, errors, or troubleshooting. The user is not reporting a malfunction; they are asking about a policy.  \n   - **Account** \u2013 covers topics such as account creation, deletion, suspension, data retention, security, and inactivity policies. The question directly asks what happens to the user\u2019s data when the account is inactive.\n\n3. **Eliminate the non\u2011matching categories**  \n   Since the ticket does not involve payment, delivery, or a technical malfunction, the only appropriate category is **account**.\n\n**Final answer:**  \n**account**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main subject o'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 2944.6583750032005,
+   "cached": false
+  },
+  {
+   "case_id": "t167",
+   "expected": "technical",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the problem described**  \n   - The customer reports that the website returns a **500 error** on every page.  \n   - A 500 error is an internal server error, indicating that something is wrong with the website\u2019s backend or infrastructure.\n\n2. **Match the problem to the available categories**  \n   - **Billing** \u2013 concerns invoices, payments, refunds, or charges. The ticket does not mention any monetary or payment issue.  \n   - **Account** \u2013 relates to login problems, password resets, profile updates, or account permissions. The ticket is not about a user\u2019s account status.  \n   - **Shipping** \u2013 deals with order delivery, tracking, or logistics. No shipping or order fulfillment is referenced.  \n   - **Technical** \u2013 covers website functionality, errors, bugs, performance, or any system\u2011related malfunction. A 500 server error is a classic technical problem.\n\n3. **Eliminate the non\u2011matching categories**  \n   - Since the ticket contains no billing, account, or shipping elements, those categories can be ruled out.\n\n4. **Select the appropriate category**  \n   - The issue is a site\u2011wide server error, which falls squarely under **technical** problems.\n\n**Final answer:**  \n**technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the problem descri'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 4766.119792002428,
+   "cached": false
+  },
+  {
+   "case_id": "t185",
+   "expected": "technical",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the problem described**  \n   - The user says the *print view* (the way a page looks when printed) *cuts off the right\u2011hand column*.  \n   - This is an issue with how the software displays or formats content for printing.\n\n2. **Match the problem to the available categories**  \n   - **Billing** \u2013 concerns invoices, payments, refunds, etc. The ticket does not mention any monetary transaction.  \n   - **Account** \u2013 concerns login, password resets, profile changes, permissions, etc. No account\u2011related details are present.  \n   - **Shipping** \u2013 concerns delivery, tracking, address changes, etc. The ticket is not about physical goods being shipped.  \n   - **Technical** \u2013 covers bugs, UI glitches, functionality problems, error messages, performance issues, etc. A print\u2011view layout problem is a classic UI/functional bug.\n\n3. **Conclusion**  \n   - The issue is a functional/UI bug affecting how the product renders for printing, which falls squarely under the **technical** category.  \n\n**Final answer:** **technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the problem descri'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 3005.5694590046187,
+   "cached": false
+  },
+  {
+   "case_id": "t189",
+   "expected": "technical",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the core issue** \u2013 The ticket reports that *tooltip text is cut short on long labels*. This describes a problem with how information is displayed in the user interface.\n\n2. **Match the issue to the available categories**  \n   - **Billing** \u2013 concerns invoices, payments, refunds, etc. The ticket does not mention any monetary transaction.  \n   - **Account** \u2013 concerns login, password resets, profile changes, permissions, etc. The ticket is not about a user\u2019s account status or credentials.  \n   - **Shipping** \u2013 concerns delivery, tracking, logistics, etc. The ticket is unrelated to any physical product shipment.  \n   - **Technical** \u2013 covers bugs, errors, performance problems, UI/UX glitches, and any functionality that isn\u2019t related to billing, account management, or shipping. A tooltip that truncates text is a UI bug, fitting squarely into this category.\n\n3. **Conclusion** \u2013 The only category that aligns with a UI display problem is **technical**.\n\n**Final answer:**  \n**technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the core issue** \u2013'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 2979.383167003107,
+   "cached": false
+  },
+  {
+   "case_id": "t198",
+   "expected": "technical",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the core problem** \u2013 The ticket describes a situation where two users are editing the same record and end up overwriting each other\u2019s changes. This is a problem with how the software handles concurrent edits.\n\n2. **Match against the categories**  \n   - **Billing** \u2013 Concerns invoices, payments, refunds, etc. The ticket does not mention any monetary transaction, so billing is not appropriate.  \n   - **Account** \u2013 Relates to login issues, password resets, profile updates, or account permissions. The issue is not about a user\u2019s account status or access rights.  \n   - **Shipping** \u2013 Involves order fulfillment, delivery tracking, or logistics. There is no mention of physical goods or delivery.  \n   - **Technical** \u2013 Covers bugs, system errors, performance problems, data integrity, and any functional issues with the product. A concurrency bug that causes lost changes is a classic technical problem.\n\n3. **Conclusion** \u2013 The only category that accurately captures a concurrency/data\u2011loss bug is **technical**.\n\n**Final answer:**  \n**technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the core problem**'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 3065.470333000121,
+   "cached": false
+  },
+  {
+   "case_id": "t200",
+   "expected": "technical",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main subject of the ticket**  \n   The customer is asking whether a *sandbox environment* exists for *testing the API*. This concerns how the product\u2019s technology can be used and evaluated.\n\n2. **Match the subject to the available categories**  \n   - **Billing** \u2013 deals with invoices, payments, refunds, etc. The question does not involve any monetary transaction.  \n   - **Account** \u2013 concerns login issues, password resets, profile changes, or account permissions. The request is not about a user\u2019s account status.  \n   - **Shipping** \u2013 relates to physical product delivery, tracking, or logistics. No physical goods are mentioned.  \n   - **Technical** \u2013 covers usage of the product\u2019s features, integrations, APIs, environments, bugs, and other functional aspects. A sandbox for API testing is a classic technical inquiry.\n\n3. **Eliminate the non\u2011matching categories**  \n   Since the ticket does not involve money, user account management, or shipping, those three categories can be ruled out.\n\n4. **Select the best fit**  \n   The request is about the availability of a testing environment for the API, which is a technical matter.\n\n**Final answer:** **technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main subject o'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 3103.0830000017886,
+   "cached": false
+  },
+  {
+   "case_id": "t202",
+   "expected": "billing",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main intent of the ticket**  \n   The customer says they are happy with their current plan and are *thinking of upgrading* to a higher\u2011tier (the \u201cteam\u201d tier). The request is about changing the subscription level.\n\n2. **Match the intent to the available categories**  \n   - **Billing** \u2013 covers anything related to pricing, invoices, subscription changes, upgrades/downgrades, and payment plans.  \n   - **Account** \u2013 concerns login issues, password resets, profile edits, or account security.  \n   - **Technical** \u2013 deals with product functionality, bugs, errors, or performance problems.  \n   - **Shipping** \u2013 pertains to physical product delivery, tracking, or returns.\n\n3. **Eliminate categories that do not fit**  \n   - **Account**: No mention of login, password, or personal account details.  \n   - **Technical**: No problem with the product\u2019s operation.  \n   - **Shipping**: No physical goods are involved.\n\n4. **Select the best fitting category**  \n   Since the ticket is about *upgrading the subscription tier*, it directly relates to pricing and plan changes, which belong to the **billing** domain.\n\n**Final answer:** **billing**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main intent of'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 3217.661374997988,
+   "cached": false
+  },
+  {
+   "case_id": "t206",
+   "expected": "billing",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main request** \u2013 The customer is expressing willingness to switch to a yearly subscription plan. This concerns the pricing/plan structure of the service.\n\n2. **Match to categories**  \n   - **Billing** \u2013 Handles anything related to payments, invoices, subscription upgrades/downgrades, and plan changes. Switching to a yearly plan falls squarely here.  \n   - **Account** \u2013 Concerns login problems, profile updates, password resets, etc. The ticket does not mention any of those.  \n   - **Technical** \u2013 Involves product bugs, feature malfunctions, or usage problems. No technical issue is described.  \n   - **Shipping** \u2013 Relates to physical product delivery, tracking, or returns. The ticket is about a subscription, not a shipped item.\n\n3. **Eliminate the non\u2011matching categories** \u2013 Since the ticket is about a subscription upgrade and contains no mention of account access, technical malfunction, or shipping, those categories are not appropriate.\n\n**Conclusion**\n\nThe ticket best fits the **billing** category.  \n\n**Final answer:** billing",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main request**'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 3886.8572499995935,
+   "cached": false
+  },
+  {
+   "case_id": "t212",
+   "expected": "shipping",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main request** \u2013 The customer says the order arrived fine and asks whether they can \u201cset up a repeat delivery.\u201d  \n   This is about arranging future shipments of a product.\n\n2. **Match to categories**  \n   - **Billing** \u2013 concerns invoices, payments, refunds, etc. The ticket does not mention any money\u2011related issue.  \n   - **Account** \u2013 deals with login problems, profile updates, password resets, etc. No account\u2011management request is present.  \n   - **Technical** \u2013 involves product malfunctions, software bugs, error messages, etc. The request is not about a technical problem.  \n   - **Shipping** \u2013 covers anything related to order fulfillment, delivery schedules, tracking, repeat shipments, and logistics. Setting up a repeat delivery falls squarely into this area.\n\n3. **Conclusion** \u2013 The only category that directly addresses the customer\u2019s need to arrange future shipments is **shipping**.\n\n**Final answer:** shipping",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main request**'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 3118.8215840011253,
+   "cached": false
+  },
+  {
+   "case_id": "t220",
+   "expected": "account",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main subject of the ticket**  \n   - The customer mentions *\u201cSingle sign on worked first time, delighted.\u201d*  \n   - This refers to the authentication process (SSO) that allows the user to log in using another identity provider.\n\n2. **Match the subject to the available categories**  \n   - **Billing** \u2013 concerns invoices, payments, refunds, etc. The ticket does not mention any of these.  \n   - **Shipping** \u2013 concerns delivery of physical goods. No mention of shipping or products.  \n   - **Account** \u2013 usually covers things like password resets, account closures, profile updates, or general account access questions. While SSO is related to accessing an account, the focus here is on the *functionality* of the SSO integration rather than a routine account\u2011management request.  \n   - **Technical** \u2013 covers issues or feedback about the product\u2019s functionality, integrations, bugs, or performance. The ticket is specifically praising that the SSO integration worked correctly, which is a technical feature.\n\n3. **Determine the best fit**  \n   - Because the ticket is about the successful operation of a technical feature (SSO), the most appropriate category is **technical**.  \n   - The other categories (billing, shipping, account) do not align with the content of the message.\n\n**Final answer:**  \n**technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main subject o'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 3206.608750006126,
+   "cached": false
+  },
+  {
+   "case_id": "t234",
+   "expected": "billing",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main issue** \u2013 The customer received an *overdue notice* for an invoice that they already paid. This concerns a payment/invoice discrepancy.\n\n2. **Match to categories**  \n   - **Billing** \u2013 Handles anything related to invoices, payments, charges, refunds, and notices about money owed. An overdue notice about a settled invoice is a classic billing problem.  \n   - **Account** \u2013 Concerns login problems, profile updates, password resets, or account\u2011level settings. The ticket does not mention any of these.  \n   - **Technical** \u2013 Involves software bugs, error messages, functionality failures, or system performance. No technical malfunction is described.  \n   - **Shipping** \u2013 Relates to delivery, tracking, lost packages, or shipping costs. The issue is not about physical goods or delivery.\n\n3. **Eliminate non\u2011matching categories** \u2013 Since the problem is purely about an invoice and a payment notice, the account, technical, and shipping categories are irrelevant.\n\n**Conclusion** \u2013 The ticket belongs to the **billing** category.\n\n**Final answer:** billing",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main issue** \u2013'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 4318.2840420049615,
+   "cached": false
+  },
+  {
+   "case_id": "t239",
+   "expected": "billing",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the core issue** \u2013 The customer is complaining that a *promotional rate* they were receiving has ended without any prior notice. This concerns the price they are being charged.\n\n2. **Match the issue to the available categories**  \n   - **Billing** \u2013 Handles questions about charges, rates, invoices, refunds, and any changes to the amount a customer pays. A sudden change in a promotional price falls squarely into this area.  \n   - **Account** \u2013 Concerns login problems, profile updates, password resets, or account closures. The ticket does not mention any of these.  \n   - **Technical** \u2013 Relates to software/hardware malfunctions, error messages, feature bugs, or performance problems. No technical malfunction is described.  \n   - **Shipping** \u2013 Involves delivery, tracking, lost packages, or shipping costs. The ticket is unrelated to physical goods or delivery.\n\n3. **Eliminate the non\u2011matching categories** \u2013 Since the ticket does not involve account access, technical functionality, or shipping logistics, those three categories can be ruled out.\n\n4. **Select the best fit** \u2013 The complaint is about an unexpected change in pricing, which is a classic billing concern.\n\n**Final answer:** **billing**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the core issue** \u2013'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 3196.2346250002156,
+   "cached": false
+  },
+  {
+   "case_id": "t241",
+   "expected": "billing",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main request** \u2013 The customer is asking for invoices to be sent to a different email address (their finance mailbox). This concerns how billing documents are delivered.\n\n2. **Match to categories**  \n   - **Billing** \u2013 Deals with invoices, payments, refunds, and any financial documentation. The request directly involves invoices, so it fits here.  \n   - **Account** \u2013 Concerns login issues, profile updates, password resets, or account settings. Changing an invoice email is not an account\u2011access matter.  \n   - **Technical** \u2013 Relates to product functionality, bugs, errors, or technical support. No technical problem is described.  \n   - **Shipping** \u2013 Involves delivery, tracking, or logistics of physical goods. The ticket does not mention shipping at all.\n\n3. **Eliminate the non\u2011matching categories** \u2013 Since the request is purely about where billing documents are sent, the other three categories (account, technical, shipping) are irrelevant.\n\n**Conclusion** \u2013 The ticket belongs to the **billing** category.\n\n**Final answer:** billing",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main request**'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 3057.49262500467,
+   "cached": false
+  },
+  {
+   "case_id": "t247",
+   "expected": "billing",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main topic of the ticket**  \n   The customer asks, *\u201cIs there a setup fee for new accounts?\u201d* \u2013 they are inquiring about a possible charge associated with opening an account.\n\n2. **Match the topic to the available categories**  \n   - **Billing** \u2013 concerns any questions about fees, charges, invoices, or payment terms. A setup fee is a type of charge, so this fits.  \n   - **Account** \u2013 would cover issues like login problems, password resets, profile updates, or account closures. The ticket is not about accessing or modifying an existing account.  \n   - **Technical** \u2013 relates to product or service functionality, bugs, error messages, or technical troubleshooting. No technical problem is mentioned.  \n   - **Shipping** \u2013 pertains to delivery, tracking, or logistics of physical goods. The ticket does not involve any shipping matter.\n\n3. **Eliminate the non\u2011matching categories**  \n   - The question is not about accessing or managing the account \u2192 not **account**.  \n   - It does not describe a technical malfunction or need for troubleshooting \u2192 not **technical**.  \n   - It does not mention any product being shipped \u2192 not **shipping**.\n\n4. **Select the appropriate category**  \n   The only category that directly addresses questions about fees is **billing**.\n\n**Final answer:** **billing**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main topic of '",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 4244.85299999651,
+   "cached": false
+  },
+  {
+   "case_id": "t253",
+   "expected": "billing",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main subject of the ticket**  \n   The customer is asking whether Value\u2011Added Tax (VAT) is applied to purchases made by customers who are located outside the United Kingdom. This is a question about pricing and tax policy.\n\n2. **Match the subject to the available categories**  \n   - **Billing** \u2013 concerns anything related to charges, invoices, taxes, refunds, or payment terms. A VAT question fits squarely here.  \n   - **Account** \u2013 would involve login problems, password resets, profile updates, or account permissions. The ticket does not mention any of these.  \n   - **Technical** \u2013 deals with software bugs, error messages, functionality issues, or system performance. No technical problem is described.  \n   - **Shipping** \u2013 pertains to delivery times, tracking numbers, lost packages, or address changes. The question is not about shipping at all.\n\n3. **Eliminate the non\u2011matching categories**  \n   - The ticket does not discuss account access \u2192 not **account**.  \n   - It does not describe a malfunction or error \u2192 not **technical**.  \n   - It does not involve the movement of goods \u2192 not **shipping**.\n\n4. **Select the best fitting category**  \n   Since the inquiry is about whether a tax (VAT) is applied to purchases, the appropriate classification is **billing**.\n\n**Final answer:**  \n**billing**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main subject o'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 3643.527084001107,
+   "cached": false
+  },
+  {
+   "case_id": "t259",
+   "expected": "billing",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main subject of the ticket.**  \n   The ticket mentions the *\u201cnew billing dashboard\u201d* and says it is a \u201cbig improvement.\u201d The focus is clearly on a billing\u2011related feature.\n\n2. **Check each possible category:**\n   - **Billing:** Directly references a billing dashboard, which is part of the billing system. This matches perfectly.  \n   - **Account:** The ticket does not discuss login, profile, password, or any account\u2011management issue.  \n   - **Technical:** There is no problem, error, or request for technical assistance; it is simply a comment about a feature.  \n   - **Shipping:** No mention of shipping, delivery, or logistics.\n\n3. **Select the most appropriate category.**  \n   Since the ticket is about a billing feature, the correct category is **billing**.\n\n**Final answer:** billing",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main subject o'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 3254.4426250024117,
+   "cached": false
+  },
+  {
+   "case_id": "t261",
+   "expected": "billing",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main subject of the ticket**  \n   The customer is commenting on the *upgrade process*. An upgrade usually means changing the plan or service level associated with the user\u2019s account.\n\n2. **Match the subject to the available categories**  \n   - **Billing** \u2013 would involve questions or issues about charges, invoices, refunds, etc. The ticket contains no mention of money or invoices.  \n   - **Account** \u2013 covers anything related to the user\u2019s account status, plan changes, upgrades/downgrades, profile updates, etc. An upgrade process falls squarely here.  \n   - **Technical** \u2013 would involve bugs, errors, performance problems, or feature malfunctions. The ticket is a positive comment, not a technical problem.  \n   - **Shipping** \u2013 pertains to physical goods delivery, which is unrelated.\n\n3. **Select the best fit**  \n   Since the ticket is about the experience of upgrading the account (a plan or service level change) and does not involve billing, technical trouble, or shipping, the **account** category is the most appropriate.\n\n**Final answer:** **account**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main subject o'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 3222.601958004816,
+   "cached": false
+  },
+  {
+   "case_id": "t288",
+   "expected": "shipping",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main issue** \u2013 The customer asks whether a parcel that has already been sent can be redirected. This concerns the handling of a physical shipment.\n\n2. **Match to categories**  \n   - **Billing** \u2013 deals with payments, invoices, refunds. The request is not about money.  \n   - **Account** \u2013 concerns login, profile, password, or account settings. No account information is involved.  \n   - **Technical** \u2013 relates to software bugs, website/app functionality, or technical errors. Redirecting a parcel is not a technical problem.  \n   - **Shipping** \u2013 covers anything about order delivery, tracking, changes to delivery, returns, or redirects of parcels. This request fits perfectly here.\n\n3. **Conclusion** \u2013 The ticket is about modifying the delivery of a dispatched parcel, which is a shipping\u2011related matter.\n\n**Final category:** **shipping**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main issue** \u2013'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 3840.056832996197,
+   "cached": false
+  },
+  {
+   "case_id": "t302",
+   "expected": "shipping",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main subject of the ticket**  \n   - The customer mentions a *courier* that *rescheduled* a delivery.  \n   - This concerns the logistics of getting a product shipped and delivered.\n\n2. **Match the subject to the available categories**  \n   - **Billing** \u2013 deals with invoices, payments, refunds, etc. The ticket does not discuss any monetary transaction.  \n   - **Account** \u2013 concerns login issues, profile changes, password resets, etc. No account\u2011related details are present.  \n   - **Technical** \u2013 relates to product or service functionality, software bugs, error messages, etc. The ticket is not about a technical problem.  \n   - **Shipping** \u2013 covers order dispatch, carrier communication, delivery dates, rescheduling, tracking, and any other delivery\u2011related matters. The courier\u2019s rescheduling directly falls under this category.\n\n3. **Conclusion**  \n   - The ticket is about the flexibility of the courier\u2019s delivery schedule, which is a shipping\u2011related issue. Therefore, the appropriate category is **shipping**.\n\n**Final answer:** shipping",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main subject o'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 2071.5207499961252,
+   "cached": false
+  },
+  {
+   "case_id": "t323",
+   "expected": "account",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main request** \u2013 The user asks how to \u201ccreate a read\u2011only role for auditors.\u201d This is about configuring permissions/roles within the product.\n\n2. **Match the request to the categories**  \n   - **Billing** \u2013 concerns invoices, payments, refunds, etc. The ticket does not mention any monetary issue.  \n   - **Account** \u2013 deals with login problems, password resets, profile updates, account closures, etc. The request is not about the user\u2019s own account status.  \n   - **Shipping** \u2013 relates to physical product delivery, tracking, returns, etc. No shipping context is present.  \n   - **Technical** \u2013 covers usage questions, feature configuration, troubleshooting, API usage, permission settings, etc. Creating a role is a configuration/technical task.\n\n3. **Eliminate the non\u2011matching categories** \u2013 Since the ticket is neither about money, personal account access, nor physical delivery, the only appropriate bucket is **technical**.\n\n**Final answer:**  \n**technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main request**'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 4083.857250006986,
+   "cached": false
+  },
+  {
+   "case_id": "t329",
+   "expected": "account",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main issue** \u2013 The user asks whether they can hide their email address from other members. This concerns a **privacy/visibility setting** for their personal information.\n\n2. **Match the issue to the available categories**  \n   - **Billing** \u2013 Deals with payments, invoices, refunds, etc. The request does not involve any monetary transaction. \u2192 *Not a fit.*  \n   - **Shipping** \u2013 Concerns delivery, tracking, address changes, etc. No mention of physical goods or delivery. \u2192 *Not a fit.*  \n   - **Technical** \u2013 Usually about bugs, errors, system malfunctions, or how to use a feature that isn\u2019t working. The user is not reporting a malfunction; they are asking about a configurable option. \u2192 *Not a fit.*  \n   - **Account** \u2013 Encompasses profile settings, privacy preferences, login issues, account management, and related user\u2011account questions. Hiding an email address is a **profile/account privacy setting**. \u2192 *Best fit.*\n\n3. **Conclusion** \u2013 The ticket is about an account\u2011related privacy option, so the appropriate category is **account**.\n\n**Final answer:**  \n**account**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main issue** \u2013'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 4556.881875003455,
+   "cached": false
+  },
+  {
+   "case_id": "t335",
+   "expected": "account",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main topic of the ticket**  \n   - The user mentions *onboarding* and that the *whole team is set up*. This refers to the process of creating and configuring user accounts for a team.\n\n2. **Match the topic to the available categories**  \n   - **Billing** \u2013 concerns payments, invoices, refunds, etc. The ticket does not mention any of these.  \n   - **Shipping** \u2013 concerns physical product delivery. No mention of shipping or delivery.  \n   - **Technical** \u2013 usually involves bugs, errors, performance problems, or feature\u2011related questions. The ticket does not describe any technical problem; it simply comments on the onboarding experience.  \n   - **Account** \u2013 covers anything related to user accounts, sign\u2011ups, onboarding, team member management, permissions, etc. The statement about the team being set up fits squarely here.\n\n3. **Eliminate the non\u2011matching categories**  \n   - Billing and shipping are clearly unrelated.  \n   - Technical is not appropriate because there is no issue or question about system behavior; it\u2019s a status update about account creation.\n\n4. **Select the best fitting category**  \n   - The ticket is about the successful creation and configuration of user accounts during onboarding, so the **account** category is the most appropriate.\n\n**Final answer:** **account**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main topic of '",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 3802.937624997867,
+   "cached": false
+  },
+  {
+   "case_id": "t340",
+   "expected": "account",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main topic of the ticket**  \n   The customer is thanking the company for adding *single sign\u2011on* (SSO) and notes that it was the blocker for them. SSO is a feature that allows users to log in to multiple applications with one set of credentials.\n\n2. **Match the topic to the available categories**  \n   - **Billing** \u2013 concerns invoices, payments, refunds, etc. The ticket does not mention any monetary issue.  \n   - **Shipping** \u2013 concerns delivery of physical goods. No mention of shipping or logistics.  \n   - **Account** \u2013 usually covers things like password resets, account creation, profile updates, or access permissions. While SSO is related to authentication, the ticket is not about a specific user\u2019s account problem but about the availability of a technical feature.  \n   - **Technical** \u2013 covers product features, integrations, bugs, performance, and anything related to how the software works. Adding SSO is a technical integration/enhancement.\n\n3. **Determine the best fit**  \n   The ticket is expressing appreciation for a new technical capability (SSO) that resolves a functional blocker. This aligns most closely with the **technical** category.\n\n**Final answer:**  \n**technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main topic of '",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 2337.4067499971716,
+   "cached": false
+  },
+  {
+   "case_id": "t348",
+   "expected": "account",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the core problem** \u2013 The user reports that the *notification settings* they choose are not being saved when they close the app or log out and then return later. This is a functionality\u2011related issue.\n\n2. **Match the problem to the available categories**  \n   - **Billing** \u2013 Concerns payments, invoices, refunds, or charges. The ticket does not mention any monetary transaction, so billing is not a fit.  \n   - **Shipping** \u2013 Relates to delivery of physical goods, tracking numbers, or logistics. No physical product or delivery is involved, so shipping is out.  \n   - **Account** \u2013 Covers login problems, password resets, profile updates, or account closures. While notification settings are part of a user\u2019s preferences, the issue is not about accessing or managing the account itself, but about the system\u2019s ability to retain those preferences.  \n   - **Technical** \u2013 Encompasses bugs, errors, performance problems, or any malfunction of the product\u2019s features. A setting that fails to persist is a classic technical malfunction.\n\n3. **Select the most appropriate category** \u2013 Because the problem is a malfunction of a product feature (settings not being saved), the ticket belongs to the **technical** category.\n\n**Final answer:**  \n**technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the core problem**'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 3233.0077910010004,
+   "cached": false
+  },
+  {
+   "case_id": "t352",
+   "expected": "technical",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the core issue** \u2013 The ticket reports that *webhook deliveries have stopped* and that the customer did not make any changes that would explain it. This is a problem with an automated system that sends data (webhooks) from our service to the customer\u2019s endpoint.\n\n2. **Match the issue to the available categories**  \n   - **Billing** \u2013 concerns invoices, payments, refunds, or subscription charges. Nothing in the ticket mentions money or invoices, so billing is not a fit.  \n   - **Account** \u2013 deals with login problems, password resets, profile updates, or account permissions. The ticket does not reference any of these; it is about a service feature, not the user\u2019s account itself.  \n   - **Shipping** \u2013 relates to physical product delivery, tracking numbers, or logistics. The ticket is purely digital and has no connection to shipping.  \n   - **Technical** \u2013 covers problems with the product\u2019s functionality, integrations, APIs, webhooks, errors, outages, or any other operational issue. A webhook stoppage is a classic technical integration problem.\n\n3. **Eliminate the non\u2011matching categories** \u2013 Billing, account, and shipping are clearly unrelated to a webhook delivery failure.\n\n4. **Select the best fitting category** \u2013 The issue is about the functioning of a system feature (webhooks), which belongs to the **technical** domain.\n\n**Final answer:**  \n**technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the core issue** \u2013'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 4207.683583001199,
+   "cached": false
+  },
+  {
+   "case_id": "t362",
+   "expected": "technical",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the core problem** \u2013 The user reports that the *editor* (a software feature) \u201closes formatting when pasting from a document.\u201d This is about how the product behaves when performing a specific action.\n\n2. **Match to categories**  \n   - **Billing** \u2013 concerns invoices, payments, refunds, etc. The ticket does not mention any monetary transaction.  \n   - **Account** \u2013 concerns login, password resets, profile changes, permissions, etc. No account\u2011related details are present.  \n   - **Shipping** \u2013 concerns physical delivery, tracking, addresses, etc. The issue is purely digital, not about shipping anything.  \n   - **Technical** \u2013 covers product functionality, bugs, performance, errors, or usage problems. The loss of formatting is a functional/bug issue with the editor, which fits squarely in this category.\n\n3. **Conclusion** \u2013 The ticket is about a product\u2011usage problem, so the appropriate classification is **technical**.\n\n**Final answer:**  \n**technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the core problem**'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 3200.309624997317,
+   "cached": false
+  },
+  {
+   "case_id": "t364",
+   "expected": "technical",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the core problem** \u2013 The user reports that a *scheduled export* (an automated data\u2011export feature) generated an *empty file* this week.  \n   - This is about a feature not working as expected.\n\n2. **Match against possible categories**  \n   - **Billing** \u2013 concerns invoices, payments, refunds, or charges. The ticket does not mention any monetary issue, so billing is not a fit.  \n   - **Account** \u2013 involves login problems, password resets, profile updates, or account permissions. The issue is not about accessing or managing the account itself.  \n   - **Shipping** \u2013 relates to physical product delivery, tracking, or logistics. The ticket is about a digital export, not a physical shipment.  \n   - **Technical** \u2013 covers bugs, errors, malfunctions, or performance problems with the product\u2019s features or services. An export that returns an empty file is a malfunction of a product feature, which is precisely a technical problem.\n\n3. **Conclusion** \u2013 The only category that aligns with a malfunctioning software feature is **technical**.\n\n**Final answer:**  \n**technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the core problem**'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 3151.365292003902,
+   "cached": false
+  },
+  {
+   "case_id": "t367",
+   "expected": "technical",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the subject of the ticket**  \n   The customer is asking about the *rate limit* for the *public API*. This concerns how the service can be used programmatically.\n\n2. **Match the subject to the available categories**  \n   - **Billing** \u2013 deals with invoices, payments, refunds, etc. The question does not involve any monetary transaction.  \n   - **Account** \u2013 concerns login issues, password resets, profile changes, or account permissions. The API rate limit is not about a specific user\u2019s account status.  \n   - **Shipping** \u2013 relates to physical product delivery, tracking, or logistics. No physical goods are mentioned.  \n   - **Technical** \u2013 covers usage of the product\u2019s features, integrations, errors, limits, and other functional aspects. An API rate\u2011limit question is a classic technical inquiry.\n\n3. **Select the best fit**  \n   Since the ticket is about a functional limitation of the service (how many API calls can be made), the **technical** category is the most appropriate.\n\n**Final answer:**  \n**technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the subject of the'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 3032.289666996803,
+   "cached": false
+  },
+  {
+   "case_id": "t371",
+   "expected": "technical",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main subject of the ticket**  \n   - The user asks about a \u201cbulk endpoint for creating records.\u201d This concerns how to programmatically create multiple records at once, i.e., an API feature.\n\n2. **Match the subject to the available categories**  \n   - **Billing** \u2013 deals with invoices, payments, refunds, etc. The question is not about any monetary transaction.  \n   - **Account** \u2013 concerns login issues, password resets, profile updates, permissions, etc. The question does not involve a user\u2019s account status or credentials.  \n   - **Shipping** \u2013 relates to delivery, tracking, logistics, or physical product shipment. No shipping context is present.  \n   - **Technical** \u2013 covers product functionality, integrations, API usage, bugs, performance, and other technical aspects. Asking about an API endpoint clearly falls under this category.\n\n3. **Eliminate the non\u2011matching categories**  \n   - Since the ticket is neither about money, account management, nor shipping, those three categories can be ruled out.\n\n4. **Select the best fit**  \n   - The request is about a technical capability (an API bulk\u2011creation endpoint), so the appropriate classification is **technical**.\n\n**Final answer:**  \n**technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main subject o'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 4124.146374997508,
+   "cached": false
+  },
+  {
+   "case_id": "t373",
+   "expected": "technical",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the main subject of the ticket**  \n   The customer is asking whether the service \u201csupports webhooks with a signing secret.\u201d This is a question about a product feature and how it works.\n\n2. **Match the subject to the available categories**  \n   - **Billing** \u2013 concerns invoices, payments, refunds, or charges. The ticket does not mention any of these.  \n   - **Account** \u2013 concerns login issues, password resets, profile updates, or account permissions. The ticket does not involve any of those topics.  \n   - **Shipping** \u2013 concerns delivery, tracking, or logistics of physical goods. No shipping\u2011related content is present.  \n   - **Technical** \u2013 covers product functionality, integrations, APIs, errors, or any technical implementation details. A question about webhook support and signing secrets is precisely a technical inquiry.\n\n3. **Conclusion**  \n   The ticket fits best in the **technical** category, as it pertains to a feature of the service rather than billing, account management, or shipping.\n\n**Final answer:**  \n**technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the main subject o'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 3117.995417000202,
+   "cached": false
+  },
+  {
+   "case_id": "t374",
+   "expected": "technical",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the subject of the ticket**  \n   The user asks, *\u201cHow long are logs retained in the console?\u201d* \u2013 this concerns the retention period of system logs that appear in a console interface.\n\n2. **Match the subject to the available categories**  \n   - **Billing** \u2013 deals with payments, invoices, refunds, etc. The question is not about any monetary issue.  \n   - **Account** \u2013 concerns login problems, password resets, profile updates, or account permissions. The query does not involve a user\u2019s account status.  \n   - **Shipping** \u2013 relates to physical product delivery, tracking, or logistics. No shipping or delivery element is present.  \n   - **Technical** \u2013 covers product functionality, usage details, configuration, troubleshooting, and feature\u2011related inquiries. Log retention is a technical detail of the product\u2019s operation.\n\n3. **Select the best fitting category**  \n   Since the question is about a product feature (log retention) and does not pertain to billing, account management, or shipping, the appropriate category is **technical**.\n\n**Final answer:**  \n**technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the subject of the'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 3857.2314589982852,
+   "cached": false
+  },
+  {
+   "case_id": "t387",
+   "expected": "technical",
+   "text": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the core problem** \u2013 The user is complaining that error messages are unclear because they don\u2019t indicate which specific field caused the rejection. This is about how the system communicates validation errors.\n\n2. **Match to categories**  \n   - **Billing** \u2013 Concerns invoices, payments, refunds, etc. The ticket does not mention any monetary transaction.  \n   - **Account** \u2013 Involves login problems, password resets, profile updates, or account closures. The issue isn\u2019t about accessing or managing the account itself.  \n   - **Shipping** \u2013 Relates to delivery addresses, tracking, delays, or lost packages. No shipping\u2011related content is present.  \n   - **Technical** \u2013 Covers bugs, UI/UX problems, error handling, functionality, and any other system\u2011behavior issues. An unclear error message is a classic technical/UX problem.\n\n3. **Conclusion** \u2013 The ticket is about a usability/validation bug in the software, which belongs to the **technical** category.\n\n**Final answer:**  \n**technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: '**Step\u2011by\u2011step reasoning**  1. **Identify the core problem**'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 3120.6261250044918,
+   "cached": false
+  }
+ ],
+ "golden_hash": "db64034ea063",
+ "seconds": 145.67852950000088
+}

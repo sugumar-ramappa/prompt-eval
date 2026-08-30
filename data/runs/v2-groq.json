@@ -1,0 +1,914 @@
+{
+ "label": "v2-groq",
+ "prompt_name": "classify-v2",
+ "prompt_hash": "9c06b7e0ff5b",
+ "model": "groq/openai/gpt-oss-120b",
+ "results": [
+  {
+   "case_id": "t6",
+   "expected": "shipping",
+   "text": "{\"category\": \"shipping\", \"confidence\": 0.99}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 1432.6633330019831,
+   "cached": false
+  },
+  {
+   "case_id": "t10",
+   "expected": "billing",
+   "text": "{\"category\": \"billing\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 529.3042500015872,
+   "cached": false
+  },
+  {
+   "case_id": "t16",
+   "expected": "account",
+   "text": "{\"category\": \"account\", \"confidence\": 0.92}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 606.5302499991958,
+   "cached": false
+  },
+  {
+   "case_id": "t22",
+   "expected": "account",
+   "text": "{\"category\": \"account\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 594.5171659986954,
+   "cached": false
+  },
+  {
+   "case_id": "t23",
+   "expected": "technical",
+   "text": "{\"category\": \"technical\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 541.2885420009843,
+   "cached": false
+  },
+  {
+   "case_id": "t41",
+   "expected": "billing",
+   "text": "{\"category\": \"billing\", \"confidence\": 0.93}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 596.097292000195,
+   "cached": false
+  },
+  {
+   "case_id": "t43",
+   "expected": "technical",
+   "text": "{\"category\": \"technical\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 569.5028330010246,
+   "cached": false
+  },
+  {
+   "case_id": "t48",
+   "expected": "shipping",
+   "text": "{\"category\": \"shipping\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 548.1835840000713,
+   "cached": false
+  },
+  {
+   "case_id": "t50",
+   "expected": "account",
+   "text": "{\"category\": \"account\", \"confidence\": 0.86}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 633.2821670002886,
+   "cached": false
+  },
+  {
+   "case_id": "t52",
+   "expected": "shipping",
+   "text": "{\"category\": \"shipping\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 536.8667910006479,
+   "cached": false
+  },
+  {
+   "case_id": "t56",
+   "expected": "shipping",
+   "text": "{\"category\": \"shipping\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 553.4891659990535,
+   "cached": false
+  },
+  {
+   "case_id": "t58",
+   "expected": "account",
+   "text": "{\"category\": \"account\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 539.1647090000333,
+   "cached": false
+  },
+  {
+   "case_id": "t69",
+   "expected": "billing",
+   "text": "{\"category\": \"billing\", \"confidence\": 0.96}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 647.3201670014532,
+   "cached": false
+  },
+  {
+   "case_id": "t71",
+   "expected": "billing",
+   "text": "{\"category\": \"billing\", \"confidence\": 0.96}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 563.9975410012994,
+   "cached": false
+  },
+  {
+   "case_id": "t72",
+   "expected": "billing",
+   "text": "{\"category\": \"billing\", \"confidence\": 0.98}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 556.3370829986525,
+   "cached": false
+  },
+  {
+   "case_id": "t73",
+   "expected": "billing",
+   "text": "{\"category\": \"billing\", \"confidence\": 0.96}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 517.5091249984689,
+   "cached": false
+  },
+  {
+   "case_id": "t100",
+   "expected": "shipping",
+   "text": "{\"category\": \"shipping\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 547.3755829989386,
+   "cached": false
+  },
+  {
+   "case_id": "t101",
+   "expected": "shipping",
+   "text": "{\"category\": \"shipping\", \"confidence\": 0.96}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 732.6871659970493,
+   "cached": false
+  },
+  {
+   "case_id": "t108",
+   "expected": "shipping",
+   "text": "{\"category\": \"shipping\", \"confidence\": 0.92}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 709.3105419990025,
+   "cached": false
+  },
+  {
+   "case_id": "t116",
+   "expected": "shipping",
+   "text": "{\"category\": \"shipping\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 528.9038329974574,
+   "cached": false
+  },
+  {
+   "case_id": "t124",
+   "expected": "shipping",
+   "text": "{\"category\": \"shipping\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 519.625625001936,
+   "cached": false
+  },
+  {
+   "case_id": "t125",
+   "expected": "shipping",
+   "text": "{\"category\": \"shipping\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 589.1827090017614,
+   "cached": false
+  },
+  {
+   "case_id": "t126",
+   "expected": "shipping",
+   "text": "{\"category\": \"shipping\", \"confidence\": 0.96}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 549.8212919992511,
+   "cached": false
+  },
+  {
+   "case_id": "t129",
+   "expected": "shipping",
+   "text": "{\"category\": \"shipping\", \"confidence\": 0.96}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 732.5945000011416,
+   "cached": false
+  },
+  {
+   "case_id": "t131",
+   "expected": "account",
+   "text": "{\"category\": \"account\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 457.45116699981736,
+   "cached": false
+  },
+  {
+   "case_id": "t134",
+   "expected": "account",
+   "text": "{\"category\": \"account\", \"confidence\": 0.96}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 676.8909170023107,
+   "cached": false
+  },
+  {
+   "case_id": "t145",
+   "expected": "account",
+   "text": "{\"category\": \"account\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 517.7661250017991,
+   "cached": false
+  },
+  {
+   "case_id": "t148",
+   "expected": "account",
+   "text": "{\"category\": \"account\", \"confidence\": 0.96}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 815.4980830004206,
+   "cached": false
+  },
+  {
+   "case_id": "t152",
+   "expected": "account",
+   "text": "{\"category\": \"account\", \"confidence\": 0.92}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 629.45508300254,
+   "cached": false
+  },
+  {
+   "case_id": "t167",
+   "expected": "technical",
+   "text": "{\"category\": \"technical\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 650.7539580015873,
+   "cached": false
+  },
+  {
+   "case_id": "t185",
+   "expected": "technical",
+   "text": "{\"category\": \"technical\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 2958.6361250003392,
+   "cached": false
+  },
+  {
+   "case_id": "t189",
+   "expected": "technical",
+   "text": "{\"category\": \"technical\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 2964.2211249993125,
+   "cached": false
+  },
+  {
+   "case_id": "t198",
+   "expected": "technical",
+   "text": "{\"category\": \"technical\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 2857.293249999202,
+   "cached": false
+  },
+  {
+   "case_id": "t200",
+   "expected": "technical",
+   "text": "{\"category\": \"technical\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 2962.65937499993,
+   "cached": false
+  },
+  {
+   "case_id": "t202",
+   "expected": "billing",
+   "text": "{\"category\": \"billing\", \"confidence\": 0.96}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 2896.8342910011415,
+   "cached": false
+  },
+  {
+   "case_id": "t206",
+   "expected": "billing",
+   "text": "{\"category\": \"billing\", \"confidence\": 0.92}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 2994.1214169994055,
+   "cached": false
+  },
+  {
+   "case_id": "t212",
+   "expected": "shipping",
+   "text": "{\"category\": \"shipping\", \"confidence\": 0.94}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 2922.4998749996303,
+   "cached": false
+  },
+  {
+   "case_id": "t220",
+   "expected": "account",
+   "text": "{\"category\": \"account\", \"confidence\": 0.96}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 2926.6259579999314,
+   "cached": false
+  },
+  {
+   "case_id": "t234",
+   "expected": "billing",
+   "text": "{\"category\": \"billing\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 3022.29379200071,
+   "cached": false
+  },
+  {
+   "case_id": "t239",
+   "expected": "billing",
+   "text": "{\"category\": \"billing\", \"confidence\": 0.92}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 2809.0251670000725,
+   "cached": false
+  },
+  {
+   "case_id": "t241",
+   "expected": "billing",
+   "text": "{\"category\": \"billing\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 2846.01533300156,
+   "cached": false
+  },
+  {
+   "case_id": "t247",
+   "expected": "billing",
+   "text": "{\"category\": \"billing\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 2842.855041002622,
+   "cached": false
+  },
+  {
+   "case_id": "t253",
+   "expected": "billing",
+   "text": "{\"category\": \"billing\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 2901.56470799775,
+   "cached": false
+  },
+  {
+   "case_id": "t259",
+   "expected": "billing",
+   "text": "{\"category\": \"billing\", \"confidence\": 0.92}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 2920.4487909992167,
+   "cached": false
+  },
+  {
+   "case_id": "t261",
+   "expected": "billing",
+   "text": "{\"category\": \"account\", \"confidence\": 0.73}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": false
+   },
+   "detail": {
+    "category_correct": "said 'account', expected 'billing'"
+   },
+   "latency_ms": 3086.9291669987433,
+   "cached": false
+  },
+  {
+   "case_id": "t288",
+   "expected": "shipping",
+   "text": "{\"category\": \"shipping\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 2864.926665999519,
+   "cached": false
+  },
+  {
+   "case_id": "t302",
+   "expected": "shipping",
+   "text": "{\"category\": \"shipping\", \"confidence\": 0.96}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 2962.5333749972924,
+   "cached": false
+  },
+  {
+   "case_id": "t323",
+   "expected": "account",
+   "text": "{\"category\": \"account\", \"confidence\": 0.96}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 3094.2575419976492,
+   "cached": false
+  },
+  {
+   "case_id": "t329",
+   "expected": "account",
+   "text": "{\"category\": \"account\", \"confidence\": 0.95}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 2950.113124999916,
+   "cached": false
+  },
+  {
+   "case_id": "t335",
+   "expected": "account",
+   "text": "{\"category\": \"account\", \"confidence\": 0.73}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 2971.861917001661,
+   "cached": false
+  },
+  {
+   "case_id": "t340",
+   "expected": "account",
+   "text": "{\"category\": \"account\", \"confidence\": 0.96}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 3015.293249998649,
+   "cached": false
+  },
+  {
+   "case_id": "t348",
+   "expected": "account",
+   "text": "{\"category\": \"technical\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": false
+   },
+   "detail": {
+    "category_correct": "said 'technical', expected 'account'"
+   },
+   "latency_ms": 2874.530249999225,
+   "cached": false
+  },
+  {
+   "case_id": "t352",
+   "expected": "technical",
+   "text": "{\"category\": \"technical\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 2945.4857080017973,
+   "cached": false
+  },
+  {
+   "case_id": "t362",
+   "expected": "technical",
+   "text": "{\"category\": \"technical\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 2925.107750001189,
+   "cached": false
+  },
+  {
+   "case_id": "t364",
+   "expected": "technical",
+   "text": "{\"category\": \"technical\", \"confidence\": 0.96}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 2990.3492500016,
+   "cached": false
+  },
+  {
+   "case_id": "t367",
+   "expected": "technical",
+   "text": "{\"category\": \"technical\", \"confidence\": 0.96}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 2905.4571249980654,
+   "cached": false
+  },
+  {
+   "case_id": "t371",
+   "expected": "technical",
+   "text": "{\"category\": \"technical\", \"confidence\": 0.96}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 3434.6199999999953,
+   "cached": false
+  },
+  {
+   "case_id": "t373",
+   "expected": "technical",
+   "text": "{\"category\": \"technical\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 2921.0022920015035,
+   "cached": false
+  },
+  {
+   "case_id": "t374",
+   "expected": "technical",
+   "text": "{\"category\": \"technical\", \"confidence\": 0.96}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 2881.590041000891,
+   "cached": false
+  },
+  {
+   "case_id": "t387",
+   "expected": "technical",
+   "text": "{\"category\": \"technical\", \"confidence\": 0.97}",
+   "scores": {
+    "parses_as_json": true,
+    "has_required_fields": true,
+    "category_is_valid": true,
+    "confidence_in_range": true,
+    "category_correct": true
+   },
+   "detail": {},
+   "latency_ms": 2874.0752920020896,
+   "cached": false
+  }
+ ],
+ "golden_hash": "db64034ea063",
+ "seconds": 107.41612699999678
+}

@@ -32,11 +32,14 @@ while proving nothing.
 from __future__ import annotations
 
 import argparse
+import json
+from datetime import datetime, timezone
+from pathlib import Path
 import random
 import sys
 
 from src import golden
-from src.judge import VERDICT_SCHEMA, ask_judge
+from src.judge import VERDICT_SCHEMA, ask_judge, load_judge_prompt
 from src.models import build
 
 
@@ -67,6 +70,9 @@ def main() -> int:
     parser.add_argument("--limit", type=int, default=0,
                         help="judge only the first N cases (0 = all)")
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--judge-prompt", default="judge-v2",
+                        help="which prompts/judge-*.txt to grade with. "
+                             "judge-v1 is a RECONSTRUCTION - see prompts/README.md")
     args = parser.parse_args()
 
     cases = golden.load()
@@ -76,7 +82,9 @@ def main() -> int:
     answers = build_calibration_answers(cases, args.seed)
     planted_correct = sum(1 for c in cases if answers[c.id] == c.expected)
 
-    print(f"\n  calibrating judge: {args.backend}/{args.model}")
+    template = load_judge_prompt(args.judge_prompt)
+    print(f"\n  calibrating judge: {args.backend}/{args.model}"
+          f"  prompt {args.judge_prompt}")
     print(f"  {len(cases)} cases - {planted_correct} answers correct, "
           f"{len(cases) - planted_correct} deliberately wrong\n")
 
@@ -91,7 +99,7 @@ def main() -> int:
 
     for n, case in enumerate(cases, start=1):
         answer = answers[case.id]
-        verdict = ask_judge(judge, case, answer)
+        verdict = ask_judge(judge, case, answer, template)
 
         if verdict is None:
             unavailable += 1
@@ -148,6 +156,9 @@ def main() -> int:
   that is the failure that reaches production; a harsh one only annoys you.
 """)
 
+    _record(args, cases, judged, unavailable, agreements, agreement,
+            false_accept, false_reject, skew, disagreements)
+
     if disagreements:
         print("  where it disagreed - read these, they are the calibration:\n")
         for case, answer, verdict in disagreements[:8]:
@@ -157,6 +168,59 @@ def main() -> int:
             print(f"            judge:  {verdict.reason[:68]}\n")
 
     return 0
+
+
+def _record(args, cases, judged, unavailable, agreements, agreement,
+            false_accept, false_reject, skew, disagreements) -> None:
+    """Write the calibration where it can be read back.
+
+    Until 30 Aug this script only printed. The 76.7% it produced was quoted in
+    five documents and existed in none of them as data - the exact failure this
+    workspace hit with a sibling project's latency figures, which survived in a
+    README after the result files had been overwritten with cached runs.
+
+    **This file is not a reproducibility guarantee and must not be read as one.**
+    The judge is a language model. It runs at temperature 0, which is as stable
+    as sampling gets and is not the same as deterministic: a different model
+    build or Ollama version can move the number. So the model, the case count and
+    the date are recorded beside the figures, and re-running is expected to give
+    something close rather than something identical. A result you can attribute
+    beats a result you can only assert, even when it will not reproduce to the
+    decimal.
+    """
+    out = (Path(__file__).resolve().parents[1] / "data" / "runs"
+           / f"judge-calibration-{args.judge_prompt}.json")
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps({
+        "recordedAt": datetime.now(timezone.utc).isoformat(),
+        "backend": args.backend,
+        "model": args.model,
+        "judgePrompt": args.judge_prompt,
+        "seed": args.seed,
+        "cases": len(cases),
+        "judged": judged,
+        "unavailable": unavailable,
+        "agreements": agreements,
+        "agreement": round(agreement, 4),
+        "falseAccept": false_accept,
+        "falseReject": false_reject,
+        "skew": skew,
+        "reproducible": False,
+        "note": (
+            "A judge is a model, so this does not reproduce to the decimal even "
+            "at temperature 0. Agreement alone is the WRONG metric for choosing "
+            "a judge: v2 agreed more often than v1 (76.7% against 66.7%) and was "
+            "the worse judge, because it waved through 11 wrong answers against "
+            "v1's 1. A generous judge passes bad output; a harsh one only annoys "
+            "you. Read falseAccept and falseReject, not agreement."
+        ),
+        "disagreements": [
+            {"case": c.id, "judgeSaid": "accepted" if v.correct else "rejected",
+             "answer": a, "truth": c.expected, "reason": v.reason}
+            for c, a, v in disagreements
+        ],
+    }, indent=2) + "\n")
+    print(f"  recorded to {out.parent.name}/{out.name}")
 
 
 if __name__ == "__main__":

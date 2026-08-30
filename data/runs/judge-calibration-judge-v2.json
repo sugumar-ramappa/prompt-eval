@@ -1,0 +1,117 @@
+{
+  "recordedAt": "2026-08-30T14:40:11.929820+00:00",
+  "backend": "ollama",
+  "model": "llama3.1:8b",
+  "judgePrompt": "judge-v2",
+  "seed": 42,
+  "cases": 60,
+  "judged": 60,
+  "unavailable": 0,
+  "agreements": 46,
+  "agreement": 0.7667,
+  "falseAccept": 11,
+  "falseReject": 3,
+  "skew": "GENEROUS - it waves through answers the humans rejected",
+  "reproducible": false,
+  "note": "A judge is a model, so this does not reproduce to the decimal even at temperature 0. Agreement alone is the WRONG metric for choosing a judge: v2 agreed more often than v1 (76.7% against 66.7%) and was the worse judge, because it waved through 11 wrong answers against v1's 1. A generous judge passes bad output; a harsh one only annoys you. Read falseAccept and falseReject, not agreement.",
+  "disagreements": [
+    {
+      "case": "t41",
+      "judgeSaid": "accepted",
+      "answer": "account",
+      "truth": "billing",
+      "reason": "The classifier chose 'account', which is a reasonable fit for a subscription-related issue."
+    },
+    {
+      "case": "t71",
+      "judgeSaid": "accepted",
+      "answer": "account",
+      "truth": "billing",
+      "reason": "The classifier chose 'account', which is a reasonable fit for a complaint about automatic renewal without warning."
+    },
+    {
+      "case": "t73",
+      "judgeSaid": "accepted",
+      "answer": "account",
+      "truth": "billing",
+      "reason": "The issue is related to the discount code, which is a billing issue."
+    },
+    {
+      "case": "t108",
+      "judgeSaid": "rejected",
+      "answer": "shipping",
+      "truth": "shipping",
+      "reason": "Shipping is not directly related to adding directions, which is more related to navigation or location."
+    },
+    {
+      "case": "t189",
+      "judgeSaid": "accepted",
+      "answer": "account",
+      "truth": "technical",
+      "reason": "The classifier chose a category that is relevant to the issue of tooltip text."
+    },
+    {
+      "case": "t198",
+      "judgeSaid": "rejected",
+      "answer": "technical",
+      "truth": "technical",
+      "reason": "The issue described is more related to account management than technical functionality."
+    },
+    {
+      "case": "t206",
+      "judgeSaid": "accepted",
+      "answer": "account",
+      "truth": "billing",
+      "reason": "The ticket mentions moving to a yearly plan, which is related to billing or account management, but 'account' is a more direct fit."
+    },
+    {
+      "case": "t220",
+      "judgeSaid": "accepted",
+      "answer": "billing",
+      "truth": "account",
+      "reason": "The classifier chose billing, which is a reasonable fit for a positive experience."
+    },
+    {
+      "case": "t239",
+      "judgeSaid": "accepted",
+      "answer": "account",
+      "truth": "billing",
+      "reason": "The classifier chose 'account', which is a reasonable fit for a complaint about a promotional rate."
+    },
+    {
+      "case": "t247",
+      "judgeSaid": "accepted",
+      "answer": "account",
+      "truth": "billing",
+      "reason": "The question is about account specifics, not a broader category like billing or technical."
+    },
+    {
+      "case": "t253",
+      "judgeSaid": "rejected",
+      "answer": "billing",
+      "truth": "billing",
+      "reason": "Billing is not directly related to VAT charges."
+    },
+    {
+      "case": "t259",
+      "judgeSaid": "accepted",
+      "answer": "shipping",
+      "truth": "billing",
+      "reason": "The classifier chose 'shipping', which is a plausible category for a billing dashboard improvement."
+    },
+    {
+      "case": "t335",
+      "judgeSaid": "accepted",
+      "answer": "shipping",
+      "truth": "account",
+      "reason": "The classifier chose shipping, which is a plausible category for onboarding."
+    },
+    {
+      "case": "t387",
+      "judgeSaid": "accepted",
+      "answer": "shipping",
+      "truth": "technical",
+      "reason": "shipping is a plausible category for error messages related to field rejection."
+    }
+  ]
+}

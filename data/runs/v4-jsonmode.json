@@ -1,0 +1,1270 @@
+{
+ "label": "v4-jsonmode",
+ "prompt_name": "classify-v4-reasoning",
+ "prompt_hash": "3fa162460ab4",
+ "model": "ollama/llama3.1:8b[json]",
+ "results": [
+  {
+   "case_id": "t6",
+   "expected": "shipping",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category typically deals with issues related to payment, invoices, or charges. Since the ticket mentions a shipping delay, it doesn't seem to be related to billing.\n\n2. **Account**: This category usually handles issues related to user accounts, login problems, or profile settings. The ticket doesn't mention anything about account-related issues, so it's unlikely to be classified under this category.\n\n3. **Technical**: This category often deals with issues related to product functionality, software bugs, or technical problems. While shipping delays can be related to technical issues (e.g., logistics or inventory problems), the ticket doesn't explicitly mention a technical problem.\n\n4. **Shipping**: This category deals with issues related to the delivery of products, such as delayed shipments, incorrect addresses, or missing items. The ticket explicitly mentions a shipping delay, which directly relates to the shipping category.\n\nBased on the analysis, the customer support ticket is most likely to be classified under the **shipping** category, as it directly mentions a shipping delay.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 14370.40587500087,
+   "cached": false
+  },
+  {
+   "case_id": "t10",
+   "expected": "billing",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category seems like a strong candidate because the issue is related to a charge, which is typically a billing-related issue. The customer is complaining about being charged after cancelling their subscription, which suggests a problem with the billing process.\n\n2. **Account**: While the issue is related to the customer's account (specifically, their subscription), the primary concern is the billing aspect, not the account management itself. Therefore, this category is less likely.\n\n3. **Technical**: The issue doesn't seem to be related to a technical problem with the product or service, but rather a billing error. Therefore, this category is unlikely.\n\n4. **Shipping**: Shipping is not relevant to the issue described in the ticket, as there is no mention of any shipping-related problems. This category is unlikely.\n\nBased on the analysis, the most fitting category for the customer support ticket is **billing**, as the issue is directly related to a charge and the billing process.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 8603.160624999873,
+   "cached": false
+  },
+  {
+   "case_id": "t16",
+   "expected": "account",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category typically deals with issues related to payment, invoices, or charges. Since the ticket is about two-factor authentication, which is a security feature, it doesn't seem to be related to billing.\n\n2. **Account**: This category usually covers issues related to user accounts, such as login problems, password reset, or account access. While two-factor authentication is related to account security, the specific issue is with the two-factor authentication process, not the account itself.\n\n3. **Technical**: This category encompasses issues related to the functionality or performance of the system, software, or application. Since the ticket is about a specific technical issue with two-factor authentication (not sending codes), it seems to fit well within this category.\n\n4. **Shipping**: This category is typically related to issues with delivering products or services, such as tracking, delivery times, or package issues. Since the ticket is about two-factor authentication, which is unrelated to shipping, this category doesn't fit.\n\nBased on the analysis, the customer support ticket is best classified under the **technical** category, as it deals with a specific technical issue related to the functionality of the two-factor authentication process.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 10369.056874998932,
+   "cached": false
+  },
+  {
+   "case_id": "t22",
+   "expected": "account",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category typically deals with issues related to payment, invoices, or charges. Since the ticket is asking about deleting the account, it doesn't seem to be related to billing.\n\n2. **Account**: This category usually involves managing or modifying an existing account, such as updating information, resetting passwords, or changing account settings. Deleting an account permanently falls under account management, as it involves modifying the account's status.\n\n3. **Technical**: This category is often used for issues related to the functionality or performance of a product or service, such as bugs, errors, or troubleshooting. While deleting an account might involve some technical steps, the primary concern is account management, not technical issues.\n\n4. **Shipping**: This category is typically used for issues related to the delivery or tracking of physical products. Since the ticket is asking about deleting an account, it's not related to shipping.\n\nBased on this analysis, the customer support ticket is best classified under the **account** category, as it involves managing or modifying an existing account.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 9030.498125001031,
+   "cached": false
+  },
+  {
+   "case_id": "t23",
+   "expected": "technical",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category is related to payment or financial issues. Since the ticket is about a notification sound not working on iOS, it doesn't seem to be related to billing. Therefore, we can rule out the billing category.\n\n2. **Account**: This category is related to user accounts, login issues, or profile management. Although the ticket is related to a user's experience with the app, it's specifically about a technical issue (notification sound not working) rather than an account-related issue. So, we can rule out the account category.\n\n3. **Technical**: This category is related to issues with the app's functionality, performance, or features. The ticket is specifically about a technical issue (notification sound not working) on a specific platform (iOS). This seems to be a good fit for the technical category.\n\n4. **Shipping**: This category is related to delivery or logistics of physical products. Since the ticket is about an app notification sound, it doesn't seem to be related to shipping. Therefore, we can rule out the shipping category.\n\nBased on the analysis, the customer support ticket is best classified under the **technical** category, as it's specifically about a technical issue with the app's functionality.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 10416.497917001834,
+   "cached": false
+  },
+  {
+   "case_id": "t41",
+   "expected": "billing",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category seems like a good fit because the issue is related to the auto-renewal of a subscription, which is typically a billing-related process. The customer is expressing dissatisfaction with the auto-renewal, which suggests a problem with the billing cycle.\n\n2. **Account**: While the issue is related to the customer's account (specifically, their subscription), the primary concern is not with the account itself, but rather with the billing process.\n\n3. **Technical**: This category doesn't seem to fit because the issue is not related to a technical problem with the website, software, or service. The customer is not reporting any errors or issues with the functionality of the service.\n\n4. **Shipping**: This category is clearly not relevant because the issue is not related to shipping or delivery of any physical products.\n\nBased on this analysis, the most fitting category for the customer support ticket is **billing**. The issue is centered around the billing process and the auto-renewal of a subscription, making billing the primary category for this ticket.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 9684.642791999067,
+   "cached": false
+  },
+  {
+   "case_id": "t43",
+   "expected": "technical",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category is related to payment or financial issues. The ticket doesn't mention anything about payment, invoices, or financial transactions, so it's unlikely to be a billing issue.\n\n2. **Account**: This category is related to user accounts, login issues, or profile management. The ticket doesn't mention anything about accounts, login, or profile management, so it's unlikely to be an account issue.\n\n3. **Technical**: This category is related to technical problems or issues with the product or service. The ticket mentions a specific issue with the video player, which is a technical problem. The fact that it's affecting all browsers suggests a technical issue with the video player itself.\n\n4. **Shipping**: This category is related to delivery or logistics of physical products. The ticket doesn't mention anything about shipping or physical products, so it's unlikely to be a shipping issue.\n\nBased on the above analysis, the ticket is most likely related to a technical issue with the video player, which makes the **technical** category the best fit.\n\n**Final answer:** technical",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 9201.175749996764,
+   "cached": false
+  },
+  {
+   "case_id": "t48",
+   "expected": "shipping",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category is related to issues with payment, invoices, or charges. Since the ticket is about a lost package, it doesn't seem to be related to billing. Therefore, we can rule out the billing category.\n\n2. **Account**: This category is related to issues with the customer's account, such as login problems, password reset, or account information. While the customer is trying to resolve an issue related to their order, the issue itself is not directly related to their account. Therefore, we can rule out the account category.\n\n3. **Technical**: This category is related to issues with the website, application, or other technical aspects of the service. Since the ticket is about a lost package, which is a shipping issue, it doesn't seem to be related to technical problems. Therefore, we can rule out the technical category.\n\n4. **Shipping**: This category is related to issues with the shipping of orders, such as lost packages, delayed shipments, or incorrect addresses. The ticket mentions a package lost in transit with no tracking updates for a week, which directly relates to shipping issues. Therefore, this category seems to be the best fit.\n\nFinal answer: **Shipping**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 10260.141208000277,
+   "cached": false
+  },
+  {
+   "case_id": "t50",
+   "expected": "account",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category is related to payment, invoices, or any financial aspect of the customer's account. The ticket doesn't mention anything about payment or financial issues, so it's unlikely to be a billing issue.\n\n2. **Account**: This category is related to the customer's account settings, profile, or general account management. While the ticket does mention the customer's account (as they have to login), the issue is more related to the functionality of the account rather than the account settings themselves.\n\n3. **Technical**: This category is related to technical issues, such as bugs, errors, or problems with the website or application. The ticket mentions that the session expires too quickly, which is a technical issue that affects the user's experience.\n\n4. **Shipping**: This category is related to the delivery of physical products, such as tracking, orders, or delivery times. The ticket doesn't mention anything about shipping or physical products, so it's unlikely to be a shipping issue.\n\nBased on the above analysis, the ticket is most likely related to a technical issue, as it mentions a problem with the functionality of the account (session expiration).\n\n**Final answer:** technical",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 10263.713790998736,
+   "cached": false
+  },
+  {
+   "case_id": "t52",
+   "expected": "shipping",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category typically deals with issues related to payment, invoices, or charges. Since the ticket mentions a delivery issue, it doesn't seem to be related to billing.\n\n2. **Account**: This category usually handles issues related to user accounts, login problems, or profile settings. Although the ticket is related to an order, it doesn't seem to be directly related to the customer's account.\n\n3. **Technical**: This category often deals with issues related to website functionality, software problems, or technical errors. While the ticket mentions an order, it's more related to a delivery issue than a technical problem.\n\n4. **Shipping**: This category typically handles issues related to order delivery, tracking, or incorrect addresses. The ticket mentions that the order was delivered to the wrong address, which directly relates to shipping.\n\nBased on the above analysis, the customer support ticket is most closely related to shipping issues, as it directly involves a problem with the delivery of the order.\n\n**Final answer:** shipping",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 8565.481707999425,
+   "cached": false
+  },
+  {
+   "case_id": "t56",
+   "expected": "shipping",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category is related to issues with payment, invoices, or charges. Since the ticket mentions a tracking number and delivery, it doesn't seem to be related to billing. So, we can rule out **billing**.\n\n2. **Account**: This category is related to issues with the customer's account, such as login problems, password reset, or account information. While the ticket is related to a delivery issue, it doesn't seem to be directly related to the customer's account. So, we can rule out **account**.\n\n3. **Technical**: This category is related to issues with the website, application, or system. Since the ticket mentions a tracking number and delivery, it doesn't seem to be a technical issue with the website or application. So, we can rule out **technical**.\n\n4. **Shipping**: This category is related to issues with the delivery of products, such as tracking numbers, delivery times, or missing packages. The ticket mentions a tracking number that shows delivered but the customer didn't receive the package, which directly relates to a shipping issue.\n\nBased on the above analysis, the customer support ticket is best classified under the **shipping** category.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 10408.094499998697,
+   "cached": false
+  },
+  {
+   "case_id": "t58",
+   "expected": "account",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category typically deals with issues related to payment, invoices, or charges. Since the ticket is about changing the account username, it doesn't seem to be related to billing.\n\n2. **Account**: This category usually involves managing or modifying account settings, information, or permissions. Changing the account username falls under this category, as it involves modifying account settings.\n\n3. **Technical**: This category typically deals with issues related to software, hardware, or technical problems. While changing the account username might involve some technical aspects, it's primarily an account management task.\n\n4. **Shipping**: This category is usually related to issues with delivering or receiving products. Since the ticket is about changing the account username, it has no relation to shipping.\n\nBased on the above analysis, the customer support ticket is best classified under the **account** category, as it involves modifying account settings (changing the account username).",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 8043.472125002154,
+   "cached": false
+  },
+  {
+   "case_id": "t69",
+   "expected": "billing",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category seems like a good fit because the ticket mentions a transaction reference, which is typically related to financial transactions. The request to reverse a transaction also implies a financial or billing-related issue.\n\n2. **Account**: While the ticket does involve a transaction reference, it doesn't explicitly mention account-related issues such as password reset, login problems, or account settings. The focus is on a specific transaction, not the account itself.\n\n3. **Technical**: This category is too broad, as technical issues can encompass a wide range of topics, including billing, account, and shipping. The ticket doesn't mention any technical problems with the website, software, or hardware, so it's unlikely to be a technical issue.\n\n4. **Shipping**: This category is unlikely because the ticket mentions a transaction reference, which doesn't seem to be related to shipping. Shipping issues would typically involve problems with delivery, tracking, or order status.\n\nBased on the analysis, the most fitting category for the customer support ticket is **billing**, as it specifically mentions a transaction reference and a request to reverse a transaction, which are both related to financial transactions.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 9664.133083999332,
+   "cached": false
+  },
+  {
+   "case_id": "t71",
+   "expected": "billing",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category seems like a possible fit because the issue is related to the automatic renewal of a subscription, which is typically a billing-related process. However, the ticket doesn't mention any issues with payment or charges, so it might not be the most specific category.\n\n2. **Account**: This category could also be a fit because the issue is related to the customer's account, specifically the automatic renewal of their subscription. However, the ticket doesn't mention any issues with account access, security, or other account-related problems.\n\n3. **Technical**: This category seems like a possible fit because the issue is related to the automatic renewal process, which is likely a technical process. However, the ticket doesn't mention any technical issues with the website, software, or other technical problems.\n\n4. **Shipping**: This category is unlikely to be a fit because the issue is not related to shipping or delivery of physical products.\n\nConsidering the above points, the most fitting category is **account**, as the issue is related to the customer's account and the automatic renewal of their subscription, without mentioning any billing, technical, or shipping-related problems.\n\n**Final answer:** account",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 9790.466499998729,
+   "cached": false
+  },
+  {
+   "case_id": "t72",
+   "expected": "billing",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category seems like a good fit because the ticket is asking about changing the billing cycle, specifically switching from monthly to yearly billing. This is a billing-related issue.\n\n2. **Account**: While the ticket is related to the customer's account, it's more specific to the billing aspect rather than a general account-related issue. For example, if the ticket was asking about resetting a password or updating account information, it would be a better fit for the \"account\" category.\n\n3. **Technical**: This category doesn't seem to fit because the ticket is asking about a billing-related issue, not a technical problem with the product or service itself.\n\n4. **Shipping**: This category is clearly not a good fit because the ticket has nothing to do with shipping.\n\nBased on the above analysis, the customer support ticket is best classified under the **billing** category.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 7638.69191699996,
+   "cached": false
+  },
+  {
+   "case_id": "t73",
+   "expected": "billing",
+   "text": "To classify the customer support ticket into one category, let's analyze the information provided step by step:\n\n1. The ticket mentions a \"discount code,\" which implies that the issue is related to a promotion or a price reduction. This suggests that the issue is not directly related to the core functionality of the product or service, but rather to the pricing or financial aspect of the transaction.\n\n2. The ticket states that the discount code was \"accepted,\" which means that the system recognized the code and was supposed to apply the discount. However, the discount was not applied to the total, indicating that there is an issue with the application of the discount.\n\n3. Considering the categories provided, \"billing\" seems to be the most relevant category. The issue is related to the application of a discount, which is a financial or pricing-related issue. The other categories do not seem to fit as well:\n   - \"Account\" could be a related category, but it's a bit too broad. The issue is specific to the application of a discount, not a general account-related issue.\n   - \"Technical\" could be a possible category, but it's not the most specific or relevant one. The issue is not with the technical functionality of the system, but rather with the application of a discount.\n   - \"Shipping\" is clearly not relevant to the issue described in the ticket.\n\nBased on this analysis, the most fitting category for the customer support ticket is \"billing.\"",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: 'To classify the customer support ticket into one category, l'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 11558.531667000352,
+   "cached": false
+  },
+  {
+   "case_id": "t100",
+   "expected": "shipping",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category is related to payment or financial issues. Since the ticket mentions a physical package and its contents, it doesn't seem to be related to billing. Therefore, we can rule out the billing category.\n\n2. **Account**: This category is related to user accounts, login issues, or other account-related problems. The ticket doesn't mention any account-related issues, so we can rule out the account category.\n\n3. **Technical**: This category is related to issues with the product or service itself, such as bugs, errors, or functionality problems. While the ticket mentions a physical package, it's more related to the shipping and handling of the package rather than a technical issue with the product. Therefore, we can rule out the technical category.\n\n4. **Shipping**: This category is related to issues with the shipping or delivery of a package. The ticket mentions that the package arrived crushed and the contents are broken, which directly relates to a shipping issue. This is the most fitting category for the ticket.\n\nBased on the analysis, the customer support ticket should be classified under the **shipping** category.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 9812.924292000389,
+   "cached": false
+  },
+  {
+   "case_id": "t101",
+   "expected": "shipping",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category is related to payment, invoices, or charges. Since the ticket mentions a missing item, it doesn't seem to be related to billing. Therefore, we can exclude this category.\n\n2. **Account**: This category is related to user accounts, login issues, or profile management. The ticket doesn't mention anything about accounts or login issues, so we can exclude this category.\n\n3. **Technical**: This category is related to issues with the website, software, or other technical aspects of the service. While the ticket mentions a missing item, it's more related to the physical delivery of the item rather than a technical issue with the website or software. Therefore, we can exclude this category.\n\n4. **Shipping**: This category is related to the delivery of items, including issues with missing or damaged items. The ticket mentions that half the items are missing from the box, which directly relates to the shipping and delivery of the items. This seems to be the most relevant category.\n\nBased on the above analysis, the customer support ticket is best classified under the **shipping** category.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 9642.992875000346,
+   "cached": false
+  },
+  {
+   "case_id": "t108",
+   "expected": "shipping",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category is related to payment or financial issues. The ticket does not mention anything about payment, invoices, or financial transactions. Therefore, it's unlikely to be a billing issue.\n\n2. **Account**: This category is related to user accounts, login issues, or changes to account settings. The ticket does not mention anything about account settings, login issues, or user accounts. Therefore, it's unlikely to be an account issue.\n\n3. **Technical**: This category is related to technical issues with a product or service, such as software bugs, hardware problems, or connectivity issues. The ticket mentions a driver having trouble finding a building, which suggests a navigation or mapping issue. However, it's not explicitly related to a technical issue with a product or service. It's more related to a service provided by the company (directions).\n\n4. **Shipping**: This category is related to the delivery of products or packages. The ticket mentions a driver, which suggests a delivery or logistics issue. However, the issue is not with the delivery of a product, but rather with the driver finding the building. The ticket is asking for directions, which is related to navigation or logistics, but not specifically shipping.\n\nConsidering the above points, the ticket is most likely related to **shipping**, as it involves a driver and a navigation issue. However, it's worth noting that the ticket is asking for directions, which is a service provided by the company. If the company provides directions as a service, it could be argued that the ticket is related to the **technical** category, as it involves a service provided by the company. But since the ticket is specifically asking for directions, which is related to navigation or logistics, I would classify it as **shipping**.\n\n**Final answer:** shipping",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 14551.112124998326,
+   "cached": false
+  },
+  {
+   "case_id": "t116",
+   "expected": "shipping",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category is related to payment, invoices, or charges. The ticket doesn't mention anything about payment or financial information, so it's unlikely to be a billing issue.\n\n2. **Account**: This category is related to user accounts, login issues, or account management. The ticket doesn't mention anything about account-related problems, so it's unlikely to be an account issue.\n\n3. **Technical**: This category is related to technical problems, such as website errors, software issues, or hardware problems. The ticket doesn't mention any technical problems, so it's unlikely to be a technical issue.\n\n4. **Shipping**: This category is related to shipping, delivery, or logistics. The ticket asks about the courier used, which is directly related to shipping.\n\nBased on the above analysis, the ticket is most likely related to shipping, as it asks about the courier used.\n\n**Final answer:** shipping",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 7743.620542001736,
+   "cached": false
+  },
+  {
+   "case_id": "t124",
+   "expected": "shipping",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category is related to payment or financial issues. Since the ticket mentions a parcel stuck at customs, it doesn't seem to be related to payment or financial issues. Therefore, billing is not the correct category.\n\n2. **Account**: This category is related to user accounts, login issues, or other account-related problems. The ticket doesn't mention any account-related issues, so account is not the correct category.\n\n3. **Technical**: This category is related to technical issues, such as website errors, software problems, or other technical difficulties. While the ticket mentions a parcel, which is a physical item, it's not a technical issue in the classical sense. However, it could be related to a technical issue, such as a problem with tracking or delivery. But, considering the context, it's more related to the delivery process than a technical issue with the website or software.\n\n4. **Shipping**: This category is related to issues with shipping, delivery, or the movement of packages. The ticket explicitly mentions a parcel stuck at customs, which is a shipping-related issue. This is the most relevant category, as it directly addresses the problem of a delayed or stuck package.\n\nBased on the analysis, the most fitting category for this customer support ticket is **shipping**.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 11020.53325000088,
+   "cached": false
+  },
+  {
+   "case_id": "t125",
+   "expected": "shipping",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category is related to issues with payment, invoices, or charges. The ticket doesn't mention anything about payment or financial issues, so it's unlikely to be a billing issue.\n\n2. **Account**: This category is related to issues with the customer's account, such as login problems, password reset, or account settings. The ticket mentions \"consignment shows out for delivery,\" which suggests a tracking or shipping-related issue, not an account-related issue.\n\n3. **Technical**: This category is related to issues with the website, application, or system, such as errors, bugs, or functionality problems. The ticket mentions a specific issue with consignment tracking, which could be related to a technical issue, but it's more likely related to shipping or tracking.\n\n4. **Shipping**: This category is related to issues with shipping, such as tracking, delivery, or order status. The ticket explicitly mentions \"consignment shows out for delivery three days running,\" which suggests a shipping-related issue, specifically with tracking or delivery status.\n\nBased on the above analysis, the most fitting category for this customer support ticket is **shipping**. The ticket is clearly related to a shipping issue, specifically with tracking or delivery status, rather than any other category.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 11775.038542000402,
+   "cached": false
+  },
+  {
+   "case_id": "t126",
+   "expected": "shipping",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category is related to issues with payment, invoices, or charges. Since the ticket mentions a wrong item was delivered, it doesn't seem to be related to billing.\n\n2. **Account**: This category is related to issues with the customer's account, such as login problems, password reset, or account information. While the ticket is related to a customer's order, it doesn't seem to be directly related to their account.\n\n3. **Technical**: This category is related to issues with the website, application, or other technical aspects of the business. While the ticket might be related to a technical issue (e.g., incorrect order fulfillment), it's more related to the order itself rather than the technical aspect of the business.\n\n4. **Shipping**: This category is related to issues with the delivery of the order, such as incorrect or missing items, delayed shipping, or incorrect addresses. Since the ticket mentions a wrong item was delivered, it seems to be directly related to the shipping of the order.\n\nBased on the above analysis, the customer support ticket is most likely related to the **shipping** category, as it directly involves an issue with the delivery of the order.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 11156.308584002545,
+   "cached": false
+  },
+  {
+   "case_id": "t129",
+   "expected": "shipping",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category is related to payment or financial issues. Since the ticket mentions a package, it's unlikely to be about billing. The issue is with the package itself, not the payment.\n\n2. **Account**: This category is related to user accounts, login issues, or other account-related problems. The ticket doesn't mention any account-related issues, so it's unlikely to be about account.\n\n3. **Technical**: This category is related to technical issues with the product or service. While the ticket mentions a package, which is a physical product, the issue is with the shipping and handling of the package, not the product itself.\n\n4. **Shipping**: This category is related to issues with the delivery or handling of packages. The ticket mentions a package thrown over the fence and the seal broken, which indicates a problem with the shipping or handling of the package.\n\nBased on the above analysis, the customer support ticket is most likely related to shipping issues, as it involves the delivery and handling of a package.\n\n**Final answer:** shipping",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 10068.572916999983,
+   "cached": false
+  },
+  {
+   "case_id": "t131",
+   "expected": "account",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category typically deals with issues related to payment, invoices, or charges. The ticket description doesn't mention anything about payment or financial transactions, so it's unlikely to be a billing issue.\n\n2. **Account**: This category usually covers issues related to user accounts, such as login problems, password resets, or account access. The ticket description mentions being \"locked out completely,\" which suggests an issue with account access. This is a strong indication that the ticket is related to the account.\n\n3. **Technical**: This category is broad and can cover a wide range of issues, including account-related problems. However, the ticket description specifically mentions being locked out due to \"too many failed attempts,\" which implies a security-related issue rather than a general technical problem.\n\n4. **Shipping**: This category is typically related to issues with order delivery, tracking, or logistics. The ticket description doesn't mention anything about shipping or delivery, so it's unlikely to be a shipping issue.\n\nBased on the analysis, the ticket description best fits the **account** category, as it specifically mentions being locked out of the account due to failed login attempts.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 10203.525290999096,
+   "cached": false
+  },
+  {
+   "case_id": "t134",
+   "expected": "account",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category typically deals with issues related to payment, invoices, or charges. Since the ticket mentions two-factor codes being sent to a phone, it doesn't seem to be related to billing. Therefore, we can rule out the billing category.\n\n2. **Account**: This category often involves issues with user accounts, such as login problems, password recovery, or account security. The ticket mentions two-factor codes being sent to a phone, which suggests an issue with account security. This is a strong indication that the account category might be relevant.\n\n3. **Technical**: This category usually covers issues with the functionality or performance of a product or service. While the ticket does involve a technical aspect (two-factor codes), it's more focused on the security and account management aspect rather than a general technical issue. Therefore, we can consider the technical category, but it's not the most fitting.\n\n4. **Shipping**: This category is typically related to issues with delivering products or services, such as tracking, delivery times, or package problems. Since the ticket doesn't mention anything about shipping, we can rule out this category.\n\nConsidering the above analysis, the most fitting category for the customer support ticket is **account**. The issue revolves around account security and two-factor codes being sent to an outdated phone number, which suggests a problem with account management.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 11484.034832999896,
+   "cached": false
+  },
+  {
+   "case_id": "t145",
+   "expected": "account",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category typically deals with issues related to payment, invoices, or subscription plans. The ticket doesn't mention anything about payment or financial transactions, so it's unlikely to be a billing issue.\n\n2. **Account**: This category usually involves managing user accounts, passwords, or access permissions. The ticket specifically mentions revoking access for a team member, which suggests that it's related to account management. This seems like a strong candidate for the correct category.\n\n3. **Technical**: This category often involves troubleshooting technical issues, such as software bugs, hardware problems, or connectivity issues. While the ticket does involve a team member, it doesn't mention any technical problems or issues, so it's unlikely to be a technical issue.\n\n4. **Shipping**: This category typically deals with issues related to shipping products, such as delivery times, tracking numbers, or package status. The ticket doesn't mention anything about shipping products, so it's unlikely to be a shipping issue.\n\nBased on the analysis, the ticket is most likely related to managing user accounts and access permissions, which makes **Account** the correct category.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 10489.361040999938,
+   "cached": false
+  },
+  {
+   "case_id": "t148",
+   "expected": "account",
+   "text": "To classify the customer support ticket into one category, let's analyze the content step by step:\n\n1. The customer is asking about downloading data, which implies they want to access or retrieve information from their account.\n2. The phrase \"before closing the account\" suggests that the customer is planning to terminate their account, which is related to account management.\n3. The request for downloading data is not related to billing, as it's not about payment or financial transactions.\n4. The request is not related to technical issues, as it's not about troubleshooting or resolving a problem with the product or service.\n5. The request is not related to shipping, as it's not about receiving or sending physical products.\n\nConsidering these points, the customer support ticket is most closely related to account management, as the customer is asking about accessing their data before closing their account.\n\nFinal answer: **account**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: 'To classify the customer support ticket into one category, l'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 7618.460082998354,
+   "cached": false
+  },
+  {
+   "case_id": "t152",
+   "expected": "account",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category typically deals with issues related to payment, invoices, or subscription plans. The ticket doesn't mention anything about payment or financial aspects, so it's unlikely to be a billing issue.\n\n2. **Account**: This category usually covers questions or concerns about user accounts, such as login issues, password recovery, or account settings. The ticket mentions inactivity, which could be related to account status, but it's more focused on data retention rather than account settings.\n\n3. **Technical**: This category often deals with technical issues, such as errors, bugs, or troubleshooting. The ticket asks about data retention, which is a technical aspect of the service, but it's more related to data management and policy rather than a specific technical issue.\n\n4. **Shipping**: This category is typically related to orders, delivery, or logistics. The ticket doesn't mention anything about shipping or delivery, so it's unlikely to be a shipping issue.\n\nConsidering the above points, the ticket is most likely related to the **account** category, as it mentions inactivity, which could be related to account status, and the primary concern is about data retention, which is a policy-related aspect of the account.\n\n**Final answer:** account",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 11354.73733300023,
+   "cached": false
+  },
+  {
+   "case_id": "t167",
+   "expected": "technical",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category typically deals with issues related to payment, invoices, or subscription plans. Since the ticket mentions a 500 error on every page, it doesn't seem to be related to billing. Therefore, we can rule out the billing category.\n\n2. **Account**: This category usually handles issues related to user accounts, login problems, or profile settings. Although the ticket mentions a site-wide issue, it doesn't specifically mention account-related problems. However, it's possible that the 500 error is affecting the account management section of the site. Still, it's not a clear fit for the account category.\n\n3. **Technical**: This category deals with issues related to the functionality or performance of the website or application. The ticket mentions a 500 error on every page, which is a technical issue. A 500 error is typically a server-side error that prevents the site from loading correctly. This seems like a strong fit for the technical category.\n\n4. **Shipping**: This category usually handles issues related to order delivery, tracking, or shipping options. Since the ticket doesn't mention anything about shipping or orders, we can rule out the shipping category.\n\nBased on the analysis, the customer support ticket is most likely related to a technical issue with the website or application, which is causing a 500 error on every page. Therefore, the final answer is:\n\n**Technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 11674.446417000581,
+   "cached": false
+  },
+  {
+   "case_id": "t185",
+   "expected": "technical",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category is related to payment, invoices, or financial issues. The ticket description doesn't mention anything about payment or financial matters, so it's unlikely to be a billing issue.\n\n2. **Account**: This category is related to user accounts, login issues, or profile settings. The ticket description mentions a specific issue with the print view, which doesn't seem to be related to account settings.\n\n3. **Technical**: This category is related to technical issues, such as bugs, errors, or functionality problems. The ticket description mentions a specific issue with the print view, which suggests a technical problem with the website or application.\n\n4. **Shipping**: This category is related to shipping, delivery, or order-related issues. The ticket description doesn't mention anything about shipping or orders, so it's unlikely to be a shipping issue.\n\nBased on the analysis, the ticket description is most likely related to a technical issue with the website or application, specifically with the print view. Therefore, the final answer is:\n\n**Technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 8892.604959000892,
+   "cached": false
+  },
+  {
+   "case_id": "t189",
+   "expected": "technical",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category is related to payment, invoices, and financial transactions. The ticket description doesn't mention anything related to billing, so it's unlikely to be in this category.\n\n2. **Account**: This category is related to user accounts, login issues, and profile management. While the ticket might be related to a user interface issue, it doesn't specifically mention account-related topics, so it's not a strong fit.\n\n3. **Technical**: This category is related to issues with software, hardware, or technical functionality. The ticket description mentions a specific user interface issue (\"Tooltip text is cut short on long labels\"), which suggests a technical problem. This category seems like a good fit.\n\n4. **Shipping**: This category is related to delivery, logistics, and order fulfillment. The ticket description doesn't mention anything related to shipping, so it's unlikely to be in this category.\n\nBased on the analysis, the customer support ticket is most likely to be in the **technical** category, as it describes a specific user interface issue that requires technical expertise to resolve.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 9230.796958003339,
+   "cached": false
+  },
+  {
+   "case_id": "t198",
+   "expected": "technical",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category is related to payment or financial issues. The ticket doesn't mention anything about payment, invoices, or financial transactions. Therefore, it's unlikely to be a billing issue.\n\n2. **Account**: This category is related to user accounts, access, or permissions. While the ticket mentions two users, it's not about their accounts or access, but rather about a specific issue with editing a record. So, it's not a clear fit for the account category.\n\n3. **Technical**: This category is related to issues with the software, system, or functionality. The ticket describes a specific problem with two users editing the same record and losing each other's changes. This sounds like a technical issue with the system's functionality, possibly related to concurrency or data management. This category seems like a good fit.\n\n4. **Shipping**: This category is related to delivery or logistics. The ticket doesn't mention anything about shipping or delivery, so it's not a shipping issue.\n\nBased on the analysis, the customer support ticket is most likely a **technical** issue, as it describes a problem with the system's functionality.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 9873.718291000841,
+   "cached": false
+  },
+  {
+   "case_id": "t200",
+   "expected": "technical",
+   "text": "To classify the customer support ticket into one category, let's analyze the content step by step:\n\n1. The ticket mentions \"API,\" which stands for Application Programming Interface. This suggests that the issue is related to the technical functionality of the system.\n2. The ticket does not mention any billing-related information, such as payment issues, invoices, or subscription plans. Therefore, the billing category does not fit.\n3. The ticket does not mention any account-related information, such as login issues, password reset, or account settings. Therefore, the account category does not fit.\n4. The ticket does not mention any shipping-related information, such as delivery times, tracking numbers, or order status. Therefore, the shipping category does not fit.\n5. The ticket specifically asks about a \"sandbox environment for testing the API,\" which implies that the customer wants to test the API in a controlled environment. This is a technical request, as it involves the functionality and setup of the API.\n\nBased on this analysis, the customer support ticket fits best into the technical category, as it involves the technical functionality of the system and the setup of the API.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: 'To classify the customer support ticket into one category, l'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 9104.755500000465,
+   "cached": false
+  },
+  {
+   "case_id": "t202",
+   "expected": "billing",
+   "text": "To classify the customer support ticket into one category, let's analyze the content step by step:\n\n1. The customer is \"Really happy with the plan.\" This indicates that the customer is satisfied with their current subscription or plan, which suggests that the issue is not related to a problem or complaint.\n\n2. The customer is \"thinking of upgrading to the team tier.\" This implies that the customer is considering an upgrade, which is a proactive action rather than a response to a problem.\n\nConsidering the categories:\n\n- **Billing**: This category typically involves issues related to payment, invoices, or pricing. Since the customer is happy with their plan and considering an upgrade, it's unlikely that the issue is related to billing.\n\n- **Account**: This category often involves issues related to account management, such as login issues, password recovery, or profile updates. While the customer is considering an upgrade, which involves their account, the primary focus is on the plan and upgrade, not account management.\n\n- **Technical**: This category typically involves issues related to product functionality, errors, or technical difficulties. Since the customer is happy with their plan and considering an upgrade, it's unlikely that the issue is related to technical difficulties.\n\n- **Shipping**: This category is typically related to issues with delivery, tracking, or order status. Since the customer is discussing their plan and upgrade, it's clear that shipping is not relevant to this issue.\n\nBased on the analysis, the customer support ticket is most likely related to the customer's interest in upgrading their plan, which falls under the **account** category, as it involves their account and plan management.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: 'To classify the customer support ticket into one category, l'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 13171.299416000693,
+   "cached": false
+  },
+  {
+   "case_id": "t206",
+   "expected": "billing",
+   "text": "To classify the customer support ticket into one category, let's analyze the content step by step:\n\n1. The customer mentions \"Love the product,\" which indicates a positive sentiment towards the product itself. This suggests that the issue is not related to the product's functionality or quality.\n\n2. The customer expresses a willingness to \"move to the yearly plan,\" which implies a desire to upgrade their subscription or payment plan. This is a billing-related issue, as it involves the customer's payment schedule.\n\n3. The customer does not mention any issues with their account, such as login problems or account access. They also do not mention any technical issues, such as bugs or errors with the product.\n\n4. The customer does not mention anything related to shipping, such as delivery issues or product availability.\n\nConsidering these points, the customer support ticket is most likely related to billing, as the customer is inquiring about upgrading their payment plan.\n\nFinal answer: billing",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: 'To classify the customer support ticket into one category, l'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 7316.27383399973,
+   "cached": false
+  },
+  {
+   "case_id": "t212",
+   "expected": "shipping",
+   "text": "To classify the customer support ticket into one category, let's analyze the content step by step:\n\n1. The ticket mentions \"Order came through perfectly,\" which indicates that the customer has successfully placed an order. This suggests that the issue is not related to billing, as billing issues would typically involve payment or financial problems.\n\n2. The customer is asking about setting up a repeat delivery, which implies that they want to reorder or have the product shipped to them again. This is related to the shipping process, but it's not a problem or issue with shipping, rather a request for a future action.\n\n3. The customer is not asking about their account, such as password reset, account balance, or other account-related issues. Therefore, the account category does not fit.\n\n4. The customer is not asking about technical issues, such as product functionality, website errors, or other technical problems. Therefore, the technical category does not fit.\n\nConsidering the above points, the category that best fits the customer support ticket is \"shipping.\" The customer is asking about setting up a repeat delivery, which is related to the shipping process.\n\nFinal answer: shipping",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: 'To classify the customer support ticket into one category, l'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 8825.455291000253,
+   "cached": false
+  },
+  {
+   "case_id": "t220",
+   "expected": "account",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category typically deals with issues related to payment, invoices, or charges. Since the ticket mentions \"single sign on,\" which is related to authentication, it doesn't seem to be related to billing.\n\n2. **Account**: This category usually handles issues related to user accounts, such as login problems, password reset, or account settings. The ticket mentions \"single sign on,\" which is a feature related to authentication, so it could be related to account settings.\n\n3. **Technical**: This category typically deals with issues related to the functionality or performance of a product or service. Since the ticket mentions \"single sign on,\" which is a technical feature, it could be related to technical issues.\n\n4. **Shipping**: This category usually handles issues related to the delivery of products, such as tracking, delivery times, or missing items. Since the ticket mentions \"single sign on,\" which is unrelated to shipping, it doesn't seem to be related to shipping.\n\nConsidering the above points, the ticket seems to be related to the technical aspect of the product or service, as it mentions \"single sign on,\" which is a technical feature. However, it's also related to account settings, as it's a feature that affects user authentication.\n\nSince the ticket is more focused on the technical aspect of the feature, I would classify it as **technical**.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 11403.210083000886,
+   "cached": false
+  },
+  {
+   "case_id": "t234",
+   "expected": "billing",
+   "text": "To classify the customer support ticket into one category, let's analyze the information provided step by step:\n\n1. The ticket mentions an \"overdue notice,\" which implies that the customer has received a notification about a payment that is past due.\n2. The customer mentions that they \"settled\" the invoice in June, indicating that they have already made the payment.\n3. The issue is not about the payment itself, but rather about the notification being sent after the payment was made.\n\nConsidering the categories provided:\n\n- **Billing**: This category seems to fit, as the issue is related to an overdue notice, which is a billing-related issue. The fact that the customer has already made the payment in June also supports this category.\n- **Account**: While the issue is related to the customer's account (since it's about an invoice), the primary focus is on the billing aspect (the overdue notice) rather than the account itself.\n- **Technical**: There is no mention of any technical issues, such as software problems or connectivity issues, so this category does not fit.\n- **Shipping**: The ticket has no relation to shipping, so this category does not fit.\n\nBased on the analysis, the customer support ticket is best classified under the **billing** category.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: 'To classify the customer support ticket into one category, l'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 10073.276875002193,
+   "cached": false
+  },
+  {
+   "case_id": "t239",
+   "expected": "billing",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category typically involves issues related to payment, invoices, or charges. The ticket mentions a \"promotional rate,\" which suggests a pricing-related issue. However, the key phrase \"ended without notice\" implies that the issue is not about the payment itself, but rather about the rate change. So, while billing is related, it's not the primary focus.\n\n2. **Account**: This category usually involves issues related to account management, such as login problems, password resets, or changes to account settings. The ticket doesn't mention anything about account management, so this category doesn't seem to fit.\n\n3. **Technical**: This category typically involves issues related to product functionality, software bugs, or technical difficulties. The ticket mentions a promotional rate, which is a pricing-related issue, not a technical one.\n\n4. **Shipping**: This category usually involves issues related to order delivery, tracking, or shipping-related problems. The ticket doesn't mention anything about shipping, so this category doesn't fit.\n\nConsidering the above analysis, the ticket is most closely related to **billing**, as it involves a pricing-related issue (promotional rate) that was changed without notice. However, it's worth noting that the issue is more about the rate change than the billing process itself.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 11151.949416998832,
+   "cached": false
+  },
+  {
+   "case_id": "t241",
+   "expected": "billing",
+   "text": "To classify the customer support ticket into one category, let's consider each option step by step:\n\n1. **Billing**: This category seems like a good fit because the ticket is related to financial documents, specifically invoices. However, it's not directly related to payment or billing issues, but rather a request for document delivery.\n\n2. **Account**: This category could be a good fit because it involves a request related to the customer's account, specifically the delivery of invoices. However, it's more specific to the document delivery aspect rather than general account management.\n\n3. **Technical**: This category doesn't seem to fit because the ticket is not related to technical issues or problems with the system. It's a request for a change in document delivery.\n\n4. **Shipping**: This category doesn't fit at all because the ticket is not related to shipping or delivery of physical goods. It's about the delivery of invoices.\n\nConsidering the above points, the most fitting category is **billing** because it's related to financial documents, specifically invoices, and the request is for document delivery.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: 'To classify the customer support ticket into one category, l'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 8480.84199999721,
+   "cached": false
+  },
+  {
+   "case_id": "t247",
+   "expected": "billing",
+   "text": "To classify the customer support ticket into one category, let's analyze the content step by step:\n\n1. The ticket is asking about a specific aspect of the service, which is the setup fee for new accounts. This implies that the customer is inquiring about the process of creating a new account, which is related to the account setup.\n\n2. The ticket does not mention any issues with billing, such as payment methods, invoices, or charges. It's specifically asking about a setup fee, which is a one-time charge associated with creating a new account.\n\n3. The ticket does not mention any technical issues, such as errors, bugs, or troubleshooting. It's a straightforward question about a specific fee.\n\n4. The ticket does not mention shipping, which is related to the delivery of physical products. The question is about a digital service (account setup).\n\nConsidering these points, the category that best fits the customer support ticket is \"account\". The ticket is specifically asking about the setup fee for new accounts, which is a question related to the process of creating a new account.\n\nFinal answer: account",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: 'To classify the customer support ticket into one category, l'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 8817.798416999722,
+   "cached": false
+  },
+  {
+   "case_id": "t253",
+   "expected": "billing",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category seems like a good fit because the ticket is asking about a specific charge (VAT) related to the customer's purchase. VAT (Value-Added Tax) is a type of tax, and billing is typically concerned with taxes and charges associated with transactions.\n\n2. **Account**: While the ticket is related to a customer's account (since it's asking about their specific situation), the primary concern is not about the account itself, but rather about a specific charge.\n\n3. **Technical**: This category doesn't seem to fit because the ticket is asking about a business or financial aspect (VAT) rather than a technical issue with the website, software, or product.\n\n4. **Shipping**: This category doesn't fit at all because the ticket is asking about a tax charge, not about shipping costs or logistics.\n\nBased on this analysis, the most suitable category for the customer support ticket is **Billing**.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 8199.537959000736,
+   "cached": false
+  },
+  {
+   "case_id": "t259",
+   "expected": "billing",
+   "text": "To classify the customer support ticket into one category, let's analyze the content step by step:\n\n1. The ticket mentions \"billing,\" which is a direct reference to the billing system. This suggests that the ticket is related to the billing aspect of the service.\n\n2. The phrase \"new billing dashboard\" indicates that the ticket is specifically about the billing dashboard, which is a feature related to billing.\n\n3. There is no mention of account-related issues, such as account creation, deletion, or access. This suggests that the ticket is not about account management.\n\n4. The ticket does not mention any technical issues, such as errors, bugs, or problems with the service. This suggests that the ticket is not about technical support.\n\n5. There is no mention of shipping, which is a separate aspect of the service. This suggests that the ticket is not about shipping-related issues.\n\nBased on the analysis, the ticket is clearly related to the billing aspect of the service, specifically the new billing dashboard. Therefore, the final answer is:\n\n**Category: billing**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: 'To classify the customer support ticket into one category, l'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 8380.489374998433,
+   "cached": false
+  },
+  {
+   "case_id": "t261",
+   "expected": "billing",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: The ticket mentions an \"upgrade process,\" which could imply a change in pricing or subscription level. However, the customer's satisfaction with the process doesn't necessarily indicate a billing issue. The focus is on the ease of the process, not the financial aspect.\n\n2. **Account**: The upgrade process is related to the customer's account, but the ticket doesn't specifically mention any issues with their account, such as login problems or profile updates. The customer is pleased with the process, which suggests a positive experience with their account, but it's not a complaint or issue.\n\n3. **Technical**: The upgrade process could involve technical aspects, such as software updates or configuration changes. However, the customer's satisfaction with the process doesn't necessarily indicate a technical issue. The focus is on the ease of the process, not a problem that needed to be resolved.\n\n4. **Shipping**: The ticket doesn't mention shipping at all. The upgrade process is unrelated to shipping, so this category is not applicable.\n\nConsidering these points, the most fitting category for the customer support ticket is **account**. The ticket mentions an \"upgrade process,\" which is related to the customer's account, and the customer is pleased with the process, indicating a positive experience with their account.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 10784.604916003445,
+   "cached": false
+  },
+  {
+   "case_id": "t288",
+   "expected": "shipping",
+   "text": "To classify the customer support ticket into one category, let's consider each option step by step:\n\n1. **Billing**: This category is related to payment, invoices, or charges. The ticket doesn't mention anything about payment or financial transactions, so it's unlikely to be a billing issue.\n\n2. **Account**: This category is related to user accounts, login issues, or profile management. The ticket doesn't mention anything about user accounts or profiles, so it's unlikely to be an account issue.\n\n3. **Technical**: This category is related to technical issues, such as website errors, software problems, or hardware issues. The ticket mentions a parcel that has already been dispatched, which suggests a shipping-related issue rather than a technical one.\n\n4. **Shipping**: This category is related to the delivery of packages, tracking, or changes to shipping addresses. The ticket specifically asks about redirecting a parcel that has already been dispatched, which is a shipping-related issue.\n\nBased on the above analysis, the customer support ticket is most likely related to shipping, as it involves a parcel that has already been dispatched and the customer is asking about redirecting it.\n\n**Final answer:** shipping",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: 'To classify the customer support ticket into one category, l'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 9742.73466700106,
+   "cached": false
+  },
+  {
+   "case_id": "t302",
+   "expected": "shipping",
+   "text": "To classify the customer support ticket into one category, let's analyze the content step by step:\n\n1. The ticket mentions \"Courier,\" which is related to shipping. This suggests that the issue is likely related to the shipping process.\n2. The ticket mentions that the courier \"rescheduled easily,\" which implies that the issue was resolved or handled by the shipping company. This further supports the idea that the issue is related to shipping.\n3. There is no mention of billing, account, or technical issues. The focus is on the shipping process and the courier's flexibility.\n\nConsidering the above points, the categories that do not fit are:\n\n- Billing: There is no mention of payment or financial issues.\n- Account: The issue is not related to the customer's account, but rather to the shipping process.\n- Technical: The issue is not related to a technical problem, but rather to the courier's flexibility.\n\nBased on the analysis, the final answer is:\n\n**Shipping**\n\nThe customer support ticket is related to the shipping process and the courier's flexibility, making shipping the most suitable category.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: 'To classify the customer support ticket into one category, l'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 8904.412624997349,
+   "cached": false
+  },
+  {
+   "case_id": "t323",
+   "expected": "account",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category typically deals with issues related to payment, invoices, or pricing. The ticket doesn't mention anything related to billing, so we can rule out this category.\n\n2. **Account**: This category usually involves issues with user accounts, login problems, or account settings. While the ticket does involve a user (the auditor), it's not about their account settings or login issues, but rather about a specific role within the account. So, we can't rule out this category entirely, but let's continue.\n\n3. **Technical**: This category involves issues with the functionality or configuration of a system, software, or service. The ticket asks about creating a specific role, which implies a technical configuration or setup. This seems like a strong candidate for the correct category.\n\n4. **Shipping**: This category is typically related to issues with delivering products or services, such as tracking, delivery times, or product availability. The ticket has no relation to shipping, so we can rule out this category.\n\nConsidering the above analysis, the ticket is most likely related to a technical configuration or setup, specifically about creating a read-only role for auditors. Therefore, the final answer is:\n\n**Technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 10713.285582998651,
+   "cached": false
+  },
+  {
+   "case_id": "t329",
+   "expected": "account",
+   "text": "To classify the customer support ticket into one category, let's analyze the content step by step:\n\n1. The ticket is asking about hiding an email from other members. This implies that the customer is concerned about their personal information being visible to others, which is related to their account settings.\n\n2. The ticket does not mention anything about billing, such as payment issues or subscription plans. Therefore, the billing category does not fit.\n\n3. The ticket does not mention any technical issues, such as errors or bugs, that require troubleshooting. Therefore, the technical category does not fit.\n\n4. The ticket does not mention anything about shipping, such as delivery times or tracking information. Therefore, the shipping category does not fit.\n\n5. The ticket is asking about account settings, specifically hiding an email from other members. This suggests that the customer is looking for information about their account and how to manage their personal information.\n\nBased on this analysis, the customer support ticket is best classified under the \"account\" category.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: 'To classify the customer support ticket into one category, l'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 8339.68783399905,
+   "cached": false
+  },
+  {
+   "case_id": "t335",
+   "expected": "account",
+   "text": "To classify the customer support ticket into one category, let's analyze the information provided step by step:\n\n1. The ticket mentions \"Onboarding,\" which is a process related to setting up a new customer or user. This suggests that the issue is related to the initial setup or configuration of the customer's account.\n\n2. The phrase \"the whole team is set up\" implies that the onboarding process has been completed successfully for the entire team, indicating that the issue is not related to a specific problem or error.\n\n3. Considering the categories provided:\n   - Billing: This category is related to issues with payment, invoices, or charges. The ticket does not mention anything about billing or payment-related issues.\n   - Account: This category is related to issues with the customer's account, such as login problems, password reset, or account settings. The ticket mentions the onboarding process, which is related to setting up the account, making this category a strong candidate.\n   - Technical: This category is related to technical issues, such as errors, bugs, or system problems. The ticket does not mention any technical issues or errors, so this category is less likely.\n   - Shipping: This category is related to issues with shipping or delivery of products. The ticket does not mention anything about shipping or products, so this category is not applicable.\n\nBased on the analysis, the most fitting category for the customer support ticket is \"account,\" as it is related to the setup and configuration of the customer's account.",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: 'To classify the customer support ticket into one category, l'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 12599.834166001529,
+   "cached": false
+  },
+  {
+   "case_id": "t340",
+   "expected": "account",
+   "text": "To classify the customer support ticket into one category, let's analyze the content step by step:\n\n1. The customer expresses gratitude for a specific feature being added, which is \"single sign on.\" This suggests that the feature was previously missing or not functioning as expected.\n2. The customer mentions that this feature was the \"blocker\" for them. This implies that the feature was a critical requirement for the customer to proceed with their business or activity.\n3. Considering the categories provided, let's evaluate each one:\n   - **Billing**: The ticket does not mention anything related to payment, invoices, or financial transactions. Therefore, it's unlikely to be a billing issue.\n   - **Account**: While the customer is likely referring to their account, the issue is not with the account itself but with a specific feature within the account. This makes it less likely to be an account-related issue.\n   - **Technical**: The customer is expressing gratitude for a technical feature being added, which suggests that the issue was related to the functionality or availability of this feature. This makes technical support a strong candidate.\n   - **Shipping**: The ticket does not mention anything related to shipping, logistics, or delivery. Therefore, it's unlikely to be a shipping issue.\n\nBased on the analysis, the customer support ticket is most likely related to a technical issue, as it involves a specific feature (single sign on) that was previously missing or not functioning as expected.\n\n**Final answer:** technical",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: 'To classify the customer support ticket into one category, l'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 12130.118583001604,
+   "cached": false
+  },
+  {
+   "case_id": "t348",
+   "expected": "account",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category is related to payment, invoices, or financial transactions. The ticket description doesn't mention anything related to billing, so we can exclude this category.\n\n2. **Account**: This category is related to user accounts, login issues, or profile management. While the ticket is related to a user's settings, it's specifically about notification settings, which is a feature within the account, but not the account itself. We can consider this category, but let's continue to evaluate the others.\n\n3. **Technical**: This category is related to issues with the website, application, or system functionality. The ticket description mentions that notification settings do not persist between sessions, which implies a technical issue with the system's functionality. This category seems like a good fit.\n\n4. **Shipping**: This category is related to orders, delivery, or logistics. The ticket description doesn't mention anything related to shipping, so we can exclude this category.\n\nBased on the analysis, the ticket description best fits the **technical** category, as it's related to a system functionality issue (notification settings not persisting between sessions).",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 9961.727167003119,
+   "cached": false
+  },
+  {
+   "case_id": "t352",
+   "expected": "technical",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category typically deals with issues related to payment, invoices, or pricing. Since the ticket mentions webhook deliveries stopping without any change on the customer's side, it doesn't seem to be related to billing. Therefore, we can rule out the billing category.\n\n2. **Account**: This category usually involves issues with user accounts, login problems, or access permissions. The ticket doesn't mention anything about account-related problems, so we can exclude the account category.\n\n3. **Technical**: This category encompasses issues related to the functionality or performance of a product or service. The ticket mentions webhook deliveries stopping, which implies a technical issue with the service. This could be related to configuration, connectivity, or other technical aspects. Therefore, the technical category seems like a strong candidate.\n\n4. **Shipping**: This category is typically related to issues with physical goods being shipped, such as delivery times, tracking, or package status. Since the ticket mentions webhook deliveries (which are likely related to digital data or API notifications), it doesn't seem to be related to shipping. We can rule out the shipping category.\n\nBased on the analysis, the most fitting category for the customer support ticket is **technical**, as it involves an issue with the functionality or performance of a product or service (in this case, webhook deliveries).",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 12226.242666998587,
+   "cached": false
+  },
+  {
+   "case_id": "t362",
+   "expected": "technical",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category is related to payment or financial issues. The ticket doesn't mention anything about payment, invoices, or financial transactions, so it's unlikely to be a billing issue.\n\n2. **Account**: This category is related to user accounts, login issues, or profile management. The ticket doesn't mention anything about user accounts, login issues, or profile management, so it's unlikely to be an account issue.\n\n3. **Technical**: This category is related to technical problems or issues with the product or service. The ticket mentions an \"Editor\" and an issue with \"formatting when pasting from a document,\" which suggests a technical problem with the product or service.\n\n4. **Shipping**: This category is related to delivery or logistics of physical products. The ticket doesn't mention anything about shipping, delivery, or physical products, so it's unlikely to be a shipping issue.\n\nBased on the analysis, the ticket is most likely related to a technical issue with the product or service, specifically with the editor's functionality.\n\n**Final answer:** technical",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 9523.279125001864,
+   "cached": false
+  },
+  {
+   "case_id": "t364",
+   "expected": "technical",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category is related to payment or financial issues. The ticket doesn't mention anything about payment, invoices, or financial transactions, so it's unlikely to be a billing issue.\n\n2. **Account**: This category is related to user accounts, login issues, or access problems. The ticket doesn't mention anything about user accounts, login issues, or access problems, so it's unlikely to be an account issue.\n\n3. **Technical**: This category is related to technical problems or issues with the product or service. The ticket mentions a \"Scheduled export\" which implies a technical process or feature. The issue is also related to the output of this process (\"produced an empty file\"), which suggests a technical problem.\n\n4. **Shipping**: This category is related to delivery or logistics issues. The ticket doesn't mention anything about shipping, delivery, or logistics, so it's unlikely to be a shipping issue.\n\nBased on the above analysis, the ticket is most likely related to a technical issue with the product or service, specifically with the Scheduled export feature.\n\n**Final answer:** technical",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 10260.037083000498,
+   "cached": false
+  },
+  {
+   "case_id": "t367",
+   "expected": "technical",
+   "text": "To classify the customer support ticket into one category, let's analyze the information step by step:\n\n1. The ticket is asking about the \"rate limit on the public API.\" This implies that the customer is inquiring about the usage or access restrictions of the API, which is related to how the API can be used, rather than its functionality or features.\n\n2. The term \"public API\" suggests that the customer is referring to an external interface that is accessible to the public, rather than an internal system or a private API.\n\n3. The question is focused on the \"rate limit,\" which is a technical aspect of the API, specifically related to how many requests can be made within a certain time frame.\n\nConsidering the above points, let's evaluate the categories:\n\n- **Billing**: This category is unlikely, as the ticket is not asking about payment or pricing, but rather about usage restrictions.\n\n- **Account**: This category is also unlikely, as the ticket is not asking about account management or settings, but rather about a specific technical aspect of the API.\n\n- **Technical**: This category is a strong candidate, as the ticket is asking about a technical aspect of the API, specifically the rate limit.\n\n- **Shipping**: This category is highly unlikely, as the ticket has no relation to shipping or logistics.\n\nBased on the analysis, the final answer is:\n\n**Technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: 'To classify the customer support ticket into one category, l'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 11487.717708998389,
+   "cached": false
+  },
+  {
+   "case_id": "t371",
+   "expected": "technical",
+   "text": "To classify the customer support ticket into one category, let's analyze the content step by step:\n\n1. The ticket is asking about a \"bulk endpoint,\" which suggests it's related to the technical aspects of the system. This is because endpoints are typically used in APIs (Application Programming Interfaces) to interact with a system programmatically.\n\n2. The term \"bulk\" implies that the ticket is asking about a way to perform an action on multiple records at once, which is a common requirement in technical support.\n\n3. There is no mention of billing, account, or shipping, which are the other categories. This suggests that the ticket is not related to financial transactions, user accounts, or logistics.\n\n4. The language used is technical and focused on the system's architecture, which further supports the idea that the ticket is related to technical support.\n\nBased on this analysis, the ticket is most likely related to the technical aspects of the system, specifically the API or endpoints.\n\nFinal answer: **technical**",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: 'To classify the customer support ticket into one category, l'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 7812.520791001589,
+   "cached": false
+  },
+  {
+   "case_id": "t373",
+   "expected": "technical",
+   "text": "To classify the customer support ticket into one category, let's analyze the content step by step:\n\n1. The ticket is asking about a specific feature or functionality, which is \"webhooks with a signing secret.\" This suggests that the issue is related to the technical aspects of the service.\n\n2. The term \"webhooks\" is a technical term that refers to a way of notifying external applications about specific events. This implies that the ticket is related to the technical configuration or setup of the service.\n\n3. There is no mention of billing, account management, or shipping, which are the other categories. This suggests that the issue is not related to these areas.\n\n4. The question is asking for a specific technical capability, which is whether the service supports webhooks with a signing secret. This is a technical question that requires a technical answer.\n\nBased on this analysis, the ticket is most likely related to the technical category, as it is asking about a specific technical feature or capability.\n\nFinal answer: technical",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: 'To classify the customer support ticket into one category, l'",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 7761.859083999298,
+   "cached": false
+  },
+  {
+   "case_id": "t374",
+   "expected": "technical",
+   "text": "To classify the customer support ticket, let's consider each category step by step:\n\n1. **Billing**: This category is related to payment, invoices, and financial transactions. The ticket doesn't mention anything about payment or financial information, so it's unlikely to be a billing issue.\n\n2. **Account**: This category is related to user accounts, profile management, and access control. While the ticket is related to a user's interaction with the system, it's specifically about the console logs, which doesn't directly relate to account management.\n\n3. **Technical**: This category is related to issues with the system, software, or hardware. The ticket asks about the retention period of logs in the console, which is a technical question about the system's behavior. This seems like a good fit.\n\n4. **Shipping**: This category is related to the delivery of physical products. The ticket doesn't mention anything about shipping or physical products, so it's unlikely to be a shipping issue.\n\nBased on the analysis, the ticket is most likely related to the technical aspects of the system, specifically the logging mechanism.\n\n**Final answer:** technical",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's consider each\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 9244.723207997595,
+   "cached": false
+  },
+  {
+   "case_id": "t387",
+   "expected": "technical",
+   "text": "To classify the customer support ticket, let's analyze the information provided step by step:\n\n1. The ticket mentions \"Error messages,\" which suggests that the issue is related to the system's response to user input. This implies that the problem is not with the user's account, billing, or shipping, as these areas typically involve more concrete, tangible aspects.\n\n2. The phrase \"do not say which field was rejected\" indicates that the issue is with the system's feedback mechanism. This suggests that the problem is related to how the system communicates with the user, which is a technical aspect.\n\n3. Considering the categories, \"account\" and \"billing\" are less likely, as they typically involve more specific issues related to user accounts or financial transactions. While the issue might be related to a user's account, the description doesn't directly point to an account-related problem.\n\n4. \"Shipping\" is also unlikely, as it typically involves issues related to order delivery or logistics, which doesn't match the description of error messages.\n\n5. Based on the analysis, the most fitting category is \"technical,\" as it directly relates to the system's behavior and communication with the user.\n\nFinal answer: technical",
+   "scores": {
+    "parses_as_json": false,
+    "has_required_fields": false,
+    "category_is_valid": false,
+    "confidence_in_range": false,
+    "category_correct": false
+   },
+   "detail": {
+    "parses_as_json": "unparseable: \"To classify the customer support ticket, let's analyze the i\"",
+    "has_required_fields": "did not parse",
+    "category_is_valid": "did not parse",
+    "confidence_in_range": "did not parse",
+    "category_correct": "did not parse"
+   },
+   "latency_ms": 9294.78166699846,
+   "cached": false
+  }
+ ],
+ "golden_hash": "db64034ea063",
+ "seconds": 600.4694108750009
+}

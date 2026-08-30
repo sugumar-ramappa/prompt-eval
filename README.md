@@ -9,6 +9,38 @@ get changed on the strength of trying three examples by hand.
 
 ---
 
+## Read this first: there are TWO things numbered v1, v2
+
+The single most confusing thing about this project. Two different prompts do two
+different jobs, and both were revised, so both carry version numbers.
+
+```
+STEP 1   classify prompt + a ticket        →  llama3.1:8b  →  "billing"
+STEP 2   judge prompt + ticket + "billing" →  llama3.1:8b  →  "correct? yes/no"
+```
+
+**Same model, two jobs, two separate instruction sheets.**
+
+| | `classify-v1 … v4` | `judge-v1 … v2` |
+|---|---|---|
+| job | sort a ticket into a category | mark whether that sorting was right |
+| where | [`prompts/classify-*.txt`](prompts/) | [`prompts/judge-*.txt`](prompts/) |
+| how it is scored | string match against an answer key | 30 correct + 30 deliberately wrong cases |
+| how many | 4 | 2 |
+| run it with | `scripts/evaluate --prompt classify-v2` | `scripts/calibrate_judge --judge-prompt judge-v2` |
+| results land in | `data/runs/v2.json` | `data/runs/judge-calibration-judge-v2.json` |
+
+**Why a judge exists at all when classification has an answer key:** it does not
+need one. The judge is a separate experiment, asking whether an LLM grader could
+be trusted on tasks that have *no* answer key — summarisation, extraction,
+rewriting. The answer was 77% and generous, so it is deliberately excluded from
+`DEFAULT_SCORERS`.
+
+Full explanation of both families, with what changed between each version and
+why: [`prompts/README.md`](prompts/README.md).
+
+---
+
 ## The result that justifies the project
 
 A prompt was edited to add step-by-step reasoning. This is the most common
@@ -405,9 +437,19 @@ Two prompt versions, and they fail in opposite directions:
 
 ```
                 agreement   false accept   false reject   skew
-v1 prompt          66.7%          1             19        harsh
-v2 prompt          76.7%         11              3        GENEROUS
+judge-v1           66.7%          0             20        harsh
+judge-v2           76.7%         11              3        GENEROUS
 ```
+
+**v1 never passed a single wrong answer.** Sixty cases, thirty deliberately
+wrong, and it caught every one - annoying, and completely safe. The judge with
+the *worse* headline number had zero dangerous errors.
+
+Re-measured 30 Aug with both prompts as files, recorded in
+`data/runs/judge-calibration-judge-v1.json` and `-judge-v2.json`. The earlier
+hand-recorded split was 1/19 against this run's 0/20 - twenty errors either way,
+one case landing differently. `prompts/judge-v1.txt` is a **reconstruction**, so
+that is as close as it can get; see `prompts/README.md`.
 
 **v1 was rejecting defensible answers in favour of categories that do not
 exist:**
@@ -485,6 +527,17 @@ t247  "Is there a setup fee for new accounts"                  labelled billing
 
 Every one is a subscription or pricing question, and both models accepted
 `account` as defensible.
+
+**Re-run 30 Aug and reproduced exactly** — 76.7%/11/3 and 85.0%/7/2, the same six
+unanimous cases. Now recorded in `data/runs/judge-panel.json` rather than living
+in this README, with the eleven cases where the two judges split from each other.
+
+**The six are 10% of the answer key**, and that is the part with consequences.
+Every score in this project is computed against those labels, so a wrong label is
+not a judge problem — it is silently wrong arithmetic in every number the harness
+has ever produced. It also very likely runs through `ticket-classifier`'s 389
+hand-assigned labels, which share the same billing/account boundary.
+
 
 That is not six wrong labels. It is evidence that **the `account` / `billing`
 boundary is under-specified in the category scheme** - "my subscription

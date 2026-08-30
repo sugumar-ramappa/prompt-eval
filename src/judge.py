@@ -38,6 +38,7 @@ from __future__ import annotations
 
 import json
 from dataclasses import dataclass
+from pathlib import Path
 
 from src.golden import Case
 from src.models import Model, Reply
@@ -111,15 +112,41 @@ class Verdict:
     reason: str
 
 
-def ask_judge(judge: Model, case: Case, answer_text: str) -> Verdict | None:
+PROMPTS_DIR = Path(__file__).resolve().parent.parent / "prompts"
+
+
+def load_judge_prompt(name: str = "judge-v2") -> str:
+    """Read a judge prompt from `prompts/`.
+
+    The prompt lived only in this module until 30 Aug, which is why judge v1 has
+    no text: it was rewritten before the first commit, so git never held it. The
+    calibration that compares v1 against v2 was therefore a comparison nobody
+    else could run - a finding resting on a comment, which is the failure this
+    workspace has now hit in three separate places.
+
+    `prompts/judge-v1.txt` is a RECONSTRUCTION of that lost version, not a
+    recovery. See `prompts/README.md`.
+    """
+    path = PROMPTS_DIR / f"{name}.txt"
+    if not path.exists():
+        available = sorted(p.stem for p in PROMPTS_DIR.glob("judge-*.txt"))
+        raise FileNotFoundError(f"no judge prompt {name!r} - have {available}")
+    return path.read_text()
+
+
+def ask_judge(judge: Model, case: Case, answer_text: str,
+              template: str | None = None) -> Verdict | None:
     """Put one answer to the judge. None when the judge itself failed.
 
     None rather than False, deliberately. A judge that could not be reached has
     not decided the answer is wrong, and collapsing those two makes an outage
     look like a quality problem - the same distinction the reviewer agents in the
     sibling project keep for exactly this reason.
+
+    `template` defaults to the in-module v2 so every existing caller is
+    unaffected; the calibration passes a file so v1 can be run at all.
     """
-    prompt = JUDGE_PROMPT.format(
+    prompt = (template or JUDGE_PROMPT).format(
         ticket=case.text,
         allowed=", ".join(case.allowed),
         answer=answer_text.strip() or "(the classifier returned nothing)",

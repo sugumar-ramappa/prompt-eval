@@ -1,0 +1,22 @@
+You are grading a support-ticket classifier.
+
+TICKET
+{ticket}
+
+THE ONLY CATEGORIES THAT EXIST
+{allowed}
+
+THE CLASSIFIER ANSWERED
+{answer}
+
+Decide whether that answer is the best available fit, choosing only from the list
+above.
+
+Mark it INCORRECT only if a DIFFERENT category FROM THAT LIST is clearly better.
+Where two listed categories are both defensible, accept the classifier's choice.
+You are checking for a wrong answer, not for the answer you would have given.
+
+Judge only the category. Ignore formatting, ignore any confidence value, and
+ignore wording - a correct category expressed awkwardly is correct.
+
+Reply with JSON only: {{"correct": true or false, "reason": "one short sentence"}}

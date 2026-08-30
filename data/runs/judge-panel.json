@@ -1,0 +1,108 @@
+{
+  "recordedAt": "2026-08-30T14:50:31.089570+00:00",
+  "cases": 60,
+  "reproducible": false,
+  "judges": [
+    {
+      "judge": "ollama/llama3.1:8b",
+      "judged": 60,
+      "agreement": 0.7667,
+      "falseAccept": 11,
+      "falseReject": 3
+    },
+    {
+      "judge": "ollama/qwen2.5:14b",
+      "judged": 60,
+      "agreement": 0.85,
+      "falseAccept": 7,
+      "falseReject": 2
+    }
+  ],
+  "agreedWithEachOther": 49,
+  "bothJudged": 60,
+  "note": "A single judge's agreement rate cannot separate 'this judge is too weak' from 'this task is ambiguous'. A second, larger judge does: if agreement jumps the first was too small; if it does not move, the difficulty is in the task and no judge should be trusted on it.",
+  "unanimousAgainstHuman": [
+    {
+      "case": "t41",
+      "label": "billing",
+      "answerJudged": "account",
+      "text": "Subscription auto-renewed but I wanted to cancel"
+    },
+    {
+      "case": "t71",
+      "label": "billing",
+      "answerJudged": "account",
+      "text": "Subscription renewed automatically without any warning email"
+    },
+    {
+      "case": "t73",
+      "label": "billing",
+      "answerJudged": "account",
+      "text": "The discount code was accepted but not applied to the total"
+    },
+    {
+      "case": "t206",
+      "label": "billing",
+      "answerJudged": "account",
+      "text": "Love the product, happy to move to the yearly plan if that helps you"
+    },
+    {
+      "case": "t239",
+      "label": "billing",
+      "answerJudged": "account",
+      "text": "Promotional rate ended without notice"
+    },
+    {
+      "case": "t247",
+      "label": "billing",
+      "answerJudged": "account",
+      "text": "Is there a setup fee for new accounts"
+    }
+  ],
+  "judgesDisputed": [
+    {
+      "case": "t108",
+      "text": "Driver could not find the building, how do I add directions"
+    },
+    {
+      "case": "t129",
+      "text": "Package thrown over the fence and the seal is broken"
+    },
+    {
+      "case": "t189",
+      "text": "Tooltip text is cut short on long labels"
+    },
+    {
+      "case": "t198",
+      "text": "Two users editing the same record lose each other's changes"
+    },
+    {
+      "case": "t202",
+      "text": "Really happy with the plan, thinking of upgrading to the team tier"
+    },
+    {
+      "case": "t220",
+      "text": "Single sign on worked first time, delighted"
+    },
+    {
+      "case": "t253",
+      "text": "Is VAT charged for customers outside the UK"
+    },
+    {
+      "case": "t259",
+      "text": "The new billing dashboard is a big improvement"
+    },
+    {
+      "case": "t261",
+      "text": "Pleased with how simple the upgrade process was"
+    },
+    {
+      "case": "t335",
+      "text": "Onboarding was very smooth, the whole team is set up"
+    },
+    {
+      "case": "t387",
+      "text": "Error messages do not say which field was rejected"
+    }
+  ]
+}

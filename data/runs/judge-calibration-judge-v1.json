@@ -1,0 +1,159 @@
+{
+  "recordedAt": "2026-08-30T14:37:53.250434+00:00",
+  "backend": "ollama",
+  "model": "llama3.1:8b",
+  "judgePrompt": "judge-v1",
+  "seed": 42,
+  "cases": 60,
+  "judged": 60,
+  "unavailable": 0,
+  "agreements": 40,
+  "agreement": 0.6667,
+  "falseAccept": 0,
+  "falseReject": 20,
+  "skew": "harsh - it rejects answers the humans accepted",
+  "reproducible": false,
+  "note": "A judge is a model, so this does not reproduce to the decimal even at temperature 0. Agreement alone is the WRONG metric for choosing a judge: v2 agreed more often than v1 (76.7% against 66.7%) and was the worse judge, because it waved through 11 wrong answers against v1's 1. A generous judge passes bad output; a harsh one only annoys you. Read falseAccept and falseReject, not agreement.",
+  "disagreements": [
+    {
+      "case": "t16",
+      "judgeSaid": "rejected",
+      "answer": "account",
+      "truth": "account",
+      "reason": "Two factor authentication is more closely related to technical issues than account management."
+    },
+    {
+      "case": "t50",
+      "judgeSaid": "rejected",
+      "answer": "account",
+      "truth": "account",
+      "reason": "The issue is related to session management, which is more closely related to technical issues than account management."
+    },
+    {
+      "case": "t69",
+      "judgeSaid": "rejected",
+      "answer": "billing",
+      "truth": "billing",
+      "reason": "The category 'billing' is not directly related to reversing a transaction reference."
+    },
+    {
+      "case": "t108",
+      "judgeSaid": "rejected",
+      "answer": "shipping",
+      "truth": "shipping",
+      "reason": "The issue is about providing directions, which is related to navigation, not shipping."
+    },
+    {
+      "case": "t126",
+      "judgeSaid": "rejected",
+      "answer": "shipping",
+      "truth": "shipping",
+      "reason": "Shipping is not directly related to the issue of a wrong item being delivered."
+    },
+    {
+      "case": "t131",
+      "judgeSaid": "rejected",
+      "answer": "account",
+      "truth": "account",
+      "reason": "The issue is related to login attempts, which is more closely related to technical issues than account management."
+    },
+    {
+      "case": "t145",
+      "judgeSaid": "rejected",
+      "answer": "account",
+      "truth": "account",
+      "reason": "access revocation is more related to account management than billing, shipping, or technical issues, but it's not clearly more related to 'account' than 'technical'"
+    },
+    {
+      "case": "t152",
+      "judgeSaid": "rejected",
+      "answer": "account",
+      "truth": "account",
+      "reason": "The classifier's answer 'account' doesn't clearly address the question about data, which is more related to billing or technical issues."
+    },
+    {
+      "case": "t185",
+      "judgeSaid": "rejected",
+      "answer": "technical",
+      "truth": "technical",
+      "reason": "The issue is with formatting, not technical functionality."
+    },
+    {
+      "case": "t198",
+      "judgeSaid": "rejected",
+      "answer": "technical",
+      "truth": "technical",
+      "reason": "The issue is more related to user experience and data integrity, which is better described by 'account'."
+    },
+    {
+      "case": "t202",
+      "judgeSaid": "rejected",
+      "answer": "billing",
+      "truth": "billing",
+      "reason": "The category 'billing' is not directly related to upgrading to a team tier."
+    },
+    {
+      "case": "t212",
+      "judgeSaid": "rejected",
+      "answer": "shipping",
+      "truth": "shipping",
+      "reason": "The category 'shipping' is relevant, but 'account' is a better fit because it involves setting up a repeat delivery."
+    },
+    {
+      "case": "t234",
+      "judgeSaid": "rejected",
+      "answer": "billing",
+      "truth": "billing",
+      "reason": "The issue is with an overdue notice, which is more related to account management than billing."
+    },
+    {
+      "case": "t241",
+      "judgeSaid": "rejected",
+      "answer": "billing",
+      "truth": "billing",
+      "reason": "The request is about sending invoices, which is related to billing, but the classifier's answer is too narrow, as it doesn't account for the 'account' category, which could also be relevant."
+    },
+    {
+      "case": "t253",
+      "judgeSaid": "rejected",
+      "answer": "billing",
+      "truth": "billing",
+      "reason": "billing is not directly related to VAT charges"
+    },
+    {
+      "case": "t261",
+      "judgeSaid": "rejected",
+      "answer": "billing",
+      "truth": "billing",
+      "reason": "The classifier chose billing, but the ticket is about the upgrade process, which is more related to technical issues."
+    },
+    {
+      "case": "t329",
+      "judgeSaid": "rejected",
+      "answer": "account",
+      "truth": "account",
+      "reason": "The category 'account' is somewhat related, but 'billing' is a more direct connection to email."
+    },
+    {
+      "case": "t352",
+      "judgeSaid": "rejected",
+      "answer": "technical",
+      "truth": "technical",
+      "reason": "The issue is not technical in nature, it's more related to a service interruption."
+    },
+    {
+      "case": "t364",
+      "judgeSaid": "rejected",
+      "answer": "technical",
+      "truth": "technical",
+      "reason": "The issue is with the export process, not technical in nature."
+    },
+    {
+      "case": "t371",
+      "judgeSaid": "rejected",
+      "answer": "technical",
+      "truth": "technical",
+      "reason": "The question is about a bulk endpoint, which is more related to account management than technical issues."
+    }
+  ]
+}

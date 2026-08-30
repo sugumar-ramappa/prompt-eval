@@ -1,0 +1,30 @@
+You are grading a support-ticket classifier.
+
+TICKET
+{ticket}
+
+THE ONLY CATEGORIES THAT EXIST
+{allowed}
+
+This list is exhaustive. No other category is available - not "security", not
+"technical support", not anything else you might think fits better. If the idea
+you have in mind is not on that list, it is not an option, and the classifier
+could not have chosen it.
+
+THE CLASSIFIER ANSWERED
+{answer}
+
+Decide whether that answer is the best available fit, choosing only from the list
+above.
+
+Mark it INCORRECT only if a DIFFERENT category FROM THAT LIST is clearly better.
+Do not mark it incorrect because some category outside the list would have suited
+the ticket more closely - that is not a mistake the classifier was able to make.
+
+Where two listed categories are both defensible, accept the classifier's choice.
+You are checking for a wrong answer, not for the answer you would have given.
+
+Judge only the category. Ignore formatting, ignore any confidence value, and
+ignore wording - a correct category expressed awkwardly is correct.
+
+Reply with JSON only: {{"correct": true or false, "reason": "one short sentence"}}

@@ -27,8 +27,11 @@ So this ends up auditing the golden set, which was never the intention.
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from collections import defaultdict
+from datetime import datetime, timezone
+from pathlib import Path
 
 from src import golden
 from src.judge import VERDICT_SCHEMA, ask_judge
@@ -82,6 +85,7 @@ def main() -> int:
     print(f"  {'judge':28} {'agreement':>10} {'f-accept':>9} {'f-reject':>9}")
     print("  " + "-" * 68)
 
+    per_judge = []
     for label in labels:
         judged = agree = f_acc = f_rej = 0
         for case in cases:
@@ -98,8 +102,14 @@ def main() -> int:
                 f_rej += 1
         rate = f"{agree / judged:.1%}" if judged else "n/a"
         print(f"  {label:28} {rate:>10} {f_acc:>9} {f_rej:>9}")
+        per_judge.append({
+            "judge": label, "judged": judged,
+            "agreement": round(agree / judged, 4) if judged else None,
+            "falseAccept": f_acc, "falseReject": f_rej,
+        })
 
     if len(labels) < 2:
+        _record(per_judge, [], [], [], cases, answers)
         return 0
 
     # ------------------------------------------------- judges vs each other --
@@ -141,7 +151,44 @@ def main() -> int:
             print(f"    {case.id}  {marks}")
             print(f"            {case.text[:70]}")
 
+    _record(per_judge, both_judged, disputed, unanimous_against, cases, answers)
     return 0
+
+
+def _record(per_judge, both_judged, disputed, unanimous_against, cases, answers) -> None:
+    """Save the panel, because the finding it produces cannot be re-derived.
+
+    Two judges disagreeing with each other, or agreeing against the human, is an
+    observation about THESE cases from THESE models on THIS day. Re-running is
+    not guaranteed to reproduce it - the judges are language models - so a result
+    that exists only in terminal output is a result nobody can check, including
+    the person who ran it.
+    """
+    out = Path(__file__).resolve().parents[1] / "data" / "runs" / "judge-panel.json"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps({
+        "recordedAt": datetime.now(timezone.utc).isoformat(),
+        "cases": len(cases),
+        "reproducible": False,
+        "judges": per_judge,
+        "agreedWithEachOther": len(both_judged) - len(disputed),
+        "bothJudged": len(both_judged),
+        "note": (
+            "A single judge's agreement rate cannot separate 'this judge is too "
+            "weak' from 'this task is ambiguous'. A second, larger judge does: if "
+            "agreement jumps the first was too small; if it does not move, the "
+            "difficulty is in the task and no judge should be trusted on it."
+        ),
+        "unanimousAgainstHuman": [
+            {"case": c.id, "label": c.expected, "answerJudged": answers[c.id],
+             "text": c.text}
+            for c in unanimous_against
+        ],
+        "judgesDisputed": [
+            {"case": c.id, "text": c.text} for c in disputed
+        ],
+    }, indent=2) + "\n")
+    print(f"\n  recorded to {out.parent.name}/{out.name}")
 
 
 if __name__ == "__main__":
